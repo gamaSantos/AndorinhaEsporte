@@ -27,7 +27,7 @@
 
     ## Unity
     # From: https://github.com/github/gitignore/blob/master/Unity.gitignore
-	Library/
+	
     [Ll]ibrary/
     [Tt]emp/
     [Oo]bj/
