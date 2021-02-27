@@ -1,0 +1,34 @@
+using AndorinhaEsporte.Domain;
+using System;
+
+namespace AndorinhaEsporte.Services
+{
+    public class MatchService
+    {
+        
+        public Match GetMatch(Guid matchId)
+        {
+            var homeTeam = new Team(Guid.NewGuid(), true);
+            GetTeamPlayers(homeTeam, true);
+            var awayTeam = new Team(Guid.NewGuid(), false);
+            GetTeamPlayers(awayTeam, false);
+            return new Match(Guid.NewGuid(), homeTeam, awayTeam);
+        }
+
+        private void GetTeamPlayers(Team team, bool homeTeam)
+        {
+            var teamLength = 6;
+            for (int i = 0; i < teamLength; i++)
+            {
+                var position = FieldPositionFactory.Create((PlayerPositionType) i + 1);
+                var player = new Player(position, team.InMatchInformation)
+                {
+                    Id = Guid.NewGuid(),
+                    TeamId = team.Id,
+                    isHomeTeam = homeTeam,
+                };
+                team.AddPlayer(player);
+            }
+        }
+    }
+}
