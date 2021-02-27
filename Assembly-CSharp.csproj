@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\Domain\Trajectory.cs" />
      <Compile Include="Assets\Scripts\CommandHandlers\BasePlayerActionCommandHandler.cs" />
      <Compile Include="Assets\Scripts\Domain\State\ChangeSideStateEnum.cs" />
+     <Compile Include="Assets\Scripts\Domain\Events\BallChangedDirectionEvent.cs" />
      <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
      <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Commands\TeamCommand.cs" />
@@ -77,7 +78,6 @@
      <Compile Include="Assets\Scripts\Domain\FieldPosition\Positions\LeftBack.cs" />
      <Compile Include="Assets\Scripts\Commands\BaseCommand.cs" />
      <Compile Include="Assets\Scripts\CommandHandlers\Actions\ServeCommandHandler.cs" />
-     <Compile Include="Assets\Scripts\Domain\Events\BallChangedDirectionEvent.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
