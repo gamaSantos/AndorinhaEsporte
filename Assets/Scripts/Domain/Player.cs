@@ -22,6 +22,33 @@ namespace AndorinhaEsporte.Domain
             ResetStates();
         }
 
+        public Vector3 GetDefensivePosition(Vector3 position)
+        {
+            if (InBlockPosition)
+            {
+                return GetBlockPosition(Position);
+
+            }
+            else
+            {
+                return GetSpikeDefensivePosition(Position);
+            }
+        }
+
+        private Vector3 GetBlockPosition(Vector3 position)
+        {
+            return FieldPosition.GetStartPosition(TeamFoward);
+        }
+
+        private Vector3 GetSpikeDefensivePosition(Vector3 position)
+        {
+            return FieldPosition.GetStartPosition(TeamFoward);
+        }
+
+        public bool IsDefenseNecessary(Vector3 landingSpot)
+        {
+            return TeamFoward.IsFowardOfNet() != landingSpot.IsFowardOfNet();
+        }
 
         private void ResetStates()
         {
@@ -97,6 +124,8 @@ namespace AndorinhaEsporte.Domain
         public bool IsPassTarget { get; internal set; }
         public float SpikeHeight => 3.3f;
 
+        public bool InBlockPosition => FieldPosition.InFrontRow;
+
         public void UpdatePosition(Vector3 position, Vector3 velocity)
         {
             Position = position;
@@ -125,8 +154,6 @@ namespace AndorinhaEsporte.Domain
             _actions.Add(action);
         }
 
-        internal bool InControlRange(Vector3 position) => (position - Position).sqrMagnitude < BallControlRange;
-
         public void RemoveAction(PlayerAction action)
         {
             var actions = _actions.FirstOrDefault(x => x == action);
@@ -135,7 +162,7 @@ namespace AndorinhaEsporte.Domain
             Passing = false;
         }
 
-        internal void ClearActions()
+        public void ClearActions()
         {
             _actions.Clear();
         }
@@ -147,8 +174,6 @@ namespace AndorinhaEsporte.Domain
 
         public void NotifyIsPassTarget()
         {
-            // AddAction(PlayerAction.FollowingBall);
-            // IsUserControlled = true;
             IsPassTarget = true;
         }
 

@@ -42,6 +42,9 @@ namespace AndorinhaEsporte.CommandHandlers
                 case PlayerAction.Spike:
                     new SpikeCommandHandler().Handle(baseCommand);
                     break;
+                case PlayerAction.MoveToDenfensivePosition:
+                    new DefensivePositionCommandHandler().Handle(baseCommand);
+                    break;
             }
 
         }

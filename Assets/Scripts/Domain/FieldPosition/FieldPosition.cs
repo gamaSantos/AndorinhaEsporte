@@ -39,6 +39,7 @@ namespace AndorinhaEsporte.Domain
             return target;
         }
         protected float GetTeamFoward(Vector3 foward) => Mathf.Clamp(foward.z, -1, 1);
+        public abstract bool InFrontRow { get; }
 
         protected float FowardPosition => -1.2f;
         protected float BackPosition => -7.5f;

@@ -12,6 +12,7 @@ namespace AndorinhaEsporte.Domain
         ChangeSides,
         ResetPosition,
         Defend,
-        Spike
+        Spike,
+        MoveToDenfensivePosition
     }
 }

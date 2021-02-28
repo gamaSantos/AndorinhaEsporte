@@ -102,8 +102,15 @@ namespace AndorinhaEsporte.Domain
             var foward = this.InMatchInformation.Foward.z;
 
             var incomming = (foward < 0 && e.FowardDirection > 0) || (foward > 0 && e.FowardDirection < 0);
-            if (!incomming) return;
-            Defend();
+            if (!incomming) 
+            {
+                foreach(var player in Formation)
+                {
+                    player.AddAction(PlayerAction.MoveToDenfensivePosition);
+                }
+            }
+            else
+                Defend();
         }
 
         public void Serve()

@@ -29,5 +29,10 @@ namespace AndorinhaEsporte.Domain
             var heading = target - position;
             return heading / heading.magnitude;
         }
+
+        public static bool IsFowardOfNet(this Vector3 position)
+        {
+            return position.z > 0;
+        }
     }
 }

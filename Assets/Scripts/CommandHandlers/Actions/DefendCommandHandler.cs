@@ -12,15 +12,15 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             var team = command.Team;
 
             if (!ball.LandingSpot.HasValue) return;
-            var LandingSpot = ball.LandingSpot.Value;
-            var needToDefend = player.TeamFoward.z > 0 ? LandingSpot.z < 0 : LandingSpot.z > 0;
-            if (!needToDefend)
+            var landingSpot = ball.LandingSpot.Value;
+            
+            if (!player.IsDefenseNecessary(landingSpot))
             {
                 player.RemoveAction(PlayerAction.Defend);
                 return;
             }
 
-            var playerID = team.GetNearestPlayerIdFrom(LandingSpot);
+            var playerID = team.GetNearestPlayerIdFrom(landingSpot);
             if (player.Id != playerID)
             {
                 player.RemoveAction(PlayerAction.Defend);
@@ -38,7 +38,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 return;
             }
             var margin = 0.5f * team.Foward.z;
-            var target = new Vector3(LandingSpot.x, 0, LandingSpot.z + margin);
+            var target = new Vector3(landingSpot.x, 0, landingSpot.z + margin);
             if (!player.ArrivedInTarget(target))
             {
                 MoveToTarget(target, command, 0, lookAtBall: true);
