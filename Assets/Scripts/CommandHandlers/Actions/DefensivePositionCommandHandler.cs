@@ -17,7 +17,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 player.RemoveAction(PlayerAction.MoveToDenfensivePosition);
                 return;
             }
-            Vector3 target = player.GetDefensivePosition(ball.Position);
+            Vector3 target = player.GetDefensivePosition(landingSpot);
             MoveToTarget(target, command, precisionStart: 1, lookAtBall: true);
             return;
         }

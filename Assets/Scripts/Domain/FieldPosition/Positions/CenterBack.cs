@@ -15,5 +15,6 @@ namespace AndorinhaEsporte.Domain
         public override int RotationOrder => 6;
 
         public override bool InFrontRow => false;
+        public override FieldSide HorizontalPosition => FieldSide.Center;
     }
 }

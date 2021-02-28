@@ -13,5 +13,6 @@ namespace AndorinhaEsporte.Domain
         protected override Vector3 ChangeSidePosition => new Vector3(SideLine - 1, 0, 7);
         public override int RotationOrder => 5;
         public override bool InFrontRow => false;
+        public override FieldSide HorizontalPosition => FieldSide.Left;
     }
 }

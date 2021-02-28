@@ -26,18 +26,13 @@ namespace AndorinhaEsporte.Domain
         {
             if (InBlockPosition)
             {
-                return GetBlockPosition(Position);
+                return FieldPosition.GetBlockingPosition(position, TeamFoward.z);
 
             }
             else
             {
                 return GetSpikeDefensivePosition(Position);
             }
-        }
-
-        private Vector3 GetBlockPosition(Vector3 position)
-        {
-            return FieldPosition.GetStartPosition(TeamFoward);
         }
 
         private Vector3 GetSpikeDefensivePosition(Vector3 position)
