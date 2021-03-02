@@ -89,9 +89,9 @@ namespace AndorinhaEsporte.Controller
             else _matchController.AddScoreAgainst(_lastTeamId);
         }
 
-        private bool IsInPlayField() => transform.position.IsInPlayField();
+        private bool IsInPlayField() => Position.IsInPlayField();
 
-        private bool IsInCourt() => transform.position.IsInCourt();
+        private bool IsInCourt() => Position.IsInCourt();
 
         public void DrawTrajectory()
         {

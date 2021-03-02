@@ -33,7 +33,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 var passStrength = ball.GetNeededForceFromSimulation(ball.Position, targetBallPosition, direction);
                 
                 ball.EnableGravity();
-                targetPlayer.NotifyIsPassTarget();
+                targetPlayer.SetAsPassTarget();
                 ball.MoveInDirection(direction, passStrength, player.TeamId);
                 player.RemoveAction(PlayerAction.Pass);
             }

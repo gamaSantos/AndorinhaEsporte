@@ -18,6 +18,8 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 return;
             }
             Vector3 target = player.GetDefensivePosition(landingSpot);
+            if (player.ArrivedInTarget(target)) return;
+            
             MoveToTarget(target, command, precisionStart: 1, lookAtBall: true);
             return;
         }

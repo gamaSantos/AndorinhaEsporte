@@ -34,7 +34,6 @@ namespace AndorinhaEsporte.Domain
             return HomeTeam.IsServing() || AwayTeam.IsServing();
         }
 
-
         public void ApproveServe()
         {
             if (!HomeTeam.IsWaitingForServe() && !AwayTeam.IsWaitingForServe()) return;
