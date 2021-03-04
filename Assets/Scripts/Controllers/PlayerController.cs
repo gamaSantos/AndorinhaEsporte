@@ -8,10 +8,9 @@ namespace AndorinhaEsporte.Controller
 {
     public class PlayerController : MonoBehaviour
     {
-
         [SerializeField]
-        private GameObject _userIcon;
-        private Renderer _userIconRender;
+        private PlayerUIController UIController;
+
         [SerializeField]
         private GameObject _meshWrapper;
         private Rigidbody _rigidBody;
@@ -27,7 +26,7 @@ namespace AndorinhaEsporte.Controller
         private PlayerCommandHandler playerCommandHandler;
 
         private Player _passTarget;
-        
+
         void Start()
         {
             _rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -38,22 +37,21 @@ namespace AndorinhaEsporte.Controller
         {
             _player = playerData;
             _team = team;
-            _userIconRender = _userIcon.GetComponent<Renderer>();
+
             _rigidBody = gameObject.GetComponent<Rigidbody>();
             _ball = GameObject.FindObjectOfType<BallController>();
             var renderer = _meshWrapper.GetComponent<Renderer>();
-            
-            
-            renderer.material.SetColor("_Color", _player.MainColor);
 
+
+            renderer.material.SetColor("_Color", _player.MainColor);
+            UIController.ChangePosition(_player.FieldPosition);
             playerCommandHandler = new PlayerCommandHandler(_player, _ball, _rigidBody, transform, _team);
         }
 
         public void FixedUpdate()
         {
-            _userIconRender.enabled = _player.IsUserControlled;
             _player.UpdatePosition(transform.position, _rigidBody.velocity);
-            
+
             if (playerCommandHandler != null)
                 playerCommandHandler.HandleCurrentAction(_passTarget);
 
