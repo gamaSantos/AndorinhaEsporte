@@ -11,6 +11,7 @@ namespace AndorinhaEsporte.Controller
         private Match _match;
         private HudController _hudController;
         private MatchService _matchService;
+        private CameraController _camera;
         private BallController _ball;
 
 
@@ -27,6 +28,7 @@ namespace AndorinhaEsporte.Controller
         void Start()
         {
             _ball = GameObject.FindObjectOfType<BallController>();
+            _camera = Camera.main.GetComponent<CameraController>();
             _matchService = new MatchService();
             initiateMatch();
             _hudController = gameObject.GetComponent<HudController>();
@@ -48,6 +50,7 @@ namespace AndorinhaEsporte.Controller
             if (_matchStats.IsSetFinished)
             {
                 _match.ChangeSides();
+                _camera.ChangeSides();
                 return;
             }
 
