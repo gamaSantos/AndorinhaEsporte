@@ -36,7 +36,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 targetPlayer.SetAsPassTarget();
                 ball.MoveInDirection(direction, passStrength, player.TeamId);
                 player.RemoveAction(PlayerAction.Pass);
-            }
+            } 
 
             if (!player.ArrivedInTarget(target))
             {

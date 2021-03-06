@@ -45,6 +45,9 @@ namespace AndorinhaEsporte.CommandHandlers
                 case PlayerAction.MoveToDenfensivePosition:
                     new DefensivePositionCommandHandler().Handle(baseCommand);
                     break;
+                case PlayerAction.Move:
+                    new MoveCommandHandler().Handle(baseCommand);
+                    break;
             }
 
         }

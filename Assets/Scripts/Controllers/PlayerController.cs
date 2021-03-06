@@ -21,6 +21,12 @@ namespace AndorinhaEsporte.Controller
 
         public Guid PlayedId => _player.Id;
         public bool IsHomeTeamPlayer => _player.isHomeTeam;
+
+        internal void Move()
+        {
+            _player.AddAction(PlayerAction.Move);
+        }
+
         public bool IsUserControlled => _player.IsUserControlled;
 
         private PlayerCommandHandler playerCommandHandler;
@@ -50,6 +56,7 @@ namespace AndorinhaEsporte.Controller
 
         public void FixedUpdate()
         {
+            if(_player == null) return;
             _player.UpdatePosition(transform.position, _rigidBody.velocity);
 
             if (playerCommandHandler != null)

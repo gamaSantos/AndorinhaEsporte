@@ -8,6 +8,7 @@ namespace AndorinhaEsporte.Domain
 {
     public class Player
     {
+        private readonly Guid _id;
         private readonly List<PlayerAction> _actions;
         private readonly TeamInMatchInformation _team;
         private readonly List<Player> _teammates;
@@ -15,6 +16,7 @@ namespace AndorinhaEsporte.Domain
         private MatchStats _matchStatus;
         public Player(FieldPosition fieldPosition, TeamInMatchInformation teamInfo)
         {
+            _id = Guid.NewGuid();
             _actions = new List<PlayerAction>();
             _teammates = new List<Player>();
             _team = teamInfo;
@@ -27,8 +29,8 @@ namespace AndorinhaEsporte.Domain
         public Vector3 Position { get; private set; }
         public Vector3 Velocity { get; private set; }
 
-        public Guid Id { get; set; }
-        public Guid TeamId { get; set; }
+        public Guid Id => _id;
+        public Guid TeamId => _team.TeamId;
         public bool isHomeTeam { get; set; }
         public PlayerPositionType CurrentFunction => this.FieldPosition.Type;
         public FieldPosition FieldPosition { get; private set; }
@@ -156,7 +158,7 @@ namespace AndorinhaEsporte.Domain
         {
             if (InBlockPosition)
             {
-                if(_matchStatus?.IsServe ?? false) return Position;
+                if (_matchStatus?.IsServe ?? false) return Position;
                 return FieldPosition.GetBlockingPosition(position, TeamFoward.z);
             }
             else

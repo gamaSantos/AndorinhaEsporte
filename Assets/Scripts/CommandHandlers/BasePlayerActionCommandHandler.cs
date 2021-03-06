@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using AndorinhaEsporte.Domain;
+using UnityEngine;
 
 namespace AndorinhaEsporte.CommandHandlers
 {
@@ -6,7 +8,8 @@ namespace AndorinhaEsporte.CommandHandlers
     {
         protected static void MoveToTarget(Vector3 target, BasePlayerCommand command, float precisionStart = 1f, bool lookAtBall = false)
         {
-            if (command.Player.InAir) return;
+            var player = command.Player;
+            if (player == null || player.InAir) return;
             target.y = 0;
             var transform = command.PlayerTransform;
             var rigidBody = command.PlayerRigidBody;
@@ -15,6 +18,12 @@ namespace AndorinhaEsporte.CommandHandlers
             var distance = heading.magnitude;
 
             var direction = heading / distance;
+            var faceDirection = direction;
+            var collisionRange = 2f;
+            
+            var teamMateInCollisionRange = player.Teammates.Any(teammate => teammate.Position.Distance(player.Position) < collisionRange);
+
+            if (teamMateInCollisionRange) direction += transform.right;
             var moveSpeed = distance > precisionStart ? command.Player.MoveSpeed : command.Player.PreciseMoveSpeed;
             if (lookAtBall)
             {
@@ -30,13 +39,10 @@ namespace AndorinhaEsporte.CommandHandlers
             if (lookAtBall)
             {
                 var ballPosition = command.Ball.transform.position;
-                var lookAtDirection = new Vector3(ballPosition.x, 0, ballPosition.z);
-                transform.LookAt(lookAtDirection);
+                faceDirection = new Vector3(ballPosition.x, 0, ballPosition.z);
+               
             }
-            else
-            {
-                transform.forward = direction;
-            }
+             transform.LookAt(faceDirection);
 
         }
 

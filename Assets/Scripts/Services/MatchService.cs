@@ -27,8 +27,6 @@ namespace AndorinhaEsporte.Services
                 var position = FieldPositionFactory.Create((PlayerPositionType)i + 1);
                 var player = new Player(position, team.InMatchInformation)
                 {
-                    Id = Guid.NewGuid(),
-                    TeamId = team.Id,
                     isHomeTeam = homeTeam,
                 };
                 team.AddPlayer(player);

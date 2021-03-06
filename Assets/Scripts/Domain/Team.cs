@@ -15,7 +15,7 @@ namespace AndorinhaEsporte.Domain
             var foward = isHomeTeam ? Vector3.forward : Vector3.back;
 
             UnityEngine.Random.InitState(id.GetHashCode());
-            InMatchInformation = new TeamInMatchInformation(foward, UnityEngine.Random.ColorHSV(0, 1, 0.7f, 1), UnityEngine.Random.ColorHSV());
+            InMatchInformation = new TeamInMatchInformation(Id, foward, UnityEngine.Random.ColorHSV(0, 1, 0.7f, 1), UnityEngine.Random.ColorHSV());
         }
         public Guid Id { get; }
         public Vector3 Foward => InMatchInformation.Foward;
