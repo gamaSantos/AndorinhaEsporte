@@ -18,12 +18,8 @@ namespace AndorinhaEsporte.CommandHandlers
             var distance = heading.magnitude;
 
             var direction = heading / distance;
-            var faceDirection = direction;
-            var collisionRange = 2f;
             
-            var teamMateInCollisionRange = player.Teammates.Any(teammate => teammate.Position.Distance(player.Position) < collisionRange);
-
-            if (teamMateInCollisionRange) direction += transform.right;
+            direction = ChangeDirectionToAvoidCollision(player, direction);
             var moveSpeed = distance > precisionStart ? command.Player.MoveSpeed : command.Player.PreciseMoveSpeed;
             if (lookAtBall)
             {
@@ -39,11 +35,26 @@ namespace AndorinhaEsporte.CommandHandlers
             if (lookAtBall)
             {
                 var ballPosition = command.Ball.transform.position;
-                faceDirection = new Vector3(ballPosition.x, 0, ballPosition.z);
-               
+                var lookAtDirection = new Vector3(ballPosition.x, 0, ballPosition.z);
+                transform.LookAt(lookAtDirection);
             }
-             transform.LookAt(faceDirection);
+            else
+            {
+                transform.forward = direction;
+            }
+        }
 
+        private static Vector3 ChangeDirectionToAvoidCollision(Player player, Vector3 direction)
+        {
+            var collisionRange = 1.5f;
+            var teamatesInCollisionRange = player.Teammates.Where(teammate => teammate.Position.Distance(player.Position) < collisionRange);
+
+            foreach(var teammate in teamatesInCollisionRange)
+            {
+
+            }
+
+            return direction;
         }
 
         protected static void Jump(BasePlayerCommand command)

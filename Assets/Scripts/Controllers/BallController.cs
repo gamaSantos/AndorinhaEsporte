@@ -8,6 +8,8 @@ namespace AndorinhaEsporte.Controller
 {
     public class BallController : MonoBehaviour
     {
+        public AudioSource audioSource;
+
         Rigidbody _rigidbody;
         MatchController _matchController;
         PhysicsSceneController _simulationController;
@@ -50,6 +52,7 @@ namespace AndorinhaEsporte.Controller
                 TeamId = teamId
             });
             DrawTrajectory();
+            audioSource?.Play();
         }
 
         public float GetNeededForceFromSimulation(Vector3 startPosition, Vector3 target, Vector3 direction)

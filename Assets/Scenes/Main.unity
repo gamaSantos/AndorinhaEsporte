@@ -524,14 +524,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
-    - target: {fileID: 2044043248177471025, guid: bf426cdff9685f84fb4882cd5fdb29f2, type: 3}
-      propertyPath: m_Drag
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2044043248177471025, guid: bf426cdff9685f84fb4882cd5fdb29f2, type: 3}
-      propertyPath: m_Mass
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 2044043248177471026, guid: bf426cdff9685f84fb4882cd5fdb29f2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -574,6 +566,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2044043248177471026, guid: bf426cdff9685f84fb4882cd5fdb29f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972317719933270718, guid: bf426cdff9685f84fb4882cd5fdb29f2, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ce07d9655766da4b884d4118f9cef2e, type: 3}
+    - target: {fileID: 5972317719933270718, guid: bf426cdff9685f84fb4882cd5fdb29f2, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
