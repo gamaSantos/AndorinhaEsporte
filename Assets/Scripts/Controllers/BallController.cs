@@ -102,8 +102,9 @@ namespace AndorinhaEsporte.Controller
             var component = GetComponent<LineRenderer>();
             if (component == null) return;
             var positionArray = Trajectory.Points.ToArray();
-            component.startWidth = 0.1f;
-            component.endWidth = 0.1f;
+            component.startWidth = 0.05f;
+            component.endWidth = 0.05f;
+            
             component.positionCount = positionArray.Count();
             component.SetPositions(positionArray);
         }
