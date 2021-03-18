@@ -26,18 +26,31 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             {
                 ball.Stop();
                 ball.EnableGravity();
-                ball.MoveInDirection(Vector3.up, 5f, player.TeamId);
+                ball.MoveInDirection(Vector3.up, 5.5f, player.TeamId);
                 player.ServeState = ServeStateEnum.Serving;
             }
-            if (state == ServeStateEnum.Serving && ball.transform.position.y < 2.1f && ball.Velocity.y < 0)
+            if (state == ServeStateEnum.Serving && ball.Velocity.y < 0)
             {
-                Jump(command);
-                var foward = player.TeamFoward.z;
-                var horizontalDirection = foward < 0 ? 0.25f : -0.25f;
-                var force = Random.Range(6.8f, 7.3f);
-                
-                ball.MoveInDirection(new Vector3(horizontalDirection, 1, foward), force, player.TeamId);
-                Finalizar(player);
+                var ballHeight = ball.transform.position.y;
+                if (ballHeight < player.SpikeHeight)
+                {
+                    var foward = player.TeamFoward.z;
+                    var horizontalDirection = foward < 0 ? 0.25f : -0.25f;
+                    var force = Random.Range(6f, 6.8f);
+
+                    player.IsSpiking = false;
+                    ball.MoveInDirection(new Vector3(horizontalDirection, 1, foward), force, player.TeamId);
+                    Finalizar(player);
+                    return;
+                }
+
+                if(player.CanStartSpikeJump(ball.transform.position, ball.Velocity))
+                {  
+                    Jump(command);
+                    player.IsSpiking = true;
+                    return;
+                }
+
             }
         }
 
@@ -54,11 +67,11 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             var servePosition = GetServePosition(player);
             MoveToTarget(servePosition, command);
             var distance = servePosition - player.Position;
-            
+
             if (distance.magnitude < 0.1f)
             {
                 command.PlayerTransform.forward = player.TeamFoward;
-                
+
                 var ball = command.Ball;
                 var ballMargin = 0.5f * player.TeamFoward.z;
                 ball.disableGravity();
@@ -72,7 +85,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
         private Vector3 GetServePosition(Player player)
         {
             var servePosition = new Vector3(3, 0, -11f) * player.TeamFoward.z;
-            
+
             return servePosition;
         }
 

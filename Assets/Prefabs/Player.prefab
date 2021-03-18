@@ -79,6 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIController: {fileID: 236951655800436791}
   _meshWrapper: {fileID: 7442620180713385069}
+  animator: {fileID: 3364500907926207552}
 --- !u!114 &236951655800436791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +192,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!95 &3364500907926207552
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7363487012807913528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c824c4422426cab4c98b95f59f39bb5d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9077192659218764664
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70adf359a60dc2a418d0ae6746d51441, type: 3}
+--- !u!1 &7363487012807913528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 70adf359a60dc2a418d0ae6746d51441, type: 3}
+  m_PrefabInstance: {fileID: 7705999524859415913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7889053929071078018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 70adf359a60dc2a418d0ae6746d51441, type: 3}

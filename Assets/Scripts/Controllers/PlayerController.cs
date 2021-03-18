@@ -13,6 +13,10 @@ namespace AndorinhaEsporte.Controller
 
         [SerializeField]
         private GameObject _meshWrapper;
+
+        [SerializeField]
+        private Animator animator;
+
         private Rigidbody _rigidBody;
         private BallController _ball;
 
@@ -56,8 +60,17 @@ namespace AndorinhaEsporte.Controller
 
         public void FixedUpdate()
         {
-            if(_player == null) return;
+            if (_player == null) return;
             _player.UpdatePosition(transform.position, _rigidBody.velocity);
+
+            var isSpiking = _player.IsSpiking;
+            var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !isSpiking;
+            var isIdle = !isRunning && !isSpiking;
+
+            animator.SetBool("IsRunning", isRunning);
+            animator.SetBool("IsSpiking", isSpiking);
+            animator.SetBool("IsIdle", isIdle);
+
 
             if (playerCommandHandler != null)
                 playerCommandHandler.HandleCurrentAction(_passTarget);

@@ -36,13 +36,20 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
             if (player.InSpikeRange(ball.Position))
             {
-                Jump(command);
+                player.IsPassTarget = false;
+                player.IsSpiking = false;
+
                 var ballHorizontalDirection = isRightSide ? -0.5f : 0.5f;
                 var direction = new Vector3(ballHorizontalDirection, 0.1f, player.TeamFoward.z);
 
                 ball.MoveInDirection(direction, 6, player.TeamId);
                 player.RemoveAction(PlayerAction.Spike);
-                player.IsPassTarget = false;
+            }
+
+            if (player.CanStartSpikeJump(ball.transform.position, ball.Velocity))
+            {
+                Jump(command);
+                // player.IsSpiking = true;
             }
         }
     }

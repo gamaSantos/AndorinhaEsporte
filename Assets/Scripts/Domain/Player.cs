@@ -60,8 +60,10 @@ namespace AndorinhaEsporte.Domain
 
         public bool IsPassTarget { get; set; }
 
-        public bool InAir => Position.y >= 0.05f && Velocity.y < 0;
+        public bool InAir => Position.y >= 0.2f;
         public bool InBlockPosition => FieldPosition.InFrontRow;
+
+        public bool IsSpiking { get; set; }
 
         public void UpdatePosition(Vector3 position, Vector3 velocity)
         {
@@ -183,6 +185,7 @@ namespace AndorinhaEsporte.Domain
             ServeState = ServeStateEnum.Initial;
             ChangeSideState = ChangeSideStateEnum.Finished;
             IsPassTarget = false;
+            IsSpiking = false;
         }
 
         public bool ArrivedInTarget(Vector3 target)
@@ -206,7 +209,16 @@ namespace AndorinhaEsporte.Domain
         public bool InSpikeRange(Vector3 ballPosition)
         {
             var groundTarget = new Vector3(ballPosition.x, 0, ballPosition.z);
-            return Position.Distance(groundTarget) < 0.5f && ballPosition.y < SpikeHeight;
+            return isBallIn2DSpikeRange(groundTarget) && ballPosition.y < SpikeHeight;
+        }
+
+        private bool isBallIn2DSpikeRange(Vector3 groundTarget) => Position.Distance(groundTarget) < 0.5f;
+        public bool CanStartSpikeJump(Vector3 ballPosition, Vector3 ballVelocity)
+        {
+            var ballHeight = ballPosition.y;
+            var groundTarget = new Vector3(ballPosition.x, 0, ballPosition.z);
+            return //isBallIn2DSpikeRange(groundTarget) && 
+            ballHeight < SpikeHeight + 2.3f && ballVelocity.y < 0;
         }
 
 

@@ -18,7 +18,7 @@ namespace AndorinhaEsporte.CommandHandlers
             var distance = heading.magnitude;
 
             var direction = heading / distance;
-            
+
             direction = ChangeDirectionToAvoidCollision(player, direction);
             var moveSpeed = distance > precisionStart ? command.Player.MoveSpeed : command.Player.PreciseMoveSpeed;
             if (lookAtBall)
@@ -49,7 +49,7 @@ namespace AndorinhaEsporte.CommandHandlers
             var collisionRange = 1.5f;
             var teamatesInCollisionRange = player.Teammates.Where(teammate => teammate.Position.Distance(player.Position) < collisionRange);
 
-            foreach(var teammate in teamatesInCollisionRange)
+            foreach (var teammate in teamatesInCollisionRange)
             {
 
             }
@@ -61,10 +61,11 @@ namespace AndorinhaEsporte.CommandHandlers
         {
             var player = command.Player;
             var rigidBody = command.PlayerRigidBody;
-
+            var eulers = command.PlayerTransform.rotation.eulerAngles;
+            Debug.Log(eulers);
             if (player.InAir) return;
 
-            rigidBody.AddForce(new Vector3(0, 1, 0.1f) * 1800);
+            rigidBody.AddForce(Vector3.up * 270);
         }
     }
 }
