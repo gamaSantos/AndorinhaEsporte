@@ -62,10 +62,10 @@ namespace AndorinhaEsporte.CommandHandlers
             var player = command.Player;
             var rigidBody = command.PlayerRigidBody;
             var eulers = command.PlayerTransform.rotation.eulerAngles;
-            Debug.Log(eulers);
+            
             if (player.InAir) return;
 
-            rigidBody.AddForce(Vector3.up * 270);
+            rigidBody.AddForce(Vector3.up * 300);
         }
     }
 }

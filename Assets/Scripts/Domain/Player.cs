@@ -212,12 +212,13 @@ namespace AndorinhaEsporte.Domain
             return isBallIn2DSpikeRange(groundTarget) && ballPosition.y < SpikeHeight;
         }
 
-        private bool isBallIn2DSpikeRange(Vector3 groundTarget) => Position.Distance(groundTarget) < 0.5f;
+        private bool isBallIn2DSpikeRange(Vector3 groundTarget, float maxDistance = 0.8f) => Position.Distance(groundTarget) < maxDistance;
         public bool CanStartSpikeJump(Vector3 ballPosition, Vector3 ballVelocity)
         {
+            if(InAir) return false;
             var ballHeight = ballPosition.y;
             var groundTarget = new Vector3(ballPosition.x, 0, ballPosition.z);
-            return //isBallIn2DSpikeRange(groundTarget) && 
+            return isBallIn2DSpikeRange(groundTarget, 1f) &&
             ballHeight < SpikeHeight + 2.3f && ballVelocity.y < 0;
         }
 

@@ -17,6 +17,10 @@ namespace AndorinhaEsporte.Controller
         [SerializeField]
         private Animator animator;
 
+
+        public bool IsSpiking = false;
+        public int JerseyNumber = 0;
+
         private Rigidbody _rigidBody;
         private BallController _ball;
 
@@ -63,12 +67,12 @@ namespace AndorinhaEsporte.Controller
             if (_player == null) return;
             _player.UpdatePosition(transform.position, _rigidBody.velocity);
 
-            var isSpiking = _player.IsSpiking;
-            var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !isSpiking;
-            var isIdle = !isRunning && !isSpiking;
+            IsSpiking = _player.IsSpiking;
+            var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !IsSpiking;
+            var isIdle = !isRunning && !IsSpiking;
 
             animator.SetBool("IsRunning", isRunning);
-            animator.SetBool("IsSpiking", isSpiking);
+            animator.SetBool("IsSpiking", IsSpiking);
             animator.SetBool("IsIdle", isIdle);
 
 
