@@ -98,6 +98,14 @@ namespace AndorinhaEsporte.Controller
         {
             // Gizmos.DrawWireSphere(transform.position, _player.BallControlRange);
         }
+
+         void OnCollisionEnter(Collision collision)
+        {
+            if(!_player.InAir)
+            {
+                _player.IsJumping = false;
+            }
+        }
     }
 
 
