@@ -44,7 +44,7 @@ namespace AndorinhaEsporte.Domain
         internal void Spike()
         {
             var players = Formation.Where(p => p.CurrentFunction == PlayerPositionType.LeftStriker || p.CurrentFunction == PlayerPositionType.RightStriker);
-            foreach (var player in players) player.AddAction(PlayerAction.Spike);
+            foreach (var player in players) player.StartSpike();
         }
 
         internal void Pass()

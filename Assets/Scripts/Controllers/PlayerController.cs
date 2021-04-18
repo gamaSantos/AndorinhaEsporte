@@ -3,6 +3,7 @@ using AndorinhaEsporte.CommandHandlers;
 using System;
 using System.Linq;
 using UnityEngine;
+using AndorinhaEsporte.Domain.State;
 
 namespace AndorinhaEsporte.Controller
 {
@@ -19,6 +20,7 @@ namespace AndorinhaEsporte.Controller
 
 
         public bool IsSpiking = false;
+        public SpikeStateEnum spikeState;
         public int JerseyNumber = 0;
 
         private Rigidbody _rigidBody;
@@ -70,6 +72,7 @@ namespace AndorinhaEsporte.Controller
             IsSpiking = _player.IsSpiking;
             var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !IsSpiking;
             var isIdle = !isRunning && !IsSpiking;
+            spikeState = _player.SpikeState;
 
             animator.SetBool("IsRunning", isRunning);
             animator.SetBool("IsSpiking", IsSpiking);

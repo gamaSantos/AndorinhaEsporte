@@ -50,10 +50,17 @@ namespace AndorinhaEsporte.Domain
         public Color MainColor => _team.MainColor;
         public PlayerAction CurrentAction => _actions.Any() ? _actions.First() : PlayerAction.Idle;
 
+        internal void StartSpike()
+        {
+            SpikeState = SpikeStateEnum.Initial;
+            IsSpiking = false;
+            AddAction(PlayerAction.Spike);
+        }
 
         public RotateStateEnum RotateState { get; set; }
         public ServeStateEnum ServeState { get; set; }
         public ChangeSideStateEnum ChangeSideState { get; set; }
+        public SpikeStateEnum SpikeState { get; set; }
         public bool IsChangingSides => ChangeSideState != ChangeSideStateEnum.Finished;
 
         public bool Passing { get; set; }
@@ -61,6 +68,7 @@ namespace AndorinhaEsporte.Domain
         public bool IsPassTarget { get; set; }
 
         public bool InAir => Position.y >= 0.2f;
+        public bool IsJumping = false;
         public bool InBlockPosition => FieldPosition.InFrontRow;
 
         public bool IsSpiking { get; set; }
@@ -121,9 +129,15 @@ namespace AndorinhaEsporte.Domain
             _actions.Add(PlayerAction.Pass);
         }
 
-        public void SetAsPassTarget()
+        public void ChangePassTargeState(bool isPassTarget)
         {
-            IsPassTarget = true;
+            IsPassTarget = isPassTarget;
+            if(SpikeState ==  SpikeStateEnum.AwaitingOrMovingToPassTarget && !isPassTarget)
+            {
+                SpikeState = SpikeStateEnum.Finished;
+                RemoveAction(PlayerAction.Spike);
+                IsSpiking = false;
+            }
         }
 
         public void ChangeSides()
@@ -215,7 +229,7 @@ namespace AndorinhaEsporte.Domain
         private bool isBallIn2DSpikeRange(Vector3 groundTarget, float maxDistance = 0.8f) => Position.Distance(groundTarget) < maxDistance;
         public bool CanStartSpikeJump(Vector3 ballPosition, Vector3 ballVelocity)
         {
-            if(InAir) return false;
+            if (InAir) return false;
             var ballHeight = ballPosition.y;
             var groundTarget = new Vector3(ballPosition.x, 0, ballPosition.z);
             return isBallIn2DSpikeRange(groundTarget, 1f) &&

@@ -27,13 +27,17 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
 
                 var fowardMargin = -1f * player.TeamFoward.z;
-                var targetBallPosition = new Vector3(targetPlayer.Position.x, 3f, fowardMargin);
+                var targetBallPosition = new Vector3(targetPlayer.Position.x, 2.5f, fowardMargin);
                 var direction = ball.Position.DirectionTo(targetBallPosition);
                 direction.y = 1;
                 var passStrength = ball.GetNeededForceFromSimulation(ball.Position, targetBallPosition, direction);
                 
                 ball.EnableGravity();
-                targetPlayer.SetAsPassTarget();
+                foreach(var teammate in player.Teammates)
+                {
+                    var isPassTarget = teammate.Id == targetPlayer.Id;
+                    teammate.ChangePassTargeState(isPassTarget);
+                }
                 ball.MoveInDirection(direction, passStrength, player.TeamId);
                 player.RemoveAction(PlayerAction.Pass);
             } 
