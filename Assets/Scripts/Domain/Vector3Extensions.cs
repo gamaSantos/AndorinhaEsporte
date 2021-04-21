@@ -24,6 +24,15 @@ namespace AndorinhaEsporte.Domain
             return Vector3.Distance(target, position);
         }
 
+        public static bool InDirection(this Vector3 position, Vector3 target)
+        {
+            var angle = 30f;
+            var heading = position - target;
+            var resultAngle = Vector3.Angle(position, heading);
+
+            return resultAngle < angle;
+        }
+
         public static Vector3 DirectionTo(this Vector3 position, Vector3 target)
         {
             var heading = target - position;

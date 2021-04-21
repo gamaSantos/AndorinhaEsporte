@@ -58,7 +58,6 @@ namespace AndorinhaEsporte.Controller
             _ball = GameObject.FindObjectOfType<BallController>();
             var renderer = _meshWrapper.GetComponent<Renderer>();
 
-
             renderer.material.SetColor("_Color", _player.MainColor);
             UIController.ChangePosition(_player.FieldPosition);
             playerCommandHandler = new PlayerCommandHandler(_player, _ball, _rigidBody, transform, _team);
@@ -99,9 +98,9 @@ namespace AndorinhaEsporte.Controller
             // Gizmos.DrawWireSphere(transform.position, _player.BallControlRange);
         }
 
-         void OnCollisionEnter(Collision collision)
+        void OnCollisionEnter(Collision collision)
         {
-            if(!_player.InAir)
+            if (!_player.InAir)
             {
                 _player.IsJumping = false;
             }

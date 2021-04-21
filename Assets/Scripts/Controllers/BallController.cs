@@ -13,7 +13,6 @@ namespace AndorinhaEsporte.Controller
         Rigidbody _rigidbody;
         MatchController _matchController;
         PhysicsSceneController _simulationController;
-        Player _currentPlayer;
 
         public Vector3 Velocity => _rigidbody.velocity;
 

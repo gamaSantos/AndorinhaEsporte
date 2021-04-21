@@ -1,5 +1,3 @@
-using System.Linq;
-using AndorinhaEsporte.Domain;
 using UnityEngine;
 
 namespace AndorinhaEsporte.CommandHandlers.Actions
@@ -10,7 +8,14 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
         {
             var transform = command.PlayerTransform;
             var foward = transform.forward;
-            MoveToTarget(foward, command);
+            var player = command.Player;
+            var target = player.FieldPosition.Type == Domain.PlayerPositionType.LeftBack ? new Vector3(0, 0, 5) : new Vector3(0, 0, -5);
+            if(player.ArrivedInTarget(target))
+            {
+                player.RemoveAction(Domain.PlayerAction.Move);
+                return;
+            }
+            MoveToTarget(target, command);
 
 
             return;
