@@ -6,7 +6,7 @@ namespace AndorinhaEsporte.Domain.Events
     public class BallChangedDirectionEventArgs : EventArgs
     {
         public Vector3? LandingSpot;
-        public Guid TeamId;
+        public Guid LastTouchTeamId;
         public float? FowardDirection => LandingSpot?.z;
     }
 }

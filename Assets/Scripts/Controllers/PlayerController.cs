@@ -59,7 +59,8 @@ namespace AndorinhaEsporte.Controller
             var renderer = _meshWrapper.GetComponent<Renderer>();
 
             renderer.material.SetColor("_Color", _player.MainColor);
-            UIController.ChangePosition(_player.FieldPosition);
+            // UIController.ChangePosition(_player.FieldPosition);
+            
             playerCommandHandler = new PlayerCommandHandler(_player, _ball, _rigidBody, transform, _team);
         }
 
@@ -77,7 +78,7 @@ namespace AndorinhaEsporte.Controller
             animator.SetBool("IsSpiking", IsSpiking);
             animator.SetBool("IsIdle", isIdle);
 
-
+            UIController.ChangeText($"{_player.CurrentFunction} - {_player.CurrentAction}");
             if (playerCommandHandler != null)
                 playerCommandHandler.HandleCurrentAction(_passTarget);
 
@@ -92,7 +93,8 @@ namespace AndorinhaEsporte.Controller
                     .First();
             return target;
         }
-
+        
+        internal Player GetPlayer() => _player;
         public void OnDrawGizmos()
         {
             // Gizmos.DrawWireSphere(transform.position, _player.BallControlRange);

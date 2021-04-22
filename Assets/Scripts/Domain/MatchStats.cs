@@ -81,7 +81,7 @@ namespace AndorinhaEsporte.Domain
         }
         internal void CountTouches(object sender, BallChangedDirectionEventArgs e)
         {
-            var teamId = e.TeamId;
+            var teamId = e.LastTouchTeamId;
             if (teamId != _lastTouchTeamId)
             {
                 BallTouchCount = 1;

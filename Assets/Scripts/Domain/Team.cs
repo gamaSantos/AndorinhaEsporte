@@ -80,7 +80,15 @@ namespace AndorinhaEsporte.Domain
         {
             foreach (var player in Formation)
             {
-                player.AddAction(PlayerAction.Defend);
+                if (player.InBlockPosition)
+                {
+                    player.AddAction(PlayerAction.Block);
+                }
+                else
+                {
+                    player.AddAction(PlayerAction.Defend);
+                }
+
             }
         }
 
@@ -96,21 +104,24 @@ namespace AndorinhaEsporte.Domain
 
         internal void CheckBall(object sender, BallChangedDirectionEventArgs e)
         {
-            if (Id == e.TeamId) return;
+            if (Id == e.LastTouchTeamId) return;
             if (!e.LandingSpot.HasValue) return;
             var landingSpot = e.LandingSpot.Value;
             var foward = this.InMatchInformation.Foward.z;
 
             var incomming = (foward < 0 && e.FowardDirection > 0) || (foward > 0 && e.FowardDirection < 0);
-            if (!incomming) 
+            if (!incomming)
             {
-                foreach(var player in Formation)
+                foreach (var player in Formation)
                 {
                     player.AddAction(PlayerAction.MoveToDenfensivePosition);
                 }
             }
             else
+            {
                 Defend();
+            }
+
         }
 
         public void Serve()

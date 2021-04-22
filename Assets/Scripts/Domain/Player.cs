@@ -132,7 +132,7 @@ namespace AndorinhaEsporte.Domain
         public void ChangePassTargeState(bool isPassTarget)
         {
             IsPassTarget = isPassTarget;
-            if(SpikeState ==  SpikeStateEnum.AwaitingOrMovingToPassTarget && !isPassTarget)
+            if (SpikeState == SpikeStateEnum.AwaitingOrMovingToPassTarget && !isPassTarget)
             {
                 SpikeState = SpikeStateEnum.Finished;
                 RemoveAction(PlayerAction.Spike);
@@ -201,28 +201,46 @@ namespace AndorinhaEsporte.Domain
             IsPassTarget = false;
             IsSpiking = false;
         }
+        private Vector3 GetGroundPosition(Vector3 target)
+        {
+            return new Vector3(target.x, 0, target.z);
+        }
 
         public bool ArrivedInTarget(Vector3 target)
         {
-            var groundTarget = new Vector3(target.x, 0, target.z);
+            var groundTarget = GetGroundPosition(target);
             return Position.Distance(groundTarget) <= 0.25f;
         }
 
         public bool InDefenseRange(Vector3 ballPosition)
         {
-            var groundTarget = new Vector3(ballPosition.x, 0, ballPosition.z);
-            return Position.Distance(ballPosition) < 1f;
+            var groundTarget = GetGroundPosition(ballPosition);
+            return Position.Distance(groundTarget) < 1f;
         }
 
+        public bool InBlockRange(Vector3 ballPosition)
+        {
+            var target = GetGroundPosition(ballPosition);
+            return Position.Distance(target) < 1f;
+        }
+        public bool CanBlock(Vector3 ballPosition)
+        {
+            if (Position.IsFowardOfNet() != ballPosition.IsFowardOfNet()) return true;
+
+            var ballDistanceFromNet = 0 + Mathf.Abs(ballPosition.z + .1f);
+            var playerDistanceFromNet = 0 + Mathf.Abs(Position.z);
+            
+            return playerDistanceFromNet >= ballDistanceFromNet;
+        }
         public bool InPassRange(Vector3 ballPosition)
         {
-            var groundTarget = new Vector3(ballPosition.x, 0, ballPosition.z);
+            var groundTarget = GetGroundPosition(ballPosition);
             return Position.Distance(groundTarget) < 0.5f && ballPosition.y < 2.4;
         }
 
         public bool InSpikeRange(Vector3 ballPosition)
         {
-            var groundTarget = new Vector3(ballPosition.x, 0, ballPosition.z);
+            var groundTarget = GetGroundPosition(ballPosition);
             return isBallIn2DSpikeRange(groundTarget) && ballPosition.y < SpikeHeight;
         }
 

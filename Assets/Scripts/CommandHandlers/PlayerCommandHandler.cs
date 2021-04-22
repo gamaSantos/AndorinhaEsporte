@@ -33,6 +33,9 @@ namespace AndorinhaEsporte.CommandHandlers
                 case PlayerAction.Defend:
                     new DefendCommandHandler().Handle(_commandFactory.CreateTeamCommand());
                     break;
+                case PlayerAction.Block:
+                    new BlockCommandHandler().Handle(_commandFactory.CreateTeamCommand());
+                    break;
                 case PlayerAction.Pass:
                     new PassCommandHandler().Handle(baseCommand);
                     break;

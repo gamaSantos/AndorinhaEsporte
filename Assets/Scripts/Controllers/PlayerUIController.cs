@@ -10,7 +10,7 @@ namespace AndorinhaEsporte.Controller
 
         public Text playerFieldPosition;
         private Transform cameraTransform;
-
+        private Player _player;
         void Start()
         {
             playerFieldPosition.color = Color.white;
@@ -26,9 +26,14 @@ namespace AndorinhaEsporte.Controller
             textTransform.LookAt(textTransform.position + cameraTransform.forward);
         }
 
-        public void ChangePosition(FieldPosition newPosition)
+        // public void ChangePosition(FieldPosition newPosition)
+        // {
+        //     playerFieldPosition.text = Enum.GetName(typeof(PlayerPositionType), newPosition.Type);
+        // }
+
+        public void ChangeText(string text)
         {
-            playerFieldPosition.text = Enum.GetName(typeof(PlayerPositionType), newPosition.Type);
+            playerFieldPosition.text = text;
         }
 
     }

@@ -48,7 +48,7 @@ namespace AndorinhaEsporte.Controller
             ChangedDirection?.Invoke(this, new BallChangedDirectionEventArgs
             {
                 LandingSpot = LandingSpot,
-                TeamId = teamId
+                LastTouchTeamId = teamId
             });
             DrawTrajectory();
             audioSource?.Play();
