@@ -81,19 +81,11 @@ namespace AndorinhaEsporte.Controller
         void OnCollisionEnter(Collision collision)
         {
             if (_matchController == null) return;
-            var touchedTheGround = collision.contacts.Any(x => x.point.y <= 0.5);
-            if (!IsInPlayField())
-            {
-                _matchController.AddScoreAgainst(_lastTeamId);
-            }
-            if (!touchedTheGround) return;
-            if (IsInCourt()) _matchController.AddScore(_lastTeamId);
-            else _matchController.AddScoreAgainst(_lastTeamId);
+            var touchedTheGround = collision.contacts.Any(x => x.point.y <= 0.2f);
+            if (!touchedTheGround && Position.IsInPlayField()) return;
+            _matchController.AddScore(Position, _lastTeamId);
+
         }
-
-        private bool IsInPlayField() => Position.IsInPlayField();
-
-        private bool IsInCourt() => Position.IsInCourt();
 
         public void DrawTrajectory()
         {

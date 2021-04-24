@@ -107,23 +107,19 @@ namespace AndorinhaEsporte.Controller
             _ball.ChangedDirection += team.CheckBall;
         }
 
-        internal void AddScore(Guid teamId)
-        {
-            var scoreTeam = _match.HomeTeam.Id == teamId ? _match.HomeTeam : _match.AwayTeam;
-            var otherTeam = _match.HomeTeam.Id != teamId ? _match.HomeTeam : _match.AwayTeam;
-            Score(scoreTeam, otherTeam);
-        }
-
-        internal void AddScoreAgainst(Guid teamId)
-        {
-            var scoreTeam = _match.HomeTeam.Id != teamId ? _match.HomeTeam : _match.AwayTeam;
-            var otherTeam = _match.HomeTeam.Id == teamId ? _match.HomeTeam : _match.AwayTeam;
-            Score(scoreTeam, otherTeam);
-        }
-        private void Score(Team scoreTeam, Team otherTeam)
+        internal void AddScore(Vector3 ballPosition, Guid lastContactTeamId)
         {
             if (!isInPlay) return;
+            var scoreTeamId = lastContactTeamId;
 
+
+            if (!ballPosition.IsInPlayField() || !ballPosition.IsInCourt())
+            {
+                scoreTeamId = _match.GetOponnentId(scoreTeamId);
+            }
+
+            var scoreTeam = _match.HomeTeam.Id == scoreTeamId ? _match.HomeTeam : _match.AwayTeam;
+            var otherTeam = _match.HomeTeam.Id != scoreTeamId ? _match.HomeTeam : _match.AwayTeam;
             isInPlay = false;
             scoreTeam.ResetState();
             otherTeam.ResetState();
@@ -142,7 +138,6 @@ namespace AndorinhaEsporte.Controller
 
 
             isWaitingRotationToServe = true;
-
         }
 
 
