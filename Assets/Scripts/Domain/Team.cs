@@ -23,6 +23,8 @@ namespace AndorinhaEsporte.Domain
         public List<Player> Players { get; private set; }
         public IEnumerable<Player> Formation => Players;
 
+        private bool _nextBallTransitionIsServe = true;
+
         public Guid? GetNearestPlayerIdFrom(Vector3 targetPosition)
         {
             if (!Formation.Any()) return null;
@@ -80,7 +82,7 @@ namespace AndorinhaEsporte.Domain
         {
             foreach (var player in Formation)
             {
-                if (player.InBlockPosition)
+                if (player.InBlockPosition && !_nextBallTransitionIsServe)
                 {
                     player.AddAction(PlayerAction.Block);
                 }
@@ -90,6 +92,7 @@ namespace AndorinhaEsporte.Domain
                 }
 
             }
+            _nextBallTransitionIsServe = false;
         }
 
         public void AddPlayer(Player newPlayer)
@@ -133,9 +136,10 @@ namespace AndorinhaEsporte.Domain
         internal void Rotate()
         {
             if (InRotation()) return;
+            _nextBallTransitionIsServe = true;
             foreach (var player in Formation)
             {
-                player.AddRotationAction();
+                player.AddRotationAction();                
             }
         }
 

@@ -59,6 +59,7 @@ Material:
         m_Texture: {fileID: 8900000, guid: c5ee9a3c7eed3c94da3a4b23f865ede6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5

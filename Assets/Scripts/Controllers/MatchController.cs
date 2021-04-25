@@ -117,6 +117,10 @@ namespace AndorinhaEsporte.Controller
             {
                 scoreTeamId = _match.GetOponnentId(scoreTeamId);
             }
+            else
+            {
+                scoreTeamId = _match.GetTeamIdFromContactPoint(ballPosition);
+            }
 
             var scoreTeam = _match.HomeTeam.Id == scoreTeamId ? _match.HomeTeam : _match.AwayTeam;
             var otherTeam = _match.HomeTeam.Id != scoreTeamId ? _match.HomeTeam : _match.AwayTeam;

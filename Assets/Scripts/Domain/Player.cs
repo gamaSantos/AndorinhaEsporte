@@ -159,6 +159,7 @@ namespace AndorinhaEsporte.Domain
 
         public void AddRotationAction()
         {
+            ResetStates();
             RotateState = RotateStateEnum.Initial;
             AddAction(PlayerAction.Rotate);
         }
