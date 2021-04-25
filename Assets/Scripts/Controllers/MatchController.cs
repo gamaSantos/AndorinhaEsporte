@@ -119,7 +119,7 @@ namespace AndorinhaEsporte.Controller
             }
             else
             {
-                scoreTeamId = _match.GetTeamIdFromContactPoint(ballPosition);
+                scoreTeamId = _match.GetOponnentId(_match.GetTeamIdFromContactPoint(ballPosition));
             }
 
             var scoreTeam = _match.HomeTeam.Id == scoreTeamId ? _match.HomeTeam : _match.AwayTeam;

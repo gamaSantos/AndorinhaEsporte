@@ -46,7 +46,7 @@ namespace AndorinhaEsporte.CommandHandlers
 
         private static Vector3 ChangeDirectionToAvoidCollision(Player player, Vector3 direction, Transform playerTransform)
         {
-            var collisionRange = 1f;
+            var collisionRange = 1.1f;
             var teamatesInCollisionRange = player.Teammates.Where(teammate => 
                     teammate.Position.Distance(player.Position) < collisionRange
                     && direction.InDirection(teammate.Position)

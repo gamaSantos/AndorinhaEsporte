@@ -163,6 +163,7 @@ namespace AndorinhaEsporte.Domain
             {
                 player.AddAction(PlayerAction.ResetPosition);
             }
+            _nextBallTransitionIsServe = true;
         }
 
         public bool InRotation()
