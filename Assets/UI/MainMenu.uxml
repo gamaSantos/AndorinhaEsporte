@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" style="align-items: center; justify-content: flex-start; flex-grow: 1;">
+        <ui:VisualElement name="MainMenuContainer" style="max-width: none; min-width: auto; flex-grow: 1; justify-content: center; flex-shrink: 1; width: 20%; align-items: stretch; height: auto; max-height: none; flex-direction: column; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; margin-right: 0; margin-left: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:Button text="Play" display-tooltip-when-elided="true" name="Play" style="height: auto; justify-content: space-around; align-items: center; background-color: rgb(228, 228, 228); white-space: nowrap; -unity-text-align: middle-center;" />
+            <ui:Button text="About" display-tooltip-when-elided="true" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" style="justify-content: flex-start; align-items: center; top: auto; bottom: auto;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
