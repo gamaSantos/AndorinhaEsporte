@@ -15,11 +15,11 @@ D:/Projetos/AndorinhaEsporte
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49872
+52921
 Successfully changed project path to: D:/Projetos/AndorinhaEsporte
 D:/Projetos/AndorinhaEsporte
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 31.64 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 52.97 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.4f1 (4cd64a618c1b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,19 +35,19 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56524
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001706 seconds.
+Registered in 0.004394 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 29.92 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 62.89 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.494 seconds
+- Completed reload, in  2.569 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000990 seconds.
+Registered in 0.001712 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
 Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
@@ -82,7 +82,7 @@ UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 34.02 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 51.72 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -108,116 +108,39 @@ UnityException: The MakeDropdownFunc has already been registered. Registration d
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Mono: successfully reloaded assembly
-- Completed reload, in  1.189 seconds
+- Completed reload, in  1.888 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1674 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 78.3 MB.
+System memory in use before: 78.4 MB.
 System memory in use after: 78.4 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2135.
-Total: 1.866600 ms (FindLiveObjects: 0.147500 ms CreateObjectMapping: 0.069000 ms MarkObjects: 1.594300 ms  DeleteObjects: 0.054500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001019 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
-  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
-
-(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
-
-UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-UnityException: The MakeDropdownFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  1.053 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.0 MB.
-System memory in use after: 77.1 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2138.
-Total: 3.471200 ms (FindLiveObjects: 0.162300 ms CreateObjectMapping: 0.068700 ms MarkObjects: 3.221300 ms  DeleteObjects: 0.017400 ms)
+Total: 1.872400 ms (FindLiveObjects: 0.143300 ms CreateObjectMapping: 0.063900 ms MarkObjects: 1.607700 ms  DeleteObjects: 0.056500 ms)
 
 ========================================================================
 Received Import Request.
   path: Assets/UI/MainMenu.uxml
   artifactKey: Guid(548482474722ecf46a4ad688329f05c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/UI/MainMenu.uxml using Guid(548482474722ecf46a4ad688329f05c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff640652002 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff640624be2 (Unity) ResolveArtifactV2
-0x00007ff64063c5b0 (Unity) ImportToObjects
-0x00007ff64063b8c8 (Unity) ImportAsset
-0x00007ff6405d8e5f (Unity) AssetImportWorker::Import
-0x00007ff6405fbe02 (Unity) <lambda_9a0c3c600e605f826d039b184a304624>::operator()
-0x00007ff640680822 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff640682a90 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff64068617e (Unity) asio::io_service::run
-0x00007ff64062580a (Unity) RunAssetImportWorkerClientV2
-0x00007ff640625860 (Unity) RunAssetImporterV2
-0x00007ff640129cf6 (Unity) Application::InitializeProject
-0x00007ff6405378d7 (Unity) WinMain
-0x00007ff6420a6f72 (Unity) __scrt_common_main_seh
+0x00007ff78d012002 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff78cfe4be2 (Unity) ResolveArtifactV2
+0x00007ff78cffc5b0 (Unity) ImportToObjects
+0x00007ff78cffb8c8 (Unity) ImportAsset
+0x00007ff78cf98e5f (Unity) AssetImportWorker::Import
+0x00007ff78cfbbe02 (Unity) <lambda_9a0c3c600e605f826d039b184a304624>::operator()
+0x00007ff78d040822 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff78d042a90 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff78d04617e (Unity) asio::io_service::run
+0x00007ff78cfe580a (Unity) RunAssetImportWorkerClientV2
+0x00007ff78cfe5860 (Unity) RunAssetImporterV2
+0x00007ff78cae9cf6 (Unity) Application::InitializeProject
+0x00007ff78cef78d7 (Unity) WinMain
+0x00007ff78ea66f72 (Unity) __scrt_common_main_seh
 0x00007fffe5357034 (KERNEL32) BaseThreadInitThunk
 0x00007fffe6cc2651 (ntdll) RtlUserThreadStart
 
@@ -228,23 +151,23 @@ Assertion failed on expression: 'state.state == kUpToDate'
 Assertion failed on expression: 'state.artifactID == result'
 
 Diagnostics callstack to track who triggered the sub-import:
-0x00007ff640652002 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff640624be2 (Unity) ResolveArtifactV2
-0x00007ff64061cf21 (Unity) ProduceArtifactV2
-0x00007ff6405b625e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff6405a1358 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff64063c8ce (Unity) ImportToObjects
-0x00007ff64063b8c8 (Unity) ImportAsset
-0x00007ff6405d8e5f (Unity) AssetImportWorker::Import
-0x00007ff6405fbe02 (Unity) <lambda_9a0c3c600e605f826d039b184a304624>::operator()
-0x00007ff640680822 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff640682a90 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff64068617e (Unity) asio::io_service::run
-0x00007ff64062580a (Unity) RunAssetImportWorkerClientV2
-0x00007ff640625860 (Unity) RunAssetImporterV2
-0x00007ff640129cf6 (Unity) Application::InitializeProject
-0x00007ff6405378d7 (Unity) WinMain
-0x00007ff6420a6f72 (Unity) __scrt_common_main_seh
+0x00007ff78d012002 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff78cfe4be2 (Unity) ResolveArtifactV2
+0x00007ff78cfdcf21 (Unity) ProduceArtifactV2
+0x00007ff78cf7625e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff78cf61358 (Unity) PreviewImporter::GenerateAssetData
+0x00007ff78cffc8ce (Unity) ImportToObjects
+0x00007ff78cffb8c8 (Unity) ImportAsset
+0x00007ff78cf98e5f (Unity) AssetImportWorker::Import
+0x00007ff78cfbbe02 (Unity) <lambda_9a0c3c600e605f826d039b184a304624>::operator()
+0x00007ff78d040822 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff78d042a90 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff78d04617e (Unity) asio::io_service::run
+0x00007ff78cfe580a (Unity) RunAssetImportWorkerClientV2
+0x00007ff78cfe5860 (Unity) RunAssetImporterV2
+0x00007ff78cae9cf6 (Unity) Application::InitializeProject
+0x00007ff78cef78d7 (Unity) WinMain
+0x00007ff78ea66f72 (Unity) __scrt_common_main_seh
 0x00007fffe5357034 (KERNEL32) BaseThreadInitThunk
 0x00007fffe6cc2651 (ntdll) RtlUserThreadStart
 
@@ -254,11 +177,145 @@ Assertion failed on expression: 'state.state == kUpToDate'
 
 Assertion failed on expression: 'state.artifactID == result'
 
- -> (artifact id: 'd4dee0eb190e2d7c703c62bc00be905e') in 7.971429 seconds 
+ -> (artifact id: 'd4dee0eb190e2d7c703c62bc00be905e') in 8.586404 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000990 seconds.
+Registered in 0.001131 seconds.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
+
+
+FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
+
+
+FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
+  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
+
+(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
+
+UnityException: The MakeClientFunc has already been registered. Registration denied.
+  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
+  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
+
+UnityException: The MakeDropdownFunc has already been registered. Registration denied.
+  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
+  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
+
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Mono: successfully reloaded assembly
+ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
+Parameter name: key
+  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
+
+- Completed reload, in  2.622 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 77.1 MB.
+System memory in use after: 77.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2138.
+Total: 5.074600 ms (FindLiveObjects: 0.248900 ms CreateObjectMapping: 0.154300 ms MarkObjects: 4.594800 ms  DeleteObjects: 0.075000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1296.634840 seconds.
+  path: Assets/UI/MainMenu.uxml
+  artifactKey: Guid(548482474722ecf46a4ad688329f05c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/MainMenu.uxml using Guid(548482474722ecf46a4ad688329f05c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff78d012002 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff78cfe4be2 (Unity) ResolveArtifactV2
+0x00007ff78cffc5b0 (Unity) ImportToObjects
+0x00007ff78cffb8c8 (Unity) ImportAsset
+0x00007ff78cf98e5f (Unity) AssetImportWorker::Import
+0x00007ff78cfbbe02 (Unity) <lambda_9a0c3c600e605f826d039b184a304624>::operator()
+0x00007ff78d040822 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff78d042a90 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff78d04617e (Unity) asio::io_service::run
+0x00007ff78cfe580a (Unity) RunAssetImportWorkerClientV2
+0x00007ff78cfe5860 (Unity) RunAssetImporterV2
+0x00007ff78cae9cf6 (Unity) Application::InitializeProject
+0x00007ff78cef78d7 (Unity) WinMain
+0x00007ff78ea66f72 (Unity) __scrt_common_main_seh
+0x00007fffe5357034 (KERNEL32) BaseThreadInitThunk
+0x00007fffe6cc2651 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(548482474722ecf46a4ad688329f05c4) Importer(-1,00000000000000000000000000000000), Assets/UI/MainMenu.uxml from editor
+Resuming Guid(548482474722ecf46a4ad688329f05c4) Importer(-1,00000000000000000000000000000000) -> 521488aab8109f9c975d3a165b7adacd 
+Assertion failed on expression: 'state.state == kUpToDate'
+
+Assertion failed on expression: 'state.artifactID == result'
+
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff78d012002 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff78cfe4be2 (Unity) ResolveArtifactV2
+0x00007ff78cfdcf21 (Unity) ProduceArtifactV2
+0x00007ff78cf7625e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff78cf61358 (Unity) PreviewImporter::GenerateAssetData
+0x00007ff78cffc8ce (Unity) ImportToObjects
+0x00007ff78cffb8c8 (Unity) ImportAsset
+0x00007ff78cf98e5f (Unity) AssetImportWorker::Import
+0x00007ff78cfbbe02 (Unity) <lambda_9a0c3c600e605f826d039b184a304624>::operator()
+0x00007ff78d040822 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff78d042a90 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff78d04617e (Unity) asio::io_service::run
+0x00007ff78cfe580a (Unity) RunAssetImportWorkerClientV2
+0x00007ff78cfe5860 (Unity) RunAssetImporterV2
+0x00007ff78cae9cf6 (Unity) Application::InitializeProject
+0x00007ff78cef78d7 (Unity) WinMain
+0x00007ff78ea66f72 (Unity) __scrt_common_main_seh
+0x00007fffe5357034 (KERNEL32) BaseThreadInitThunk
+0x00007fffe6cc2651 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(548482474722ecf46a4ad688329f05c4) Importer(-1,00000000000000000000000000000000), Assets/UI/MainMenu.uxml from editor
+Resuming Guid(548482474722ecf46a4ad688329f05c4) Importer(-1,00000000000000000000000000000000) -> 521488aab8109f9c975d3a165b7adacd 
+Assertion failed on expression: 'state.state == kUpToDate'
+
+Assertion failed on expression: 'state.artifactID == result'
+
+ -> (artifact id: 'd4dee0eb190e2d7c703c62bc00be905e') in 0.034598 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000961 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -321,21 +378,84 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  0.989 seconds
+- Completed reload, in  0.856 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 77.1 MB.
-System memory in use after: 77.2 MB.
+System memory in use after: 77.3 MB.
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2141.
-Total: 1.832100 ms (FindLiveObjects: 0.140200 ms CreateObjectMapping: 0.063500 ms MarkObjects: 1.596700 ms  DeleteObjects: 0.030700 ms)
+Total: 2.020800 ms (FindLiveObjects: 0.130700 ms CreateObjectMapping: 0.063000 ms MarkObjects: 1.774600 ms  DeleteObjects: 0.051600 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 2284.398046 seconds.
+  path: Assets/UI/MainMenu.uxml
+  artifactKey: Guid(548482474722ecf46a4ad688329f05c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/MainMenu.uxml using Guid(548482474722ecf46a4ad688329f05c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff78d012002 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff78cfe4be2 (Unity) ResolveArtifactV2
+0x00007ff78cffc5b0 (Unity) ImportToObjects
+0x00007ff78cffb8c8 (Unity) ImportAsset
+0x00007ff78cf98e5f (Unity) AssetImportWorker::Import
+0x00007ff78cfbbe02 (Unity) <lambda_9a0c3c600e605f826d039b184a304624>::operator()
+0x00007ff78d040822 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff78d042a90 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff78d04617e (Unity) asio::io_service::run
+0x00007ff78cfe580a (Unity) RunAssetImportWorkerClientV2
+0x00007ff78cfe5860 (Unity) RunAssetImporterV2
+0x00007ff78cae9cf6 (Unity) Application::InitializeProject
+0x00007ff78cef78d7 (Unity) WinMain
+0x00007ff78ea66f72 (Unity) __scrt_common_main_seh
+0x00007fffe5357034 (KERNEL32) BaseThreadInitThunk
+0x00007fffe6cc2651 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(548482474722ecf46a4ad688329f05c4) Importer(-1,00000000000000000000000000000000), Assets/UI/MainMenu.uxml from editor
+Resuming Guid(548482474722ecf46a4ad688329f05c4) Importer(-1,00000000000000000000000000000000) -> 521488aab8109f9c975d3a165b7adacd 
+Assertion failed on expression: 'state.state == kUpToDate'
+
+Assertion failed on expression: 'state.artifactID == result'
+
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff78d012002 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff78cfe4be2 (Unity) ResolveArtifactV2
+0x00007ff78cfdcf21 (Unity) ProduceArtifactV2
+0x00007ff78cf7625e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff78cf61358 (Unity) PreviewImporter::GenerateAssetData
+0x00007ff78cffc8ce (Unity) ImportToObjects
+0x00007ff78cffb8c8 (Unity) ImportAsset
+0x00007ff78cf98e5f (Unity) AssetImportWorker::Import
+0x00007ff78cfbbe02 (Unity) <lambda_9a0c3c600e605f826d039b184a304624>::operator()
+0x00007ff78d040822 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff78d042a90 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff78d04617e (Unity) asio::io_service::run
+0x00007ff78cfe580a (Unity) RunAssetImportWorkerClientV2
+0x00007ff78cfe5860 (Unity) RunAssetImporterV2
+0x00007ff78cae9cf6 (Unity) Application::InitializeProject
+0x00007ff78cef78d7 (Unity) WinMain
+0x00007ff78ea66f72 (Unity) __scrt_common_main_seh
+0x00007fffe5357034 (KERNEL32) BaseThreadInitThunk
+0x00007fffe6cc2651 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(548482474722ecf46a4ad688329f05c4) Importer(-1,00000000000000000000000000000000), Assets/UI/MainMenu.uxml from editor
+Resuming Guid(548482474722ecf46a4ad688329f05c4) Importer(-1,00000000000000000000000000000000) -> 521488aab8109f9c975d3a165b7adacd 
+Assertion failed on expression: 'state.state == kUpToDate'
+
+Assertion failed on expression: 'state.artifactID == result'
+
+ -> (artifact id: 'd4dee0eb190e2d7c703c62bc00be905e') in 0.008264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.577516 seconds.
+  path: Assets/Scripts/Controllers/CameraController.cs
+  artifactKey: Guid(f59b1d53eda4a264d9d1b17248dca6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Controllers/CameraController.cs using Guid(f59b1d53eda4a264d9d1b17248dca6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e5f650bb02d4e004bedc75a4f85d044') in 0.097897 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000956 seconds.
+Registered in 0.000935 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -362,84 +482,7 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
-  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
-
-(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
-
-UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-UnityException: The MakeDropdownFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  1.021 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.1 MB.
-System memory in use after: 77.2 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2144.
-Total: 1.837400 ms (FindLiveObjects: 0.139200 ms CreateObjectMapping: 0.065900 ms MarkObjects: 1.601000 ms  DeleteObjects: 0.030200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001071 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -480,22 +523,22 @@ Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.1 MB.
-System memory in use after: 77.2 MB.
+System memory in use before: 77.2 MB.
+System memory in use after: 77.3 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2147.
-Total: 7.599700 ms (FindLiveObjects: 0.138000 ms CreateObjectMapping: 0.063900 ms MarkObjects: 7.356400 ms  DeleteObjects: 0.018400 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2144.
+Total: 1.970600 ms (FindLiveObjects: 0.150500 ms CreateObjectMapping: 0.067400 ms MarkObjects: 1.737100 ms  DeleteObjects: 0.014400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 372.625486 seconds.
+  Time since last request: 116.647871 seconds.
   path: Assets/Scenes/Main.unity
   artifactKey: Guid(66d75d16355e6ac499f10aa9f4321348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main.unity using Guid(66d75d16355e6ac499f10aa9f4321348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983ae708b7bedd2ff88ae78b1382274a') in 0.017557 seconds 
+Start importing Assets/Scenes/Main.unity using Guid(66d75d16355e6ac499f10aa9f4321348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4c346a304dfdb26d43b15ee903d0caf') in 0.016628 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000970 seconds.
+Registered in 0.000981 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -522,7 +565,7 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -558,21 +601,175 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  0.953 seconds
+- Completed reload, in  1.058 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.1 MB.
-System memory in use after: 77.2 MB.
+System memory in use before: 77.2 MB.
+System memory in use after: 77.3 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2150.
-Total: 1.975800 ms (FindLiveObjects: 0.134000 ms CreateObjectMapping: 0.062300 ms MarkObjects: 1.751600 ms  DeleteObjects: 0.026800 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2147.
+Total: 2.122000 ms (FindLiveObjects: 0.174400 ms CreateObjectMapping: 0.066200 ms MarkObjects: 1.853700 ms  DeleteObjects: 0.026400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000978 seconds.
+Registered in 0.000917 seconds.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
+
+
+FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
+
+
+FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
+  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
+
+(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
+
+UnityException: The MakeClientFunc has already been registered. Registration denied.
+  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
+  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
+
+UnityException: The MakeDropdownFunc has already been registered. Registration denied.
+  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
+  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
+
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Mono: successfully reloaded assembly
+ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
+Parameter name: key
+  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
+
+- Completed reload, in  0.908 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 77.2 MB.
+System memory in use after: 77.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2150.
+Total: 1.859800 ms (FindLiveObjects: 0.140500 ms CreateObjectMapping: 0.063400 ms MarkObjects: 1.627600 ms  DeleteObjects: 0.027400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000947 seconds.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
+
+
+FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
+
+
+FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
+  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
+
+(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
+
+UnityException: The MakeClientFunc has already been registered. Registration denied.
+  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
+  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
+
+UnityException: The MakeDropdownFunc has already been registered. Registration denied.
+  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
+  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
+
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Mono: successfully reloaded assembly
+ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
+Parameter name: key
+  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
+
+- Completed reload, in  0.941 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 77.2 MB.
+System memory in use after: 77.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2153.
+Total: 2.032200 ms (FindLiveObjects: 0.136700 ms CreateObjectMapping: 0.062300 ms MarkObjects: 1.803700 ms  DeleteObjects: 0.028700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001187 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -600,6 +797,83 @@ UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
 
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
+
+
+FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
+
+
+FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
+  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
+
+(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
+
+UnityException: The MakeClientFunc has already been registered. Registration denied.
+  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
+  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
+
+UnityException: The MakeDropdownFunc has already been registered. Registration denied.
+  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
+  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
+
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Mono: successfully reloaded assembly
+ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
+Parameter name: key
+  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
+
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 77.2 MB.
+System memory in use after: 77.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2156.
+Total: 2.091900 ms (FindLiveObjects: 0.137000 ms CreateObjectMapping: 0.063600 ms MarkObjects: 1.858600 ms  DeleteObjects: 0.031700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001153 seconds.
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
+ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
+
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -640,176 +914,16 @@ Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.1 MB.
-System memory in use after: 77.2 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2153.
-Total: 2.303900 ms (FindLiveObjects: 0.211200 ms CreateObjectMapping: 0.076400 ms MarkObjects: 1.984700 ms  DeleteObjects: 0.030400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.670935 seconds.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(febc702ad41545445b9ab71476db5dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(febc702ad41545445b9ab71476db5dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75b4cb5424ccae2e0c0465a1e9f1f708') in 0.015662 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001095 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
-  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
-
-(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
-
-UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-UnityException: The MakeDropdownFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  0.934 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.2 MB.
-System memory in use after: 77.3 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2156.
-Total: 1.878800 ms (FindLiveObjects: 0.140400 ms CreateObjectMapping: 0.065700 ms MarkObjects: 1.647600 ms  DeleteObjects: 0.023900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001321 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
-  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
-
-(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
-
-UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-UnityException: The MakeDropdownFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  0.991 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 77.2 MB.
 System memory in use after: 77.3 MB.
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2159.
-Total: 1.914900 ms (FindLiveObjects: 0.142600 ms CreateObjectMapping: 0.068300 ms MarkObjects: 1.689300 ms  DeleteObjects: 0.013700 ms)
+Total: 2.185000 ms (FindLiveObjects: 0.214900 ms CreateObjectMapping: 0.106600 ms MarkObjects: 1.830700 ms  DeleteObjects: 0.031900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000972 seconds.
+Registered in 0.001157 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -836,7 +950,7 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -872,33 +986,21 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  0.960 seconds
+- Completed reload, in  0.980 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 77.2 MB.
-System memory in use after: 77.3 MB.
+System memory in use after: 77.4 MB.
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2162.
-Total: 1.887200 ms (FindLiveObjects: 0.140100 ms CreateObjectMapping: 0.065400 ms MarkObjects: 1.652800 ms  DeleteObjects: 0.027200 ms)
+Total: 1.912000 ms (FindLiveObjects: 0.129400 ms CreateObjectMapping: 0.061800 ms MarkObjects: 1.626700 ms  DeleteObjects: 0.093300 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 368.529596 seconds.
-  path: Assets/Scenes/Main.unity
-  artifactKey: Guid(66d75d16355e6ac499f10aa9f4321348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main.unity using Guid(66d75d16355e6ac499f10aa9f4321348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0414031e9f5deb6d39123f504bf3cb7') in 0.011202 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.204458 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b2f5a964a27a72490f5ec7902608e24') in 0.006862 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000915 seconds.
+Registered in 0.000931 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -925,7 +1027,7 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -961,21 +1063,21 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  0.906 seconds
+- Completed reload, in  0.904 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.2 MB.
-System memory in use after: 77.3 MB.
+System memory in use before: 77.3 MB.
+System memory in use after: 77.4 MB.
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2165.
-Total: 2.097700 ms (FindLiveObjects: 0.136000 ms CreateObjectMapping: 0.063700 ms MarkObjects: 1.867100 ms  DeleteObjects: 0.029900 ms)
+Total: 1.916400 ms (FindLiveObjects: 0.149500 ms CreateObjectMapping: 0.065500 ms MarkObjects: 1.675800 ms  DeleteObjects: 0.024400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000932 seconds.
+Registered in 0.001244 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -1002,7 +1104,7 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
@@ -1038,16 +1140,16 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  0.928 seconds
+- Completed reload, in  0.910 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.2 MB.
-System memory in use after: 77.3 MB.
+System memory in use before: 77.3 MB.
+System memory in use after: 77.4 MB.
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2168.
-Total: 1.816900 ms (FindLiveObjects: 0.141300 ms CreateObjectMapping: 0.065100 ms MarkObjects: 1.584200 ms  DeleteObjects: 0.013600 ms)
+Total: 2.020500 ms (FindLiveObjects: 0.141000 ms CreateObjectMapping: 0.063600 ms MarkObjects: 1.788300 ms  DeleteObjects: 0.026700 ms)
 
 ========================================================================
 Received Prepare
@@ -1079,101 +1181,6 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
-  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
-
-(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
-
-UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-UnityException: The MakeDropdownFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  0.949 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.2 MB.
-System memory in use after: 77.3 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2171.
-Total: 2.639100 ms (FindLiveObjects: 0.171200 ms CreateObjectMapping: 0.109800 ms MarkObjects: 2.334100 ms  DeleteObjects: 0.023200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 78.807008 seconds.
-  path: Assets/Scenes/MainMenu
-  artifactKey: Guid(d952dc8178402b8408a3391374f94b49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu using Guid(d952dc8178402b8408a3391374f94b49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abbe2ca42bc6d24f9a845181a0c95137') in 0.007613 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.184906 seconds.
-  path: Assets/Scenes/Main.unity
-  artifactKey: Guid(66d75d16355e6ac499f10aa9f4321348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main.unity using Guid(66d75d16355e6ac499f10aa9f4321348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be1cbc2d51733199fd123281c84525ae') in 0.010773 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.111136 seconds.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(febc702ad41545445b9ab71476db5dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(febc702ad41545445b9ab71476db5dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd68729644fd4f83d2bdeb39bd359fa7e') in 0.002834 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001141 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
@@ -1210,235 +1217,21 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  0.936 seconds
+- Completed reload, in  0.964 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.2 MB.
-System memory in use after: 77.3 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2174.
-Total: 2.114300 ms (FindLiveObjects: 0.138000 ms CreateObjectMapping: 0.063400 ms MarkObjects: 1.881800 ms  DeleteObjects: 0.030200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000925 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
-  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
-
-(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
-
-UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-UnityException: The MakeDropdownFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  0.924 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.2 MB.
-System memory in use after: 77.3 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2177.
-Total: 1.897900 ms (FindLiveObjects: 0.142300 ms CreateObjectMapping: 0.064400 ms MarkObjects: 1.677800 ms  DeleteObjects: 0.012600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000922 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
-  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
-
-(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
-
-UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-UnityException: The MakeDropdownFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  0.971 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.74 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 77.3 MB.
 System memory in use after: 77.4 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2180.
-Total: 2.071900 ms (FindLiveObjects: 0.192000 ms CreateObjectMapping: 0.069200 ms MarkObjects: 1.784000 ms  DeleteObjects: 0.025500 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2171.
+Total: 2.538700 ms (FindLiveObjects: 0.227100 ms CreateObjectMapping: 0.154800 ms MarkObjects: 2.136400 ms  DeleteObjects: 0.018800 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 102.349441 seconds.
-  path: Assets/Models/volleynet.blend
-  artifactKey: Guid(5109b56014bf91e44951c570b4b0a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/volleynet.blend using Guid(5109b56014bf91e44951c570b4b0a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6831d81e1946a8e6fee8a18c0951aee1') in 0.491911 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Materials/Red.mat
-  artifactKey: Guid(741b1a014e7efae459e969258846c8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Red.mat using Guid(741b1a014e7efae459e969258846c8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ece51c7674dcf4cc602676142060c999') in 0.043534 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Materials/Blue.mat
-  artifactKey: Guid(e4092a310832857488780737c30e7d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Blue.mat using Guid(e4092a310832857488780737c30e7d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05fffa77ad9f3a7c581a17407236199b') in 0.035264 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000294 seconds.
-  path: Assets/Materials/Skybox.mat
-  artifactKey: Guid(318d2194de01d904888519e92f8eafd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Skybox.mat using Guid(318d2194de01d904888519e92f8eafd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5e7be743a7d48486aa13746cc420cab') in 0.063002 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/Materials/BallMaterial.mat
-  artifactKey: Guid(8af8438afa00d9d448385a56844f1442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/BallMaterial.mat using Guid(8af8438afa00d9d448385a56844f1442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87b8f9ab6dc3b85dfda73e1168954047') in 0.013253 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000177 seconds.
-  path: Assets/Models/VolleyCourt_Export.blend
-  artifactKey: Guid(81c1e4c9e1f669b4aa81597fbd2e3558) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/VolleyCourt_Export.blend using Guid(81c1e4c9e1f669b4aa81597fbd2e3558) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '871130c41d7301b6ccb5d9b6ab2b5edc') in 0.074651 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/Materials/BallPathMaterial.mat
-  artifactKey: Guid(771a8689a533b16468d89311bfe3357a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/BallPathMaterial.mat using Guid(771a8689a533b16468d89311bfe3357a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cd7d55c2af504ce93f6a740994cb208') in 0.015465 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/UI Toolkit/Resources/Fonts & Materials/LiberationSans SDF.asset
-  artifactKey: Guid(11620d32377004149ba4922e54514328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI Toolkit/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(11620d32377004149ba4922e54514328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a33d3e2043905ca7d246cd5b46e5e50d') in 0.081140 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/Models/dummy.blend
-  artifactKey: Guid(70adf359a60dc2a418d0ae6746d51441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/dummy.blend using Guid(70adf359a60dc2a418d0ae6746d51441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '584fda318b32f2a4779d3ac0db78a25e') in 0.127084 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/UI Toolkit/Resources/Fonts & Materials/LiberationSans.ttf
-  artifactKey: Guid(189c84d4bdcba6d449b66c25aad92981) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI Toolkit/Resources/Fonts & Materials/LiberationSans.ttf using Guid(189c84d4bdcba6d449b66c25aad92981) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '382d56ffe5b5c5bbd52135d600830e81') in 0.149517 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000966 seconds.
+Registered in 0.000958 seconds.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 Begin MonoManager ReloadAssembly
@@ -1465,186 +1258,8 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
-  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
-
-(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
-
-UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-UnityException: The MakeDropdownFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  0.989 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1659 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.3 MB.
-System memory in use after: 96.4 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2261.
-Total: 2.158100 ms (FindLiveObjects: 0.153300 ms CreateObjectMapping: 0.062900 ms MarkObjects: 1.910700 ms  DeleteObjects: 0.030100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 36.029947 seconds.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(febc702ad41545445b9ab71476db5dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(febc702ad41545445b9ab71476db5dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7618714290c5867c4196640d2d692c2') in 0.012958 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 287.690947 seconds.
-  path: Assets/Scenes/Main.unity
-  artifactKey: Guid(66d75d16355e6ac499f10aa9f4321348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main.unity using Guid(66d75d16355e6ac499f10aa9f4321348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cade06434c377bf2f6655a66d8c5c487') in 0.003831 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 26.380701 seconds.
-  path: Assets/Scenes/SampleSceneSettings.lighting
-  artifactKey: Guid(f6ae1cfa9a89bba4abd380cd06451d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleSceneSettings.lighting using Guid(f6ae1cfa9a89bba4abd380cd06451d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d5513dd96a153c227de1fd12d368ecd') in 0.008307 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001086 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextHandleFactory:CreateEditorHandle' is inaccessible from method `UnityEngine.UIElements.Text.TextCoreHandle:InjectTextCoreHandle ()'
-
-
-FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:GetFont' is inaccessible from method `UnityEngine.UIElements.Text.TextDelegates:InitializeDelegates ()'
-  at UnityEngine.UIElements.Text.TextDelegates.EditorInitialization () [0x00000] in D:\Projetos\AndorinhaEsporte\Library\PackageCache\com.unity.ui@1.0.0-preview.14\Text\Delegates\TextDelegates.cs:38 
-
-(Filename: Library/PackageCache/com.unity.ui@1.0.0-preview.14/Text/Delegates/TextDelegates.cs Line: 38)
-
-UnityException: The MakeClientFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DragAndDropUtility.RegisterMakeClientFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorDragAndDrop.RegisterEditorClient () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-UnityException: The MakeDropdownFunc has already been registered. Registration denied.
-  at UnityEngine.UIElements.DropdownUtility.RegisterMakeDropdownFunc (System.Func`1[TResult] makeClient) [0x00017] in <6aef74cd6e9c4a708ea4a51c97de39d4>:0 
-  at UnityEditor.UIElements.EditorMenuExtensions.RegisterEditorDropdown () [0x0000a] in <c23044a1d79146ae9e09271e58031064>:0 
-
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Mono: successfully reloaded assembly
-ArgumentException: An item with the same key has already been added. Key: UnityEditor.UIElements.EditorAtlasMonitorInjector
-Parameter name: key
-  at System.Collections.Generic.SortedList`2[TKey,TValue].Add (TKey key, TValue value) [0x00041] in <480201908ed94ddaa0561e2e6e0ddd4e>:0 
-  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x000ae] in <cbc56ce48ec645d2beabdfed6b9ae8ee>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
-
-- Completed reload, in  0.966 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.2 MB.
-System memory in use after: 96.3 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2264.
-Total: 2.131600 ms (FindLiveObjects: 0.172500 ms CreateObjectMapping: 0.067600 ms MarkObjects: 1.865800 ms  DeleteObjects: 0.024500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.995137 seconds.
-  path: Assets/Scenes/Main
-  artifactKey: Guid(782defb51e960034eaeb29ba5841ce35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main using Guid(782defb51e960034eaeb29ba5841ce35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de9ce5d9b22ccd74e0a21deef05f514f') in 0.008610 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000901 seconds.
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
-ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Multiple scripted importers are targeting the extension 'uxml' and have all been rejected: UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.UIElementsViewImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'uss' and have all been rejected: UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.StyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Multiple scripted importers are targeting the extension 'tss' and have all been rejected: UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll), UnityEditor.UIElements.StyleSheets.ThemeStyleSheetImporter (assembly: C:\Program Files\Unity\Hub\Editor\2021.1.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll) 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.AssetImporters.ScriptedImporter:RegisterScriptedImporters ()
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEngine.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEngine.UIElementsModule.dll)
 ASSEMBLY OVERRIDES: * override found for Unity assembly UnityEditor.UIElementsModule.dll (override path Library/ScriptAssemblies/UnityEditor.UIElementsModule.dll)
 FieldAccessException: Field `UnityEngine.UIElements.TextDelegates:ImportDefaultTextSettings' is inaccessible from method `UnityEditor.UIElements.Text.TextDelegates:InitializeDelegates ()'
@@ -1679,14 +1294,14 @@ UnityEngine.Logger:LogException(Exception, Object)
 UnityEngine.Debug:LogException(Exception)
 UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
 
-- Completed reload, in  1.036 seconds
+- Completed reload, in  0.980 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1657 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.2 MB.
-System memory in use after: 96.4 MB.
+System memory in use before: 77.3 MB.
+System memory in use after: 77.4 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2267.
-Total: 4.775000 ms (FindLiveObjects: 0.214600 ms CreateObjectMapping: 0.082100 ms MarkObjects: 4.459400 ms  DeleteObjects: 0.017300 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2174.
+Total: 2.365600 ms (FindLiveObjects: 0.278000 ms CreateObjectMapping: 0.113000 ms MarkObjects: 1.945500 ms  DeleteObjects: 0.028200 ms)
 

@@ -35,12 +35,12 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 if (ballHeight < player.SpikeHeight)
                 {
                     var foward = player.TeamFoward.z;
-                    var horizontalDirection = Random.Range(0f, 0.1f) * foward;
-                    var verticalDirection = Random.Range(0.5f, 1f);
-                    var forwardDirection = Random.Range(0.5f, 1f) * foward;
-                    var force = Random.Range(6f, 6.8f);
+                    var horizontalDirection = Random.Range(-.3f, .1f) * foward;
+                    var verticalDirection = Random.Range(0.7f, 1f);
+                    var forwardDirection = Random.Range(0.6f, 1f) * foward;
+                    var force = Random.Range(7f, 8.5f);
                     var spikeDirection = new Vector3(horizontalDirection, verticalDirection, forwardDirection);
-                    Debug.Log(spikeDirection);
+                    
                     player.IsSpiking = false;
                     ball.MoveInDirection(spikeDirection, force, player.TeamId);
                     Finalizar(player);

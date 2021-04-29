@@ -216,7 +216,7 @@ namespace AndorinhaEsporte.Domain
         public bool InDefenseRange(Vector3 ballPosition)
         {
             var groundTarget = GetGroundPosition(ballPosition);
-            return Position.Distance(groundTarget) < 1f;
+            return Position.Distance(groundTarget) < 1f && ballPosition.y < 2;
         }
 
         public bool InBlockRange(Vector3 ballPosition)
