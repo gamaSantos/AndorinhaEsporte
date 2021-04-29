@@ -11,7 +11,7 @@ namespace AndorinhaEsporte.Controller
         void Start()
         {
             var controllers = FindObjectsOfType<PlayerController>();
-            var teamInfo = new TeamInMatchInformation(Guid.NewGuid(), Vector3.forward, Color.red, Color.red);
+            var teamInfo = new TeamInMatchInformation(Guid.NewGuid(), "testName", Color.red, Color.red);
             var playerA = new Domain.Player(FieldPositionFactory.Create(PlayerPositionType.RightBack), teamInfo);
             var playerB = new Domain.Player(FieldPositionFactory.Create(PlayerPositionType.LeftBack), teamInfo);
 

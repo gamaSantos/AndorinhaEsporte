@@ -8,14 +8,11 @@ namespace AndorinhaEsporte.Domain
 {
     public class Team
     {
-        public Team(Guid id, bool isHomeTeam)
+        public Team(Guid id, TeamInMatchInformation inMatchInfo)
         {
             Id = id;
             Players = new List<Player>();
-            var foward = isHomeTeam ? Vector3.forward : Vector3.back;
-
-            UnityEngine.Random.InitState(id.GetHashCode());
-            InMatchInformation = new TeamInMatchInformation(Id, foward, UnityEngine.Random.ColorHSV(0, 1, 0.7f, 1), UnityEngine.Random.ColorHSV());
+           InMatchInformation = inMatchInfo;
         }
         public Guid Id { get; }
         public Vector3 Foward => InMatchInformation.Foward;
@@ -24,6 +21,11 @@ namespace AndorinhaEsporte.Domain
         public IEnumerable<Player> Formation => Players;
 
         private bool _nextBallTransitionIsServe = true;
+
+        public void SetFoward(Vector3 direction)
+        {
+            InMatchInformation.Foward = direction;
+        }
 
         public Guid? GetNearestPlayerIdFrom(Vector3 targetPosition)
         {

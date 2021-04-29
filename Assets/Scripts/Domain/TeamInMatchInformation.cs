@@ -5,15 +5,16 @@ namespace AndorinhaEsporte.Domain
 {
     public class TeamInMatchInformation
     {
-        public TeamInMatchInformation(Guid teamId, Vector3 foward, Color mainColor, Color secondaryColor)
+        public TeamInMatchInformation(Guid teamId, string name, Color mainColor, Color secondaryColor)
         {
-            Foward = foward;
+            Name = name;
             MainColor = mainColor;
             SecondaryColor = secondaryColor;
             TeamId = teamId;
         }
 
         public Guid TeamId { get; }
+        public string Name { get; }
         public Vector3 Foward { get; set; }
         public Color MainColor { get; }
         public Color SecondaryColor { get; }

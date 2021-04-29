@@ -1,16 +1,24 @@
+using AndorinhaEsporte.Data;
 using AndorinhaEsporte.Domain;
 using System;
+using UnityEngine;
 
 namespace AndorinhaEsporte.Services
 {
     public class MatchService
     {
-
+        private readonly TeamRepository _teamRepository;
+        public MatchService()
+        {
+            _teamRepository = new TeamRepository();
+        }
         public Match GetMatch(Guid matchId)
         {
-            var homeTeam = new Team(Guid.NewGuid(), true);
+            var homeTeam = _teamRepository.GetTeam(0);
+            homeTeam.SetFoward(Vector3.forward);
             GetTeamPlayers(homeTeam, true);
-            var awayTeam = new Team(Guid.NewGuid(), false);
+            var awayTeam = _teamRepository.GetTeam(1);
+            awayTeam.SetFoward(Vector3.back);
             GetTeamPlayers(awayTeam, false);
             var match = new Match(Guid.NewGuid(), homeTeam, awayTeam);
 
