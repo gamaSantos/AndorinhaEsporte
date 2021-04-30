@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="TeamContainer" style="align-items: center; padding-top: 0; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+        <ui:Label text="Team Name&#10;" display-tooltip-when-elided="true" name="TeamName" style="align-items: flex-start;" />
+        <ui:IMGUIContainer name="TeamLogo" style="width: 50px; height: 50px; background-image: url(&apos;/Assets/UI/Assets/volleyicon.png&apos;); background-color: rgba(127, 127, 127, 255); margin-top: 10px;" />
+    </ui:VisualElement>
+</ui:UXML>

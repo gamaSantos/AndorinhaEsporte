@@ -8,9 +8,9 @@ namespace AndorinhaEsporte.Domain
 {
     public class Team
     {
-        public Team(Guid id, TeamInMatchInformation inMatchInfo)
+        public Team(TeamInMatchInformation inMatchInfo)
         {
-            Id = id;
+            Id = inMatchInfo.TeamId;
             Players = new List<Player>();
            InMatchInformation = inMatchInfo;
         }
