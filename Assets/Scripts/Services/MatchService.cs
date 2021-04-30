@@ -1,5 +1,6 @@
 using AndorinhaEsporte.Data;
 using AndorinhaEsporte.Domain;
+using AndorinhaEsporte.UI;
 using System;
 using UnityEngine;
 
@@ -14,10 +15,18 @@ namespace AndorinhaEsporte.Services
         }
         public Match GetMatch(Guid matchId)
         {
+
             var homeTeam = _teamRepository.GetTeam(0);
+            var awayTeam = _teamRepository.GetTeam(2);
+            if (MainMenuController.SELECTED_TEAM_ID != Guid.Empty)
+            {
+                homeTeam = _teamRepository.GetTeam(MainMenuController.SELECTED_TEAM_ID);
+                awayTeam = _teamRepository.GetTeam(MainMenuController.OPPONENT_TEAM_ID);
+            }
+
             homeTeam.SetFoward(Vector3.forward);
             GetTeamPlayers(homeTeam, true);
-            var awayTeam = _teamRepository.GetTeam(1);
+
             awayTeam.SetFoward(Vector3.back);
             GetTeamPlayers(awayTeam, false);
             var match = new Match(Guid.NewGuid(), homeTeam, awayTeam);

@@ -11,76 +11,80 @@ namespace AndorinhaEsporte.UI
 {
     public class MainMenuController : MonoBehaviour
     {
-        // Start is called before the first frame update
+        public static Guid SELECTED_TEAM_ID;
+        public static Guid OPPONENT_TEAM_ID;
+
+
         Button _startButton;
-        ListView _teamListView;
+        private VisualElement _teamContainer;
+        private VisualElement _mainMenuContainer;
+
+        private int _selectedTeamIndex;
+        private Label _teamNameLabel;
+        private VisualElement _teamLogo;
         TeamRepository _teamRepository;
         IEnumerable<Team> _teams;
 
-        public VisualTreeAsset TeamListTemplate;
-
         void Start()
         {
-            var document = GetComponent<UIDocument>();
-            _startButton = document.rootVisualElement.Q<Button>(name: "Play");
-            _teamListView = document.rootVisualElement.Q<ListView>("TeamListView");
-            _startButton.clicked += PlayButtonClicked;
-
             _teamRepository = new TeamRepository();
             _teams = _teamRepository.List();
-            
-            BindTeamListView();
 
+            var document = GetComponent<UIDocument>().rootVisualElement;
+
+            BindMainMenu(document);
+            BindTeamContainer(document);            
         }
 
-        private void BindTeamListView()
+        private void BindMainMenu(VisualElement document)
         {
-            if (_teamListView != null)
-            {
-                if (_teamListView.makeItem == null)
-                    _teamListView.makeItem = MakeItem;
-                if (_teamListView.bindItem == null)
-                    _teamListView.bindItem = BindItem;
-                _teamListView.itemsSource = _teams.ToList();
-
-                _teamListView.Refresh();
-            }
-            else
-            {
-                Debug.Log("List view is null");
-            }
+            _mainMenuContainer = document.Q<VisualElement>("MainMenuContainer");
+            _startButton = document.Q<Button>(name: "Play");
+            _startButton.clicked += PlayButtonClicked;
         }
 
-
-        // Update is called once per frame
-        void Update()
+        private void BindTeamContainer(VisualElement document)
         {
+            _teamContainer = document.Q<VisualElement>("TeamContainer");
+            _teamNameLabel = document.Q<Label>("TeamName");
+            _teamLogo = document.Q<VisualElement>("TeamLogo");
 
+            _teamContainer.Q<Button>("SelectTeamButton").clicked += SelectTeamButton;
+            _teamContainer.Q<Button>("PreviousTeamButton").clicked += () => { _selectedTeamIndex = BindTeam(_selectedTeamIndex - 1); };
+            _teamContainer.Q<Button>("NextTeamButton").clicked += () => { _selectedTeamIndex = BindTeam(_selectedTeamIndex + 1); };
+            _selectedTeamIndex = BindTeam(_selectedTeamIndex);
         }
 
-        private Action PlayButtonClicked = () =>
+        private int BindTeam(int index)
         {
+            if (_teamNameLabel == null) return 0;
+            if (_teamLogo == null) return 0;
+            index = GetNextIndex(index);
+            var team = _teams.ElementAt(index);
+            _teamNameLabel.text = team.InMatchInformation.Name.ToUpper();
+            _teamLogo.style.unityBackgroundImageTintColor = team.InMatchInformation.MainColor;
+            return index;
+        }
+
+        private int GetNextIndex(int index)
+        {
+            index = index >= _teams.Count() ? 0 : index;
+            index = index < 0 ? _teams.Count() - 1 : index;
+            return index;
+        }
+
+        private void PlayButtonClicked()
+        {
+            if (_teamContainer.visible) return;
+            _teamContainer.visible = true;
+        }
+
+        private void SelectTeamButton()
+        {
+            var team = _teams.ElementAt(_selectedTeamIndex);
+            SELECTED_TEAM_ID = team.Id;
+            OPPONENT_TEAM_ID = _teams.ElementAt(GetNextIndex(_selectedTeamIndex + 1)).Id;
             SceneManager.LoadScene("Main", LoadSceneMode.Single);
-        };
-
-        private VisualElement MakeItem()
-        {
-            if (TeamListTemplate != null)
-                return TeamListTemplate.CloneTree();
-            throw new Exception("Team list template not binded in UI.MainMenuController");
-        }
-
-        private void BindItem(VisualElement element, int index)
-        {
-            var team = _teams.ElementAt(index).InMatchInformation;
-            element.Q<Label>("TeamName").text = "Player " + team.Name;
-
-            var mainColor = team.MainColor;
-            var secondaryColor = team.SecondaryColor;
-
-            element.Q("TeamLogo").style.unityBackgroundImageTintColor = mainColor;
-
-            element.userData = team;
         }
     }
 }
