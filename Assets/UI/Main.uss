@@ -24,7 +24,7 @@ Button {
     padding-bottom: 5px;
     min-width: 50px;
     -unity-font-style: bold;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 Button:hover {
@@ -36,3 +36,29 @@ Button:active {
     border-color: rgb(234, 234, 234);
 }
 
+.Container {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.AboutText {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    -unity-font-style: bold;
+    font-size: 14px;
+    white-space: normal;
+}
