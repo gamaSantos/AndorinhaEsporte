@@ -1,11 +1,14 @@
 using AndorinhaEsporte.Domain;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace AndorinhaEsporte.Controller
 {
     public class HudController : MonoBehaviour
     {
+        private VisualElement _root;
+
         private Label _homeScore;
         private Label _homeSets;
         private Label _homeName;
@@ -16,14 +19,16 @@ namespace AndorinhaEsporte.Controller
 
         void Start()
         {
-            var root = GetComponent<UIDocument>().rootVisualElement;
-            _homeScore = root.Q<Label>("home-score");
-            _homeSets = root.Q<Label>("home-sets");
-            _homeName = root.Q<Label>("home-name");
+            _root = GetComponent<UIDocument>().rootVisualElement;
+            _homeScore = _root.Q<Label>("home-score");
+            _homeSets = _root.Q<Label>("home-sets");
+            _homeName = _root.Q<Label>("home-name");
 
-            _awayScore = root.Q<Label>("away-score");
-            _awaySets = root.Q<Label>("away-sets");
-            _awayName = root.Q<Label>("away-name");
+            _awayScore = _root.Q<Label>("away-score");
+            _awaySets = _root.Q<Label>("away-sets");
+            _awayName = _root.Q<Label>("away-name");
+
+            _root.Q<Button>("back-button").clicked += () => { SceneManager.LoadScene("MainMenu"); };
         }
 
         public void UpdateHud(MatchStats stats)
@@ -45,6 +50,11 @@ namespace AndorinhaEsporte.Controller
             _homeName.text = stats.Name;
             _homeScore.text = stats.Score.ToString("00");
             _homeSets.text = stats.WinnedSetCount.ToString();
+        }
+
+        public void ShowEndScreen()
+        {
+            _root.Q<VisualElement>("end-screen").visible = true;
         }
     }
 }

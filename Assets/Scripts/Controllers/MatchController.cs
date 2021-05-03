@@ -41,6 +41,7 @@ namespace AndorinhaEsporte.Controller
             if (_matchStats.IsFinished)
             {
                 Time.timeScale = 0;
+                _hudController.ShowEndScreen();
                 return;
             }
             if (isInPlay || _match.IsTeamBusy()) return;

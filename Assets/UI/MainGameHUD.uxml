@@ -4,19 +4,23 @@
     <ui:VisualElement name="Screen" style="flex-grow: 1;">
         <ui:VisualElement name="ScoreBoard" class="scoreboard">
             <ui:VisualElement name="HomeTeam" class="item" style="flex-direction: row; justify-content: space-between;">
-                <ui:Label text="Label" display-tooltip-when-elided="true" name="home-name" style="white-space: nowrap; -unity-text-align: upper-center; flex-grow: 1; flex-direction: row;" />
+                <ui:Label text="Home" display-tooltip-when-elided="true" name="home-name" style="white-space: nowrap; -unity-text-align: upper-center; flex-grow: 1; flex-direction: row;" />
                 <ui:VisualElement name="home-score-wrapper" style="flex-direction: row;">
-                    <ui:Label text="Label" display-tooltip-when-elided="true" name="home-sets" class="score" />
-                    <ui:Label text="Label" display-tooltip-when-elided="true" name="home-score" class="score" />
+                    <ui:Label text="0&#10;" display-tooltip-when-elided="true" name="home-sets" class="score" />
+                    <ui:Label text="00" display-tooltip-when-elided="true" name="home-score" class="score" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="AwayTeam" class="item" style="flex-direction: row; justify-content: space-between;">
-                <ui:Label text="Label" display-tooltip-when-elided="true" name="away-name" style="flex-grow: 1; -unity-text-align: upper-center;" />
+                <ui:Label text="Away" display-tooltip-when-elided="true" name="away-name" style="flex-grow: 1; -unity-text-align: upper-center;" />
                 <ui:VisualElement name="away-score-wrapper" style="flex-direction: row;">
-                    <ui:Label text="Label" display-tooltip-when-elided="true" name="away-sets" class="score" />
-                    <ui:Label text="Label" display-tooltip-when-elided="true" name="away-score" class="score" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="away-sets" class="score" />
+                    <ui:Label text="00" display-tooltip-when-elided="true" name="away-score" class="score" />
                 </ui:VisualElement>
             </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="end-screen" class="Container">
+            <ui:Label text="Congratulations&#10;" display-tooltip-when-elided="true" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

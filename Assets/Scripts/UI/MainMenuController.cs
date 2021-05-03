@@ -1,11 +1,8 @@
 using System;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using AndorinhaEsporte.Data;
-using System.Collections.Generic;
-using AndorinhaEsporte.Domain;
 
 namespace AndorinhaEsporte.UI
 {
