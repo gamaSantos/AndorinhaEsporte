@@ -10,24 +10,21 @@ namespace AndorinhaEsporte.Domain
         public MatchStats(Team hometeam, Team awayteam)
         {
             CurrentSet = 1;
-            HomeTeamName = hometeam.InMatchInformation.Name;
-            AwayTeamName = awayteam.InMatchInformation.Name;
+            HomeStats = new TeamStats() { Name = hometeam.InMatchInformation.Name };
+            AwayStats = new TeamStats() { Name = awayteam.InMatchInformation.Name };
         }
 
-        public bool IsFinished => ReachedPointLimit() && (HomeSetCount > (MAX_SET_COUNT / 2) || AwaySetCount > (MAX_SET_COUNT / 2));
+        public bool IsFinished => ReachedPointLimit() && (HomeStats.WinnedSetCount > (MAX_SET_COUNT / 2) || AwayStats.WinnedSetCount > (MAX_SET_COUNT / 2));
         public bool IsSetFinished => ReachedPointLimit();
-        public bool IsHomeWinner => HomeScore > AwayScore;
+        public bool IsHomeWinner => HomeStats.Score > AwayStats.Score;
 
-        public string HomeTeamName { get; }
-        public string AwayTeamName { get; }
 
-        public int HomeScore { get; private set; }
+        public TeamStats HomeStats { get; set; }
+        public TeamStats AwayStats { get; set; }
 
-        public int AwayScore { get; private set; }
+
 
         public int CurrentSet { get; private set; }
-        public int HomeSetCount { get; private set; }
-        public int AwaySetCount { get; private set; }
 
         private Guid _lastTouchTeamId { get; set; }
 
@@ -36,17 +33,17 @@ namespace AndorinhaEsporte.Domain
 
         private bool ReachedPointLimit()
         {
-            var pointDif = Math.Abs(HomeScore - AwayScore);
+            var pointDif = Math.Abs(HomeStats.Score - AwayStats.Score);
             if (pointDif < 2) return false;
-            return HomeScore >= SET_POINT_LIMIT || AwayScore >= SET_POINT_LIMIT;
+            return HomeStats.Score >= SET_POINT_LIMIT || AwayStats.Score >= SET_POINT_LIMIT;
         }
 
         internal void ResetScore()
         {
             if (!IsFinished)
             {
-                HomeScore = 0;
-                AwayScore = 0;
+                HomeStats.Score = 0;
+                AwayStats.Score = 0;
             }
         }
 
@@ -54,16 +51,16 @@ namespace AndorinhaEsporte.Domain
         {
             if (isHomeTeam)
             {
-                HomeScore++;
+                HomeStats.Score++;
             }
             else
             {
-                AwayScore++;
+                AwayStats.Score++;
             }
             if (IsSetFinished)
             {
-                if (IsHomeWinner) HomeSetCount++;
-                else AwaySetCount++;
+                if (IsHomeWinner) HomeStats.WinnedSetCount++;
+                else AwayStats.WinnedSetCount++;
                 CurrentSet++;
             }
 
@@ -88,5 +85,12 @@ namespace AndorinhaEsporte.Domain
             if (IsServe) return;
             BallTouchCount++;
         }
+    }
+
+    public class TeamStats
+    {
+        public string Name { get; set; }
+        public int WinnedSetCount { get; set; }
+        public int Score { get; set; }
     }
 }

@@ -28,15 +28,23 @@ namespace AndorinhaEsporte.Controller
 
         public void UpdateHud(MatchStats stats)
         {
-            if(stats == null) return;
+            if (stats == null) return;
+            UpdateHome(stats.HomeStats);
+            UpdateAway(stats.AwayStats);
+        }
 
-            _homeName.text = stats.HomeTeamName;
-            _homeScore.text = stats.HomeScore.ToString("00");
-            _homeSets.text = stats.HomeSetCount.ToString();
+        private void UpdateAway(TeamStats stats)
+        {
+            _awayName.text = stats.Name;
+            _awayScore.text = stats.Score.ToString("00");
+            _awaySets.text = stats.WinnedSetCount.ToString();
+        }
 
-            _awayName.text = stats.AwayTeamName;
-            _awayScore.text = stats.AwayScore.ToString("00");
-            _awaySets.text = stats.AwaySetCount.ToString();
+        private void UpdateHome(TeamStats stats)
+        {
+            _homeName.text = stats.Name;
+            _homeScore.text = stats.Score.ToString("00");
+            _homeSets.text = stats.WinnedSetCount.ToString();
         }
     }
 }
