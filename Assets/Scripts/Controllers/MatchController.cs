@@ -31,7 +31,7 @@ namespace AndorinhaEsporte.Controller
             _camera = Camera.main.GetComponent<CameraController>();
             _matchService = new MatchService();
             initiateMatch();
-            _hudController = gameObject.GetComponent<HudController>();
+            _hudController = GameObject.FindObjectOfType<HudController>();
         }
 
 
@@ -44,7 +44,6 @@ namespace AndorinhaEsporte.Controller
                 return;
             }
             if (isInPlay || _match.IsTeamBusy()) return;
-            _matchStats.UpdateMatchTimer(Time.deltaTime);
 
 
             if (_matchStats.IsSetFinished)

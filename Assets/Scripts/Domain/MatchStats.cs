@@ -7,17 +7,20 @@ namespace AndorinhaEsporte.Domain
     {
         private const int SET_POINT_LIMIT = 1;
         private const int MAX_SET_COUNT = 3;
-        public MatchStats(TimeSpan matchLenght)
+        public MatchStats(Team hometeam, Team awayteam)
         {
-            matchTime = matchLenght.TotalSeconds;
             CurrentSet = 1;
+            HomeTeamName = hometeam.InMatchInformation.Name;
+            AwayTeamName = awayteam.InMatchInformation.Name;
         }
 
-        private double matchTime { get; set; }
-        public TimeSpan CurrentTime => TimeSpan.FromSeconds(matchTime);
-        public bool IsFinished => (matchTime <= 0 || ReachedPointLimit()) && (HomeSetCount > (MAX_SET_COUNT / 2) || AwaySetCount > (MAX_SET_COUNT / 2));
-        public bool IsSetFinished => matchTime <= 0 || ReachedPointLimit();
+        public bool IsFinished => ReachedPointLimit() && (HomeSetCount > (MAX_SET_COUNT / 2) || AwaySetCount > (MAX_SET_COUNT / 2));
+        public bool IsSetFinished => ReachedPointLimit();
         public bool IsHomeWinner => HomeScore > AwayScore;
+
+        public string HomeTeamName { get; }
+        public string AwayTeamName { get; }
+
         public int HomeScore { get; private set; }
 
         public int AwayScore { get; private set; }
@@ -30,13 +33,6 @@ namespace AndorinhaEsporte.Domain
 
         public int BallTouchCount { get; private set; }
         public bool IsServe { get; private set; }
-
-
-        public void UpdateMatchTimer(double timeFromLastUpdate)
-        {
-            if (IsFinished) return;
-            matchTime -= timeFromLastUpdate;
-        }
 
         private bool ReachedPointLimit()
         {
@@ -89,8 +85,8 @@ namespace AndorinhaEsporte.Domain
                 IsServe = false;
                 return;
             }
-            if(IsServe) return;
-            BallTouchCount++;            
+            if (IsServe) return;
+            BallTouchCount++;
         }
     }
 }

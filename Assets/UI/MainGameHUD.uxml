@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="Main.uss" />
+    <Style src="Hud.uss" />
+    <ui:VisualElement name="Screen" style="flex-grow: 1;">
+        <ui:VisualElement name="ScoreBoard" class="scoreboard">
+            <ui:VisualElement name="HomeTeam" class="item" style="flex-direction: row; justify-content: space-between;">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="home-name" style="white-space: nowrap; -unity-text-align: upper-center; flex-grow: 1; flex-direction: row;" />
+                <ui:VisualElement name="home-score-wrapper" style="flex-direction: row;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="home-sets" class="score" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="home-score" class="score" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="AwayTeam" class="item" style="flex-direction: row; justify-content: space-between;">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="away-name" style="flex-grow: 1; -unity-text-align: upper-center;" />
+                <ui:VisualElement name="away-score-wrapper" style="flex-direction: row;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="away-sets" class="score" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="away-score" class="score" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

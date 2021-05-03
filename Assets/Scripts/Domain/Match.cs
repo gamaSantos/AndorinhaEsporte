@@ -16,7 +16,7 @@ namespace AndorinhaEsporte.Domain
             AwayTeam = awayTeam;
             _teams.Add(homeTeam);
             _teams.Add(awayTeam);
-            Stats = new MatchStats(new TimeSpan(0, 59, 0));
+            Stats = new MatchStats(homeTeam, awayTeam);
         }
 
         public Guid Id { get; set; }
@@ -71,7 +71,7 @@ namespace AndorinhaEsporte.Domain
         public Guid GetTeamIdFromContactPoint(Vector3 contactPoint)
         {
             var horizontalPosition = contactPoint.z;
-            if(horizontalPosition < 0) return _teams.First(team => team.Foward.z > 0).Id;
+            if (horizontalPosition < 0) return _teams.First(team => team.Foward.z > 0).Id;
             else return _teams.First(team => team.Foward.z < 0).Id;
         }
         private List<Player> GetAllPlayers()
