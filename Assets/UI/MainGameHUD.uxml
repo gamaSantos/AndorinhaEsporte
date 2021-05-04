@@ -20,7 +20,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="end-screen" class="Container">
             <ui:Label text="Congratulations&#10;" display-tooltip-when-elided="true" />
-            <ui:Button text="Quit" display-tooltip-when-elided="true" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="back-button" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

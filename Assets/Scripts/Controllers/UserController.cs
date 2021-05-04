@@ -1,38 +1,44 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using AndorinhaEsporte.Inputs;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
 namespace AndorinhaEsporte.Controller
 {
     public class UserController : MonoBehaviour
     {
-        // Start is called before the first frame update
         IEnumerable<PlayerController> _playerControllers;
+        private AndorinhaUserActions _actions;
+
+
+        private void Awake()
+        {
+            _actions = new AndorinhaUserActions();
+        }
+
+        private void OnEnable()
+        {
+            _actions.Enable();
+        }
+        private void OnDisable()
+        {
+            _actions.Disable();
+        }
+
         void Start()
         {
             Application.targetFrameRate = 60;
+            _actions.Player.Fire.performed += ctx =>
+            {               
+                Debug.Log("Fire2");
+            };
+            _actions.Player.Move.performed += ctx => Debug.Log(ctx.ReadValue<Vector2>());
         }
 
         void Update()
         {
-            // var playerController = GetPlayer();
-            // if (playerController == null) return;
 
-            // var horizontalInput = Input.GetAxis("Horizontal");
-            // var verticalInput = Input.GetAxis("Vertical");
-
-            // if (Input.GetKeyUp(KeyCode.C))
-            // {
-            //     playerController.KickAttheGoal();
-            // }
-
-            // if (Input.GetKeyUp(KeyCode.F))
-            // {
-            //     playerController.Pass();
-            // }
-
-            // if (Input.GetKey(KeyCode.J)) playerController.FollowBall();
-
-            // if (horizontalInput != 0 || verticalInput != 0) playerController.Move(horizontalInput, verticalInput);
         }
 
         private PlayerController GetPlayer()
@@ -48,5 +54,7 @@ namespace AndorinhaEsporte.Controller
             if (_playerControllers == null || _playerControllers.Count() == 0) return;
             _playerControllers = _playerControllers.Where(p => p.IsHomeTeamPlayer);
         }
+
+
     }
 }
