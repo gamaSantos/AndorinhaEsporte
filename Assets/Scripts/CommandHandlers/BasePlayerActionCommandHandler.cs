@@ -10,7 +10,7 @@ namespace AndorinhaEsporte.CommandHandlers
         {
             var player = command.Player;
             var rigidBody = command.PlayerRigidBody;
-            var force = direction * (player.MoveSpeed * 50) * Time.deltaTime;
+            var force = direction * player.MoveSpeed * Time.deltaTime;
             rigidBody.AddForce(force, ForceMode.Force);
             command.PlayerTransform.forward = direction;
         }

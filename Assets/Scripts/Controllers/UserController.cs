@@ -47,7 +47,7 @@ namespace AndorinhaEsporte.Controller
         {
             var action = _actions.Player.Move;
             action.started += ctx =>
-            {
+            {   
                 _moving = true;
             };
             action.performed += ctx =>
@@ -68,7 +68,7 @@ namespace AndorinhaEsporte.Controller
 
         private void Move()
         {
-            if(_moving || _movingDirection == Vector2.zero) return;
+            if(!_moving || _movingDirection == Vector2.zero) return;
             var player = GetPlayer();
             var handler = new MoveInDirectionCommandHandler();
             var command = new BasePlayerCommand<Vector2>(
