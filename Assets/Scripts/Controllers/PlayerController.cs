@@ -25,7 +25,6 @@ namespace AndorinhaEsporte.Controller
 
         private Rigidbody _rigidBody;
         private BallController _ball;
-
         private Player _player;
         private Team _team;
 
@@ -59,8 +58,7 @@ namespace AndorinhaEsporte.Controller
             var renderer = _meshWrapper.GetComponent<Renderer>();
 
             renderer.material.SetColor("_Color", _player.MainColor);
-            // UIController.ChangePosition(_player.FieldPosition);
-            
+
             playerCommandHandler = new PlayerCommandHandler(_player, _ball, _rigidBody, transform, _team);
         }
 
@@ -93,8 +91,10 @@ namespace AndorinhaEsporte.Controller
                     .First();
             return target;
         }
-        
+
         internal Player GetPlayer() => _player;
+        internal Rigidbody GetRigidbody() => _rigidBody;
+        internal Transform GetTransform() => transform;
         public void OnDrawGizmos()
         {
             // Gizmos.DrawWireSphere(transform.position, _player.BallControlRange);

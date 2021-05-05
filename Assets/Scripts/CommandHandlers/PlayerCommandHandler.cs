@@ -18,7 +18,7 @@ namespace AndorinhaEsporte.CommandHandlers
         public void HandleCurrentAction(Player target)
         {
             var baseCommand = _commandFactory.CreateBaseCommand();
-
+            if(_player.IsUserControlled) return;
             switch (_player.CurrentAction)
             {
                 case PlayerAction.Serve:

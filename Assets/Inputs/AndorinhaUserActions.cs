@@ -34,7 +34,7 @@ namespace AndorinhaEsporte.Inputs
                     ""id"": ""97b20195-060e-4149-9d20-895af95fc5ee"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Hold""
                 }
             ],
             ""bindings"": [

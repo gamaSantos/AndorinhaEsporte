@@ -49,7 +49,7 @@ namespace AndorinhaEsporte.Domain
         public Vector3 TeamFoward => _team.Foward;
         public Color MainColor => _team.MainColor;
         public PlayerAction CurrentAction => _actions.Any() ? _actions.First() : PlayerAction.Idle;
-
+        
         internal void StartSpike()
         {
             SpikeState = SpikeStateEnum.Initial;

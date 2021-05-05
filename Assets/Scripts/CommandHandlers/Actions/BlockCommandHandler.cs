@@ -1,5 +1,4 @@
 using AndorinhaEsporte.Domain;
-using UnityEngine;
 
 namespace AndorinhaEsporte.CommandHandlers.Actions
 {

@@ -6,6 +6,15 @@ namespace AndorinhaEsporte.CommandHandlers
 {
     public class BasePlayerActionCommandHandler
     {
+        protected static void MoveInDirection(Vector3 direction, BasePlayerCommand command)
+        {
+            var player = command.Player;
+            var rigidBody = command.PlayerRigidBody;
+            var force = direction * (player.MoveSpeed * 50) * Time.deltaTime;
+            rigidBody.AddForce(force, ForceMode.Force);
+            command.PlayerTransform.forward = direction;
+        }
+
         protected static void MoveToTarget(Vector3 target, BasePlayerCommand command, float precisionStart = 1f, bool lookAtBall = false)
         {
             var player = command.Player;
@@ -47,12 +56,12 @@ namespace AndorinhaEsporte.CommandHandlers
         private static Vector3 ChangeDirectionToAvoidCollision(Player player, Vector3 direction, Transform playerTransform)
         {
             var collisionRange = 1.1f;
-            var teamatesInCollisionRange = player.Teammates.Where(teammate => 
+            var teamatesInCollisionRange = player.Teammates.Where(teammate =>
                     teammate.Position.Distance(player.Position) < collisionRange
                     && direction.InDirection(teammate.Position)
                     );
-            
-            if(teamatesInCollisionRange.Any())
+
+            if (teamatesInCollisionRange.Any())
             {
                 return Quaternion.AngleAxis(90, Vector3.up) * direction;
             }
@@ -69,7 +78,7 @@ namespace AndorinhaEsporte.CommandHandlers
             if (player.InAir || player.IsJumping) return;
             player.IsJumping = true;
             rigidBody.AddForce(Vector3.up * 1800);
-            
+
         }
     }
 }

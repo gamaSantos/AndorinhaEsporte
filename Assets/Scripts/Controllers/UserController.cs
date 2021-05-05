@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using AndorinhaEsporte.CommandHandlers;
+using AndorinhaEsporte.CommandHandlers.UserActions;
 using AndorinhaEsporte.Inputs;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,7 +12,11 @@ namespace AndorinhaEsporte.Controller
     {
         IEnumerable<PlayerController> _playerControllers;
         private AndorinhaUserActions _actions;
+        private BallController _ball;
 
+
+        private bool _moving = false;
+        private Vector2 _movingDirection = Vector2.zero;
 
         private void Awake()
         {
@@ -28,17 +34,50 @@ namespace AndorinhaEsporte.Controller
 
         void Start()
         {
+            _ball = GameObject.FindObjectOfType<BallController>();
             Application.targetFrameRate = 60;
             _actions.Player.Fire.performed += ctx =>
-            {               
-                Debug.Log("Fire2");
+            {
+
             };
-            _actions.Player.Move.performed += ctx => Debug.Log(ctx.ReadValue<Vector2>());
+            BindMovimentEvents();
         }
 
-        void Update()
+        private void BindMovimentEvents()
         {
+            var action = _actions.Player.Move;
+            action.started += ctx =>
+            {
+                _moving = true;
+            };
+            action.performed += ctx =>
+            {
+                _movingDirection = ctx.ReadValue<Vector2>();
+            };
+            action.canceled += ctx =>
+            {
+                _moving = false;
+                _movingDirection = Vector2.zero;
+            };
+        }
 
+        void FixedUpdate()
+        {
+            Move();
+        }
+
+        private void Move()
+        {
+            if(_moving || _movingDirection == Vector2.zero) return;
+            var player = GetPlayer();
+            var handler = new MoveInDirectionCommandHandler();
+            var command = new BasePlayerCommand<Vector2>(
+                player.GetPlayer(),
+                _ball,
+                player.GetRigidbody(),
+                player.GetTransform(),
+                _movingDirection);
+            handler.Handle(command);
         }
 
         private PlayerController GetPlayer()
