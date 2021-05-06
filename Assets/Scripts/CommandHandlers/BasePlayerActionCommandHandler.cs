@@ -6,7 +6,7 @@ namespace AndorinhaEsporte.CommandHandlers
 {
     public class BasePlayerActionCommandHandler
     {
-        protected static void MoveInDirection(Vector3 direction, BasePlayerCommand command)
+        protected static void MoveInDirection(Vector3 direction, PlayerCommand command)
         {
             var player = command.Player;
             var rigidBody = command.PlayerRigidBody;
@@ -15,7 +15,7 @@ namespace AndorinhaEsporte.CommandHandlers
             command.PlayerTransform.forward = direction;
         }
 
-        protected static void MoveToTarget(Vector3 target, BasePlayerCommand command, float precisionStart = 1f, bool lookAtBall = false)
+        protected static void MoveToTarget(Vector3 target, PlayerCommand command, float precisionStart = 1f, bool lookAtBall = false)
         {
             var player = command.Player;
             if (player == null || player.InAir) return;
@@ -69,7 +69,7 @@ namespace AndorinhaEsporte.CommandHandlers
             return direction;
         }
 
-        protected static void Jump(BasePlayerCommand command)
+        protected static void Jump(PlayerCommand command)
         {
             var player = command.Player;
             var rigidBody = command.PlayerRigidBody;

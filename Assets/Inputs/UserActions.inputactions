@@ -6,7 +6,7 @@
             "id": "eeb47464-2b18-485c-88ae-ebea097a8f36",
             "actions": [
                 {
-                    "name": "Fire",
+                    "name": "Spike",
                     "type": "Button",
                     "id": "1eefc72b-5967-4070-8dd6-b9b82c499e0b",
                     "expectedControlType": "Button",
@@ -30,7 +30,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Fire",
+                    "action": "Spike",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

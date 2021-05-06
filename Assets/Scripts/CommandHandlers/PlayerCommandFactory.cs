@@ -22,9 +22,9 @@ namespace AndorinhaEsporte.CommandHandlers
             _team = team;
         }
 
-        public BasePlayerCommand CreateBaseCommand()
+        public PlayerCommand CreateBaseCommand()
         {
-            return new BasePlayerCommand(_player, _ball, _rigidBody, _transform);
+            return new PlayerCommand(_player, _ball, _rigidBody, _transform);
         }
 
         public TeamCommand CreateTeamCommand()

@@ -38,7 +38,7 @@ namespace AndorinhaEsporte.Controller
             _ball = GameObject.FindObjectOfType<BallController>();
             _cameraController = Camera.main.GetComponent<CameraController>();
             Application.targetFrameRate = 60;
-            _actions.Player.Fire.performed += ctx =>
+            _actions.Player.Spike.performed += ctx =>
             {
 
             };
@@ -77,7 +77,7 @@ namespace AndorinhaEsporte.Controller
 
             var direction = _cameraController.facingOposingDirection ? _movingDirection * -1 : _movingDirection;
             var handler = new MoveInDirectionCommandHandler();
-            var command = new BasePlayerCommand<Vector2>(
+            var command = new PlayerCommand<Vector2>(
                 player,
                 _ball,
                 playerController.GetRigidbody(),

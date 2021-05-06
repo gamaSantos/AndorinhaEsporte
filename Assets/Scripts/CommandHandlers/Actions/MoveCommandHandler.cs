@@ -4,7 +4,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 {
     public class MoveCommandHandler : BasePlayerActionCommandHandler
     {
-        public void Handle(BasePlayerCommand command)
+        public void Handle(PlayerCommand command)
         {
             var transform = command.PlayerTransform;
             var foward = transform.forward;

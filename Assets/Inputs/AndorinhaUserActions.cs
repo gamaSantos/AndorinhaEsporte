@@ -21,7 +21,7 @@ namespace AndorinhaEsporte.Inputs
             ""id"": ""eeb47464-2b18-485c-88ae-ebea097a8f36"",
             ""actions"": [
                 {
-                    ""name"": ""Fire"",
+                    ""name"": ""Spike"",
                     ""type"": ""Button"",
                     ""id"": ""1eefc72b-5967-4070-8dd6-b9b82c499e0b"",
                     ""expectedControlType"": ""Button"",
@@ -45,7 +45,7 @@ namespace AndorinhaEsporte.Inputs
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Fire"",
+                    ""action"": ""Spike"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -111,7 +111,7 @@ namespace AndorinhaEsporte.Inputs
 }");
             // Player
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-            m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+            m_Player_Spike = m_Player.FindAction("Spike", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         }
 
@@ -162,13 +162,13 @@ namespace AndorinhaEsporte.Inputs
         // Player
         private readonly InputActionMap m_Player;
         private IPlayerActions m_PlayerActionsCallbackInterface;
-        private readonly InputAction m_Player_Fire;
+        private readonly InputAction m_Player_Spike;
         private readonly InputAction m_Player_Move;
         public struct PlayerActions
         {
             private @AndorinhaUserActions m_Wrapper;
             public PlayerActions(@AndorinhaUserActions wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Fire => m_Wrapper.m_Player_Fire;
+            public InputAction @Spike => m_Wrapper.m_Player_Spike;
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
@@ -179,9 +179,9 @@ namespace AndorinhaEsporte.Inputs
             {
                 if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
                 {
-                    @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                    @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                    @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
+                    @Spike.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpike;
+                    @Spike.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpike;
+                    @Spike.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpike;
                     @Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                     @Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                     @Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
@@ -189,9 +189,9 @@ namespace AndorinhaEsporte.Inputs
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
                 {
-                    @Fire.started += instance.OnFire;
-                    @Fire.performed += instance.OnFire;
-                    @Fire.canceled += instance.OnFire;
+                    @Spike.started += instance.OnSpike;
+                    @Spike.performed += instance.OnSpike;
+                    @Spike.canceled += instance.OnSpike;
                     @Move.started += instance.OnMove;
                     @Move.performed += instance.OnMove;
                     @Move.canceled += instance.OnMove;
@@ -201,7 +201,7 @@ namespace AndorinhaEsporte.Inputs
         public PlayerActions @Player => new PlayerActions(this);
         public interface IPlayerActions
         {
-            void OnFire(InputAction.CallbackContext context);
+            void OnSpike(InputAction.CallbackContext context);
             void OnMove(InputAction.CallbackContext context);
         }
     }

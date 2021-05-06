@@ -7,7 +7,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
     public class ChangeSidesCommandHandler : BasePlayerActionCommandHandler
     {
 
-        public void Handle(BasePlayerCommand command)
+        public void Handle(PlayerCommand command)
         {
             var player = command.Player;
             var ball = command.Ball;

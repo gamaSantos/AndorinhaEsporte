@@ -4,7 +4,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 {
     public class ResetPositionCommandHandler : BasePlayerActionCommandHandler
     {
-        public void Handle(BasePlayerCommand command)
+        public void Handle(PlayerCommand command)
         {
             var player = command.Player;
             var target = command.Player.FieldPosition.GetStartPosition(player.TeamFoward);

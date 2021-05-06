@@ -4,7 +4,7 @@ namespace AndorinhaEsporte.CommandHandlers.UserActions
 {
     public class MoveInDirectionCommandHandler : BasePlayerActionCommandHandler
     {
-        public void Handle(BasePlayerCommand<Vector2> command)
+        public void Handle(PlayerCommand<Vector2> command)
         {
             var ball = command.Ball;
             var player = command.Player;

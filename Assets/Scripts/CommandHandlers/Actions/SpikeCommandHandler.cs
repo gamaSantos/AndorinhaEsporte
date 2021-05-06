@@ -7,7 +7,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 {
     public class SpikeCommandHandler : BasePlayerActionCommandHandler
     {
-        public void Handle(BasePlayerCommand command)
+        public void Handle(PlayerCommand command)
         {
             var ball = command.Ball;
             var player = command.Player;
@@ -70,7 +70,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
         }
 
-        private static void jumpSpike(BasePlayerCommand command, Player player)
+        private static void jumpSpike(PlayerCommand command, Player player)
         {
             Jump(command);
             player.IsSpiking = true;

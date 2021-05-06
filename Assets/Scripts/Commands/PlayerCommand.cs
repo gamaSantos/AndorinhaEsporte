@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace AndorinhaEsporte.CommandHandlers
 {
-    public class BasePlayerCommand
+    public class PlayerCommand
     {
-        public BasePlayerCommand(
+        public PlayerCommand(
             Player player,
             BallController ball,
             Rigidbody rigidbody,
@@ -25,9 +25,9 @@ namespace AndorinhaEsporte.CommandHandlers
     }
 
 
-    public class BasePlayerCommand<T> : BasePlayerCommand
+    public class PlayerCommand<T> : PlayerCommand
     {
-        public BasePlayerCommand(Player player, BallController ball, Rigidbody rigidbody, Transform transform, T data) : base(player, ball, rigidbody, transform)
+        public PlayerCommand(Player player, BallController ball, Rigidbody rigidbody, Transform transform, T data) : base(player, ball, rigidbody, transform)
         {
             Data = data;
         }

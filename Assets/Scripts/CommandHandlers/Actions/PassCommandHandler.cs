@@ -6,7 +6,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 {
     public class PassCommandHandler : BasePlayerActionCommandHandler
     {
-        public void Handle(BasePlayerCommand command)
+        public void Handle(PlayerCommand command)
         {
             var ball = command.Ball;
             var player = command.Player;

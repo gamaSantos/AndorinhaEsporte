@@ -4,7 +4,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 {
     public class RotateCommandHandler : BasePlayerActionCommandHandler
     {
-        public void Handle(BasePlayerCommand command)
+        public void Handle(PlayerCommand command)
         {
             var player = command.Player;
             if (player.RotateState == RotateStateEnum.Initial)

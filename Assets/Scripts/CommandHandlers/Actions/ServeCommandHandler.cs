@@ -6,7 +6,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 {
     public class ServeCommandHandler : BasePlayerActionCommandHandler
     {
-        public void Handle(BasePlayerCommand command)
+        public void Handle(PlayerCommand command)
         {
             var player = command.Player;
             var ball = command.Ball;
@@ -64,7 +64,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             player.AddAction(PlayerAction.ResetPosition);
         }
 
-        private void MoveToServePosition(BasePlayerCommand command)
+        private void MoveToServePosition(PlayerCommand command)
         {
             var player = command.Player;
             var servePosition = GetServePosition(player);
