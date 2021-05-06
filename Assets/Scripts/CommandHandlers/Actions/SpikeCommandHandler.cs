@@ -16,7 +16,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             var state = player.SpikeState;
 
             var target = new Vector3(side, 0, player.TeamFoward.z * -1);
-            
+
 
             if (player.IsPassTarget && ball.LandingSpot.HasValue)
             {
@@ -48,10 +48,8 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
             if (!player.IsPassTarget)
             {
-                // player.RemoveAction(PlayerAction.Spike);
-                // player.SpikeState = SpikeStateEnum.Initial;
                 return;
-            } 
+            }
 
             if (state == SpikeStateEnum.PreJump && player.CanStartSpikeJump(ball.transform.position, ball.Velocity))
             {
@@ -68,6 +66,20 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             }
 
 
+        }
+
+        public void HandleImmediate(PlayerCommand command)
+        {
+            var ball = command.Ball;
+            var player = command.Player;
+            var isRightSide = player.Position.x > 0;
+
+            jumpSpike(command, player);
+            if (player.InSpikeRange(ball.Position))
+            {
+                spike(ball, player, isRightSide);
+            }
+            player.SpikeState = SpikeStateEnum.Finished;
         }
 
         private static void jumpSpike(PlayerCommand command, Player player)

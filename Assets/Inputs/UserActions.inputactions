@@ -20,13 +20,21 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ChangePlayer",
+                    "type": "Button",
+                    "id": "46469c67-62c0-4486-b2f0-faee717042db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "cd2741c0-e89c-47b2-b720-e8ad3b3c54a7",
-                    "path": "<Keyboard>/space",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -88,6 +96,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "69f5471a-5c32-4ea1-862b-764179fafcec",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangePlayer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

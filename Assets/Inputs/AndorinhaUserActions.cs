@@ -35,13 +35,21 @@ namespace AndorinhaEsporte.Inputs
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ChangePlayer"",
+                    ""type"": ""Button"",
+                    ""id"": ""46469c67-62c0-4486-b2f0-faee717042db"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""cd2741c0-e89c-47b2-b720-e8ad3b3c54a7"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -103,6 +111,17 @@ namespace AndorinhaEsporte.Inputs
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""69f5471a-5c32-4ea1-862b-764179fafcec"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangePlayer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -113,6 +132,7 @@ namespace AndorinhaEsporte.Inputs
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
             m_Player_Spike = m_Player.FindAction("Spike", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+            m_Player_ChangePlayer = m_Player.FindAction("ChangePlayer", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -164,12 +184,14 @@ namespace AndorinhaEsporte.Inputs
         private IPlayerActions m_PlayerActionsCallbackInterface;
         private readonly InputAction m_Player_Spike;
         private readonly InputAction m_Player_Move;
+        private readonly InputAction m_Player_ChangePlayer;
         public struct PlayerActions
         {
             private @AndorinhaUserActions m_Wrapper;
             public PlayerActions(@AndorinhaUserActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @Spike => m_Wrapper.m_Player_Spike;
             public InputAction @Move => m_Wrapper.m_Player_Move;
+            public InputAction @ChangePlayer => m_Wrapper.m_Player_ChangePlayer;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -185,6 +207,9 @@ namespace AndorinhaEsporte.Inputs
                     @Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                     @Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                     @Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                    @ChangePlayer.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangePlayer;
+                    @ChangePlayer.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangePlayer;
+                    @ChangePlayer.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangePlayer;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -195,6 +220,9 @@ namespace AndorinhaEsporte.Inputs
                     @Move.started += instance.OnMove;
                     @Move.performed += instance.OnMove;
                     @Move.canceled += instance.OnMove;
+                    @ChangePlayer.started += instance.OnChangePlayer;
+                    @ChangePlayer.performed += instance.OnChangePlayer;
+                    @ChangePlayer.canceled += instance.OnChangePlayer;
                 }
             }
         }
@@ -203,6 +231,7 @@ namespace AndorinhaEsporte.Inputs
         {
             void OnSpike(InputAction.CallbackContext context);
             void OnMove(InputAction.CallbackContext context);
+            void OnChangePlayer(InputAction.CallbackContext context);
         }
     }
 }
