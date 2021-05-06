@@ -8,6 +8,14 @@ namespace AndorinhaEsporte.Domain
 {
     public class Player
     {
+        private static PlayerAction[] ForcedPlayerActions = new PlayerAction[]
+        {
+            PlayerAction.Serve,
+            PlayerAction.Rotate,
+            PlayerAction.ResetPosition,
+            PlayerAction.ChangeSides
+        };
+        
         private readonly Guid _id;
         private readonly List<PlayerAction> _actions;
         private readonly TeamInMatchInformation _team;
@@ -45,11 +53,12 @@ namespace AndorinhaEsporte.Domain
 
 
         public bool IsUserControlled { get; private set; }
+        public bool IsInForcedAction => ForcedPlayerActions.Contains(CurrentAction);
 
         public Vector3 TeamFoward => _team.Foward;
         public Color MainColor => _team.MainColor;
         public PlayerAction CurrentAction => _actions.Any() ? _actions.First() : PlayerAction.Idle;
-        
+
         internal void StartSpike()
         {
             SpikeState = SpikeStateEnum.Initial;
@@ -230,7 +239,7 @@ namespace AndorinhaEsporte.Domain
 
             var ballDistanceFromNet = 0 + Mathf.Abs(ballPosition.z + .1f);
             var playerDistanceFromNet = 0 + Mathf.Abs(Position.z);
-            
+
             return playerDistanceFromNet >= ballDistanceFromNet;
         }
         public bool InPassRange(Vector3 ballPosition)

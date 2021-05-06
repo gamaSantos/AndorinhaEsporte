@@ -13,6 +13,7 @@ namespace AndorinhaEsporte.Controller
         IEnumerable<PlayerController> _playerControllers;
         private AndorinhaUserActions _actions;
         private BallController _ball;
+        private CameraController _cameraController;
 
 
         private bool _moving = false;
@@ -35,6 +36,7 @@ namespace AndorinhaEsporte.Controller
         void Start()
         {
             _ball = GameObject.FindObjectOfType<BallController>();
+            _cameraController = Camera.main.GetComponent<CameraController>();
             Application.targetFrameRate = 60;
             _actions.Player.Fire.performed += ctx =>
             {
@@ -69,18 +71,22 @@ namespace AndorinhaEsporte.Controller
         private void Move()
         {
             if(!_moving || _movingDirection == Vector2.zero) return;
-            var player = GetPlayer();
+            var playerController = GetPlayerController();
+            var  player = playerController.GetPlayer();
+            if(player.IsInForcedAction) return;
+
+            var direction = _cameraController.facingOposingDirection ? _movingDirection * -1 : _movingDirection;
             var handler = new MoveInDirectionCommandHandler();
             var command = new BasePlayerCommand<Vector2>(
-                player.GetPlayer(),
+                player,
                 _ball,
-                player.GetRigidbody(),
-                player.GetTransform(),
-                _movingDirection);
+                playerController.GetRigidbody(),
+                playerController.GetTransform(),
+                direction);
             handler.Handle(command);
         }
 
-        private PlayerController GetPlayer()
+        private PlayerController GetPlayerController()
         {
             if (_playerControllers == null || _playerControllers.Count() == 0) LoadPlayers();
             if (_playerControllers == null || _playerControllers.Count() == 0) return null;
