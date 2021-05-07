@@ -15,7 +15,7 @@ namespace AndorinhaEsporte.Domain
             PlayerAction.ResetPosition,
             PlayerAction.ChangeSides
         };
-        
+
         private readonly Guid _id;
         private readonly List<PlayerAction> _actions;
         private readonly TeamInMatchInformation _team;
@@ -81,6 +81,7 @@ namespace AndorinhaEsporte.Domain
         public bool InBlockPosition => FieldPosition.InFrontRow;
 
         public bool IsSpiking { get; set; }
+        public bool IsDefending { get; set; }
 
         public void UpdatePosition(Vector3 position, Vector3 velocity)
         {

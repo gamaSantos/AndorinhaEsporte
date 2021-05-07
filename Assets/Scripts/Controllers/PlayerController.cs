@@ -20,6 +20,7 @@ namespace AndorinhaEsporte.Controller
 
 
         public bool IsSpiking = false;
+        public bool IsDefending = false;
         public SpikeStateEnum spikeState;
         public int JerseyNumber = 0;
 
@@ -68,13 +69,15 @@ namespace AndorinhaEsporte.Controller
             _player.UpdatePosition(transform.position, _rigidBody.velocity);
 
             IsSpiking = _player.IsSpiking;
-            var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !IsSpiking;
-            var isIdle = !isRunning && !IsSpiking;
+            IsDefending = _player.IsDefending;
+            var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !(IsSpiking || IsDefending);
+            var isIdle = !isRunning && !IsSpiking && !IsDefending;
             spikeState = _player.SpikeState;
 
             animator.SetBool("IsRunning", isRunning);
             animator.SetBool("IsSpiking", IsSpiking);
             animator.SetBool("IsIdle", isIdle);
+            animator.SetBool("IsDefending", IsDefending);
 
             UIController.ChangeText($"{_player.CurrentFunction} - {_player.CurrentAction}");
             if (playerCommandHandler != null)

@@ -29,6 +29,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
             if (player.InDefenseRange(ball.transform.position))
             {
+                player.IsDefending = true;
                 var foward = player.TeamFoward.z * 0.15f;
                 ball.Stop();
                 ball.MoveInDirection(new Vector3(0, 1, foward), 6, player.TeamId);
@@ -39,7 +40,8 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             }
             var margin = 0.5f * team.Foward.z;
             var target = new Vector3(landingSpot.x, 0, landingSpot.z + margin);
-            if (!player.ArrivedInTarget(target))
+            var arrivedInPosition = player.ArrivedInTarget(target);
+            if (!arrivedInPosition)
             {
                 MoveToTarget(target, command, 0, lookAtBall: true);
                 return;
