@@ -91,7 +91,6 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
         private static void spike(Controller.BallController ball, Player player, bool isRightSide)
         {
             player.IsPassTarget = false;
-            player.IsSpiking = false;
 
             var ballHorizontalDirection = isRightSide ? -0.5f : 0.5f;
             var direction = new Vector3(ballHorizontalDirection, 0.1f, player.TeamFoward.z);

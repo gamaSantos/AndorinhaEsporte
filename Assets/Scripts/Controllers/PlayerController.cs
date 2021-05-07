@@ -17,10 +17,7 @@ namespace AndorinhaEsporte.Controller
 
         [SerializeField]
         private Animator animator;
-
-
-        public bool IsSpiking = false;
-        public bool IsDefending = false;
+        
         public SpikeStateEnum spikeState;
         public int JerseyNumber = 0;
 
@@ -67,22 +64,35 @@ namespace AndorinhaEsporte.Controller
         {
             if (_player == null) return;
             _player.UpdatePosition(transform.position, _rigidBody.velocity);
-
-            IsSpiking = _player.IsSpiking;
-            IsDefending = _player.IsDefending;
-            var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !(IsSpiking || IsDefending);
-            var isIdle = !isRunning && !IsSpiking && !IsDefending;
             spikeState = _player.SpikeState;
-
-            animator.SetBool("IsRunning", isRunning);
-            animator.SetBool("IsSpiking", IsSpiking);
-            animator.SetBool("IsIdle", isIdle);
-            animator.SetBool("IsDefending", IsDefending);
+            UpdateAnimator();
 
             UIController.ChangeText($"{_player.CurrentFunction} - {_player.CurrentAction}");
             if (playerCommandHandler != null)
                 playerCommandHandler.HandleCurrentAction(_passTarget);
 
+        }
+
+        private void UpdateAnimator()
+        {
+            var isSpiking = _player.IsSpiking;
+            var isDefending = _player.IsDefending;
+            var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !(isSpiking || isDefending);
+            var isIdle = !isRunning && !isSpiking && !isDefending;
+
+            if (isSpiking)
+            {
+                animator.SetTrigger("IsSpiking");
+                _player.IsSpiking = false;
+            }
+            if (isDefending)
+            {
+                animator.SetTrigger("IsDefending");
+                _player.IsDefending = false;
+            }
+
+            animator.SetBool("IsRunning", isRunning);
+            animator.SetBool("IsIdle", isIdle);
         }
 
         private Player GetPassTarget(Vector3 direction)

@@ -41,7 +41,6 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                     var force = Random.Range(7.2f, 8f);
                     var spikeDirection = new Vector3(horizontalDirection, verticalDirection, forwardDirection);
                     
-                    player.IsSpiking = false;
                     ball.MoveInDirection(spikeDirection, force, player.TeamId);
                     Finalizar(player);
                     return;
