@@ -82,6 +82,8 @@ namespace AndorinhaEsporte.Domain
 
         public bool IsSpiking { get; set; }
         public bool IsDefending { get; set; }
+        public bool IsPassing { get; set; }
+        public bool IsBlocking { get; set; }
 
         public void UpdatePosition(Vector3 position, Vector3 velocity)
         {

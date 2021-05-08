@@ -21,6 +21,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
             if (player.InBlockRange(ball.Position))
             {
+                player.IsBlocking = true;
                 Jump(command);
                 player.RemoveAction(PlayerAction.Block);
                 return;

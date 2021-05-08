@@ -17,6 +17,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             if (player.InPassRange(ball.transform.position) && !player.Passing)
             {
                 player.Passing = true;
+                player.IsPassing = true;
                 ball.disableGravity();
                 ball.Stop();
 

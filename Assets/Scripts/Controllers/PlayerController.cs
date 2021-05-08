@@ -77,6 +77,8 @@ namespace AndorinhaEsporte.Controller
         {
             var isSpiking = _player.IsSpiking;
             var isDefending = _player.IsDefending;
+            var isPassing = _player.IsPassing;
+            var isBlocking = _player.IsBlocking;
             var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !(isSpiking || isDefending);
             var isIdle = !isRunning && !isSpiking && !isDefending;
 
@@ -89,6 +91,10 @@ namespace AndorinhaEsporte.Controller
             {
                 animator.SetTrigger("IsDefending");
                 _player.IsDefending = false;
+            }
+            if(isPassing){
+                animator.SetTrigger("IsPassing");
+                _player.IsPassing = false;
             }
 
             animator.SetBool("IsRunning", isRunning);
