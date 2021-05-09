@@ -47,5 +47,21 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 return;
             }
         }
+
+        public void HandleImmediate(PlayerCommand command)
+        {
+            var ball = command.Ball;
+            var player = command.Player;
+            player.IsDefending = true;
+            if (player.InDefenseRange(ball.transform.position))
+            {
+                var foward = player.TeamFoward.z * 0.15f;
+                ball.Stop();
+                ball.MoveInDirection(new Vector3(0, 1, foward), 6, player.TeamId);
+                player.RemoveAction(PlayerAction.Defend);
+                Debug.Log("Finish Implementation, pass team as parameter");
+                return;
+            }
+        }
     }
 }

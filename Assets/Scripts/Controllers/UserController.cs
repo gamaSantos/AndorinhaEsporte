@@ -42,6 +42,8 @@ namespace AndorinhaEsporte.Controller
             Application.targetFrameRate = 60;
             BindSpike();
             BindMovimentEvents();
+            BindDefend();
+            BindPass();
         }
 
         private void BindMovimentEvents()
@@ -70,6 +72,26 @@ namespace AndorinhaEsporte.Controller
                 handler.HandleImmediate(command);
             };
         }
+        private void BindDefend()
+        {
+             _actions.Player.Defend.performed += ctx =>
+            {
+                var command = new PlayerCommand(_player, _ball, _playerController.GetRigidbody(), _playerController.GetTransform());
+                var handler = new DefendCommandHandler();
+                handler.HandleImmediate(command);
+            };
+        }
+        
+        private void BindPass()
+        {
+              _actions.Player.Pass.performed += ctx =>
+            {
+                var command = new PlayerCommand(_player, _ball, _playerController.GetRigidbody(), _playerController.GetTransform());
+                var handler = new PassCommandHandler();
+                handler.HandleImmediate(command);
+            };
+        }
+
         void Update()
         {
             _playerController = GetPlayerController();

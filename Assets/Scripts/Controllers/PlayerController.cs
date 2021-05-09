@@ -79,8 +79,8 @@ namespace AndorinhaEsporte.Controller
             var isDefending = _player.IsDefending;
             var isPassing = _player.IsPassing;
             var isBlocking = _player.IsBlocking;
-            var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !(isSpiking || isDefending);
-            var isIdle = !isRunning && !isSpiking && !isDefending;
+            var isRunning = !_player.InAir && _rigidBody.velocity.magnitude > 0.1 && !(isSpiking || isDefending || !isPassing || !isBlocking);
+            var isIdle = !isRunning && !isSpiking && !isDefending && !isPassing && !isBlocking;
 
             if (isSpiking)
             {
