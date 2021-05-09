@@ -19,8 +19,8 @@ ModelImporter:
       74: -6801083763907307519
     second: Block
   - first:
-      74: 7309571157862558416
-    second: Pass
+      74: -9169957972977723929
+    second: pass
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -90,7 +90,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -195,7 +195,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Pass
+      name: pass
       takeName: Scene
       internalID: 0
       firstFrame: 180

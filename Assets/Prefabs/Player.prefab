@@ -80,6 +80,8 @@ MonoBehaviour:
   UIController: {fileID: 236951655800436791}
   _meshWrapper: {fileID: 7442620180713385069}
   animator: {fileID: 3364500907926207552}
+  spikeState: 0
+  JerseyNumber: 0
 --- !u!114 &236951655800436791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +177,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1346022938869370807
 MonoBehaviour:
   m_ObjectHideFlags: 0
