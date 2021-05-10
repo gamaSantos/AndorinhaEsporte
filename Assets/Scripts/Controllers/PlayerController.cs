@@ -97,6 +97,11 @@ namespace AndorinhaEsporte.Controller
                 _player.IsPassing = false;
             }
 
+            if(isBlocking){
+                animator.SetTrigger("IsBlocking");
+                _player.IsBlocking = false;
+            }
+
             animator.SetBool("IsRunning", isRunning);
             animator.SetBool("IsIdle", isIdle);
         }

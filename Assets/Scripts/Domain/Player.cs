@@ -78,7 +78,7 @@ namespace AndorinhaEsporte.Domain
 
         public bool InAir => Position.y >= 0.2f;
         public bool IsJumping = false;
-        public bool InBlockPosition => FieldPosition.InFrontRow;
+        public bool InBlockPosition => Position.Distance(new Vector3(Position.x, 0, 0)) < 2;
 
         public bool IsSpiking { get; set; }
         public bool IsDefending { get; set; }
@@ -183,17 +183,26 @@ namespace AndorinhaEsporte.Domain
         }
 
 
-        public Vector3 GetDefensivePosition(Vector3 position)
+        public Vector3 GetDefensivePosition(Vector3 ballPosition)
         {
             if (InBlockPosition)
             {
-                if (_matchStatus?.IsServe ?? false) return Position;
-                return FieldPosition.GetBlockingPosition(position, TeamFoward.z);
+                return GetBlockDefensivePosition(ballPosition);
             }
             else
             {
                 return GetSpikeDefensivePosition(Position);
             }
+        }
+
+        private Vector3 GetBlockDefensivePosition(Vector3 ballPosition)
+        {
+            if (_matchStatus?.IsServe ?? false) return Position;
+            var fowardDirection = TeamFoward.z;
+            var netDistance = 0.1f * fowardDirection;
+            if(!Opponents.Any()) return Position;
+            var horizontalPosition = Opponents.OrderBy(x => Position.Distance(x.Position)).First().Position.x;
+            return new Vector3(horizontalPosition, 0, netDistance);
         }
 
         private Vector3 GetSpikeDefensivePosition(Vector3 position)

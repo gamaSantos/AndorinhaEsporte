@@ -42,15 +42,6 @@ namespace AndorinhaEsporte.Domain
         public abstract bool InFrontRow { get; }
         public abstract FieldSide HorizontalPosition { get; }
 
-        public Vector3 GetBlockingPosition(Vector3 ballPosition, float fowardDirection)
-        {
-            var netDistance = 0.1f * fowardDirection;
-            if (HorizontalPosition == FieldSide.Center) return new Vector3(ballPosition.x, 0, netDistance);
-            var ballSide = ballPosition.x > 0 ? FieldSide.Right : FieldSide.Left;
-            var hPosition = (ballSide == HorizontalPosition ? -2f : 2f) * fowardDirection;
-            return new Vector3(hPosition, 0, netDistance);
-        }
-
         protected float FowardPosition => -1.2f;
         protected float BackPosition => -7.5f;
         protected float SidePosition => 3f;

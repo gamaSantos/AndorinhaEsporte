@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AndorinhaEsporte.CommandHandlers;
 using AndorinhaEsporte.CommandHandlers.Actions;
@@ -44,6 +45,7 @@ namespace AndorinhaEsporte.Controller
             BindMovimentEvents();
             BindDefend();
             BindPass();
+            // BindMenu();
         }
 
         private void BindMovimentEvents()
@@ -74,22 +76,36 @@ namespace AndorinhaEsporte.Controller
         }
         private void BindDefend()
         {
-             _actions.Player.Defend.performed += ctx =>
-            {
-                var command = new PlayerCommand(_player, _ball, _playerController.GetRigidbody(), _playerController.GetTransform());
-                var handler = new DefendCommandHandler();
-                handler.HandleImmediate(command);
-            };
+            _actions.Player.Defend.performed += ctx =>
+           {
+               var command = new PlayerCommand(_player, _ball, _playerController.GetRigidbody(), _playerController.GetTransform());
+               if (_player.InBlockPosition)
+               {
+                   var handler = new BlockCommandHandler();
+                   handler.HandleImmediate(command);
+               }
+               else
+               {
+                   var handler = new DefendCommandHandler();
+                   handler.HandleImmediate(command);
+               }
+
+           };
         }
-        
+
         private void BindPass()
         {
-              _actions.Player.Pass.performed += ctx =>
+            _actions.Player.Pass.performed += ctx =>
             {
                 var command = new PlayerCommand(_player, _ball, _playerController.GetRigidbody(), _playerController.GetTransform());
                 var handler = new PassCommandHandler();
                 handler.HandleImmediate(command);
             };
+        }
+
+        private void BindMenu()
+        {
+            throw new NotImplementedException();
         }
 
         void Update()

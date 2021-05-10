@@ -12,7 +12,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
             if (!ball.LandingSpot.HasValue) return;
             var landingSpot = ball.LandingSpot.Value;
-            
+
             if (!player.IsDefenseNecessary(landingSpot))
             {
                 player.RemoveAction(PlayerAction.Block);
@@ -26,11 +26,20 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 player.RemoveAction(PlayerAction.Block);
                 return;
             }
-            if(!player.CanBlock(ball.Position))
+            if (!player.CanBlock(ball.Position))
             {
                 player.RemoveAction(PlayerAction.Block);
                 return;
             }
+        }
+
+        public void HandleImmediate(PlayerCommand command)
+        {
+            var player = command.Player;
+            player.IsBlocking = true;
+            Jump(command);
+            player.RemoveAction(PlayerAction.Block);
+            return;
         }
     }
 }
