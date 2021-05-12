@@ -49,6 +49,12 @@ namespace AndorinhaEsporte.Domain
             playerWaiting.ServeState = ServeStateEnum.Approved;
         }
 
+        public Player GetServingPlayer()
+        {
+            var players = GetAllPlayers();
+            return players.FirstOrDefault(p => p.ServeState == ServeStateEnum.AwaitingApproval);
+        }
+
         public bool IsChangingSides()
         {
             return HomeTeam.IsChangingSides() || HomeTeam.IsChangingSides();

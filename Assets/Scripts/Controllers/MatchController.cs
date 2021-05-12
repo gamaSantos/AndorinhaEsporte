@@ -34,8 +34,7 @@ namespace AndorinhaEsporte.Controller
             _hudController = GameObject.FindObjectOfType<HudController>();
         }
 
-
-        void FixedUpdate()
+        void Update()
         {
             _hudController.UpdateHud(_matchStats);
             if (_matchStats.IsFinished)
@@ -44,8 +43,20 @@ namespace AndorinhaEsporte.Controller
                 _hudController.ShowEndScreen();
                 return;
             }
-            if (isInPlay || _match.IsTeamBusy()) return;
 
+            if (_match.IsServing())
+            {
+                var player = _match.GetServingPlayer();
+                if (player != null) _camera.MoveToServeAngle(player.Position);
+            }
+            if (isInPlay)
+            {
+                _camera.MoveToMainAngle();
+            }
+        }
+        void FixedUpdate()
+        {
+            if (isInPlay || _match.IsTeamBusy()) return;
 
             if (_matchStats.IsSetFinished)
             {
@@ -54,7 +65,7 @@ namespace AndorinhaEsporte.Controller
                 return;
             }
 
-            _match.ApproveServe();
+            if (!_camera.InTransition) _match.ApproveServe();
             if (isWaitingRotationToServe)
             {
                 AllowServe();
@@ -72,11 +83,13 @@ namespace AndorinhaEsporte.Controller
             {
                 isInPlay = true;
             }
+
         }
 
         private void AllowServe()
         {
             if (_match.HomeTeam.IsResetingPosition() || _match.AwayTeam.IsResetingPosition()) return;
+
             isWaitingRotationToServe = false;
             StartServe();
             TeamWaitingToServe = null;

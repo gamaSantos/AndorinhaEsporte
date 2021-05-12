@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
+using AndorinhaEsporte.Domain;
 
 public class CameraController : MonoBehaviour
 {
     // Start is called before the first frame update
     Camera mainCamera;
     private bool rotating = false;
+    public bool InTransition = false;
     public float startFacingDirection;
     public float currentFacingDirection;
     public bool facingOposingDirection;
-    public Vector3 startPosition;
+    private Vector3 startPosition;
+    private Vector3 mainCameraPosition = new Vector3(0, 4, -12f);
 
     void Start()
     {
@@ -17,6 +20,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+
         if (rotating)
         {
             var rotateSpeed = -25f;
@@ -41,6 +45,32 @@ public class CameraController : MonoBehaviour
         startFacingDirection = GetCameraFacingDirection();
         rotating = true;
     }
+
+    public void MoveToServeAngle(Vector3 playerPosition)
+    {
+        var target = new Vector3(playerPosition.x, 3, -14 * (GetCameraFacingDirection()));
+        MoveToTarget(target);
+    }
+
+    public void MoveToMainAngle()
+    {
+        MoveToTarget(mainCameraPosition);
+    }
+
+    private void MoveToTarget(Vector3 target)
+    {
+        if (transform.position.Distance(target) > 0.02f)
+        {
+            transform.position = Vector3.Lerp(transform.position, target, Time.deltaTime * 2);
+            InTransition = true;
+        }
+        else
+        {
+            InTransition = false;
+        }
+    }
+
+
 
     private float GetCameraFacingDirection()
     {
