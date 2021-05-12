@@ -50,7 +50,7 @@ namespace AndorinhaEsporte.Controller
                 LandingSpot = LandingSpot,
                 LastTouchTeamId = teamId
             });
-            DrawTrajectory();
+            // DrawTrajectory();
             audioSource?.Play();
         }
 

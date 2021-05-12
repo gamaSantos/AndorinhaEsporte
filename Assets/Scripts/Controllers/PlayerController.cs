@@ -53,9 +53,9 @@ namespace AndorinhaEsporte.Controller
 
             _rigidBody = gameObject.GetComponent<Rigidbody>();
             _ball = GameObject.FindObjectOfType<BallController>();
-            var renderer = _meshWrapper.GetComponent<Renderer>();
+            var renderer = _meshWrapper.GetComponent<SkinnedMeshRenderer>();
 
-            renderer.material.SetColor("_Color", _player.MainColor);
+            renderer.material.color = _player.MainColor;
 
             playerCommandHandler = new PlayerCommandHandler(_player, _ball, _rigidBody, transform, _team);
         }
