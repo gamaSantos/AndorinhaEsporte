@@ -60,6 +60,13 @@ namespace AndorinhaEsporte.Controller
             playerCommandHandler = new PlayerCommandHandler(_player, _ball, _rigidBody, transform, _team);
         }
 
+
+        public void Update()
+        {
+            if (_player == null) return;
+              UIController.ChangeText($"{_player.CurrentFunction} - {_player.CurrentAction}");
+              UIController.ChangeUserIndicatorState(_player.IsUserControlled);
+        }
         public void FixedUpdate()
         {
             if (_player == null) return;
@@ -67,7 +74,7 @@ namespace AndorinhaEsporte.Controller
             spikeState = _player.SpikeState;
             UpdateAnimator();
 
-            UIController.ChangeText($"{_player.CurrentFunction} - {_player.CurrentAction}");
+          
             if (playerCommandHandler != null)
                 playerCommandHandler.HandleCurrentAction(_passTarget);
 

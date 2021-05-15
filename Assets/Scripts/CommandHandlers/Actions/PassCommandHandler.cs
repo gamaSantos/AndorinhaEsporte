@@ -27,10 +27,13 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
         private void pass(Controller.BallController ball, Player player, bool triggerAnimation = true)
         {
+            if(player.InExtendedPassRange(ball.transform.position) && !player.Passing)
+            {
+                if(triggerAnimation) player.IsPassing = true;
+            }
             if (player.InPassRange(ball.transform.position) && !player.Passing)
             {
                 player.Passing = true;
-                if(triggerAnimation) player.IsPassing = true;
                 ball.disableGravity();
                 ball.Stop();
                 var targetPlayer = GetPassTarget(player);

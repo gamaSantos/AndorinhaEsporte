@@ -257,7 +257,13 @@ namespace AndorinhaEsporte.Domain
         public bool InPassRange(Vector3 ballPosition)
         {
             var groundTarget = GetGroundPosition(ballPosition);
-            return Position.Distance(groundTarget) < 0.5f && ballPosition.y < 2.4;
+            return Position.Distance(groundTarget) < 0.5f && ballPosition.y < 2.3;
+        }
+
+        public bool InExtendedPassRange(Vector3 ballPosition)
+        {
+             var groundTarget = GetGroundPosition(ballPosition);
+            return Position.Distance(groundTarget) < 0.5f && ballPosition.y < 2.6;
         }
 
         public bool InSpikeRange(Vector3 ballPosition)

@@ -9,11 +9,13 @@ namespace AndorinhaEsporte.Controller
     {
 
         public Text playerFieldPosition;
+        public MeshRenderer UserControllerIndicator;
         private Transform cameraTransform;
-        private Player _player;
+        
         void Start()
         {
             playerFieldPosition.color = Color.white;
+            
             if (cameraTransform == null)
             {
                 cameraTransform = Camera.main.transform;
@@ -34,6 +36,11 @@ namespace AndorinhaEsporte.Controller
         public void ChangeText(string text)
         {
             playerFieldPosition.text = text;
+        }
+
+        public void ChangeUserIndicatorState(bool enabled)
+        {
+            UserControllerIndicator.enabled= enabled;
         }
 
     }
