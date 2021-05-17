@@ -49,6 +49,11 @@ namespace AndorinhaEsporte.Domain
             playerWaiting.ServeState = ServeStateEnum.Approved;
         }
 
+        internal Team GetTeam(Guid teamId)
+        {
+            return _teams.First(x=> x.Id == teamId);
+        }
+
         public Player GetServingPlayer()
         {
             var players = GetAllPlayers();

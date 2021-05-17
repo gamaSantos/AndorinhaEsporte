@@ -17,6 +17,7 @@ namespace AndorinhaEsporte.Domain
         public Guid Id { get; }
         public Vector3 Foward => InMatchInformation.Foward;
         public TeamInMatchInformation InMatchInformation { get; private set; }
+        public bool HasControllerAssociated{get;set;}
         public List<Player> Players { get; private set; }
         public IEnumerable<Player> Formation => Players;
 

@@ -25,6 +25,7 @@ namespace AndorinhaEsporte.Services
             }
 
             homeTeam.SetFoward(Vector3.forward);
+            homeTeam.HasControllerAssociated = true;
             GetTeamPlayers(homeTeam, true);
 
             awayTeam.SetFoward(Vector3.back);
@@ -46,6 +47,7 @@ namespace AndorinhaEsporte.Services
                 {
                     isHomeTeam = homeTeam,
                 };
+                if(!team.HasControllerAssociated) player.RemoveUserControl();
                 team.AddPlayer(player);
             }
         }

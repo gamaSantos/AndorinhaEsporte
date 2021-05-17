@@ -18,6 +18,5 @@ namespace AndorinhaEsporte.Domain
         public Vector3 Foward { get; set; }
         public Color MainColor { get; }
         public Color SecondaryColor { get; }
-
     }
 }

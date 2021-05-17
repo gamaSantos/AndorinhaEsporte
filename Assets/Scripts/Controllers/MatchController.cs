@@ -47,7 +47,11 @@ namespace AndorinhaEsporte.Controller
             if (_match.IsServing())
             {
                 var player = _match.GetServingPlayer();
-                if (player != null) _camera.MoveToServeAngle(player.Position);
+                if (player != null)
+                {
+                    var team = _match.GetTeam(player.TeamId);
+                    if (team.HasControllerAssociated) _camera.MoveToServeAngle(player.Position);
+                }
             }
             if (isInPlay)
             {
