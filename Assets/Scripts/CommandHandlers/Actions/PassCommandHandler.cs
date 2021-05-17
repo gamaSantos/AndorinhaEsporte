@@ -48,8 +48,11 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 }
                 ball.MoveInDirection(direction, passStrength, player.TeamId);
                 player.RemoveAction(PlayerAction.Pass);
+                return;
             }
-            if (player.InExtendedPassRange(ball.transform.position) && !player.Passing && !player.IsPassing)
+            if (player.InExtendedPassRange(ball.transform.position)
+                    && !player.Passing 
+                    && !player.IsPassing)
             {
                 if (triggerAnimation)
                 {
