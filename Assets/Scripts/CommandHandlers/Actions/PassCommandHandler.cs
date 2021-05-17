@@ -1,4 +1,5 @@
 using System.Linq;
+using AndorinhaEsporte.Controller;
 using AndorinhaEsporte.Domain;
 using UnityEngine;
 
@@ -25,19 +26,14 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             return;
         }
 
-        private void pass(Controller.BallController ball, Player player, bool triggerAnimation = true)
+        private void pass(BallController ball, Player player, bool triggerAnimation = true)
         {
-            if(player.InExtendedPassRange(ball.transform.position) && !player.Passing)
-            {
-                if(triggerAnimation) player.IsPassing = true;
-            }
             if (player.InPassRange(ball.transform.position) && !player.Passing)
             {
                 player.Passing = true;
+                var targetPlayer = GetPassTarget(player);
                 ball.disableGravity();
                 ball.Stop();
-                var targetPlayer = GetPassTarget(player);
-
                 var fowardMargin = -1f * player.TeamFoward.z;
                 var targetBallPosition = new Vector3(targetPlayer.Position.x, 2.5f, fowardMargin);
                 var direction = ball.Position.DirectionTo(targetBallPosition);
@@ -53,6 +49,13 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 ball.MoveInDirection(direction, passStrength, player.TeamId);
                 player.RemoveAction(PlayerAction.Pass);
             }
+            if (player.InExtendedPassRange(ball.transform.position) && !player.Passing)
+            {
+                if (triggerAnimation)
+                {
+                    player.IsPassing = true;
+                }
+            }
         }
 
         private Player GetPassTarget(Player player)
@@ -66,7 +69,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
         public void HandleImmediate(PlayerCommand command)
         {
-             var ball = command.Ball;
+            var ball = command.Ball;
             var player = command.Player;
             player.IsPassing = true;
             pass(ball, player, false);

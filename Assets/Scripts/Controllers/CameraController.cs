@@ -48,7 +48,6 @@ public class CameraController : MonoBehaviour
 
     public void MoveToServeAngle(Vector3 playerPosition)
     {
-        Debug.Log("??");
         var target = new Vector3(playerPosition.x, 3, -14 * (GetCameraFacingDirection()));
         MoveToTarget(target);
     }
