@@ -51,7 +51,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 return;
             }
             if (player.InExtendedPassRange(ball.transform.position)
-                    && !player.Passing 
+                    && !player.Passing
                     && !player.IsPassing)
             {
                 if (triggerAnimation)
@@ -64,9 +64,10 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
         private Player GetPassTarget(Player player)
         {
             var horizontalDirection = UnityEngine.Random.Range(-1, 1);
-            var targetPlayer = horizontalDirection >= 0 ?
-                player.Teammates.FirstOrDefault(p => p.CurrentFunction == PlayerPositionType.RightStriker) :
-                player.Teammates.FirstOrDefault(p => p.CurrentFunction == PlayerPositionType.LeftStriker);
+            var targetPlayer = player.Teammates.FirstOrDefault(p => p.CurrentFunction == PlayerPositionType.RightStriker);
+            // horizontalDirection >= 0 ?
+            //     player.Teammates.FirstOrDefault(p => p.CurrentFunction == PlayerPositionType.RightStriker) :
+            //     player.Teammates.FirstOrDefault(p => p.CurrentFunction == PlayerPositionType.LeftStriker);
             return targetPlayer;
         }
 

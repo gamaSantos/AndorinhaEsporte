@@ -92,7 +92,10 @@ namespace AndorinhaEsporte.Controller
 
         private void AllowServe()
         {
-            if (_match.HomeTeam.IsResetingPosition() || _match.AwayTeam.IsResetingPosition()) return;
+            if (_match.HomeTeam.IsResetingPosition() || _match.AwayTeam.IsResetingPosition())
+            {
+                return;
+            } 
 
             isWaitingRotationToServe = false;
             StartServe();
@@ -107,7 +110,7 @@ namespace AndorinhaEsporte.Controller
             CreateTeam(_match.HomeTeam);
             CreateTeam(_match.AwayTeam);
             _ball.SetMatchController(this);
-            TeamWaitingToServe = _match.HomeTeam;
+            TeamWaitingToServe = _match.AwayTeam;
             _ball.ChangedDirection += _match.Stats.CountTouches;
         }
 

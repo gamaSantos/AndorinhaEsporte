@@ -75,9 +75,14 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             var isRightSide = player.Position.x > 0;
 
             jumpSpike(command, player);
-            if (player.InSpikeRange(ball.Position))
+            if (ball.Position.y < player.SpikeHeight)
             {
                 spike(ball, player, isRightSide);
+            }
+            else
+            {
+                Debug.Log(ball.Position.y);
+                Debug.Log(player.Position.Distance(ball.Position));
             }
             player.SpikeState = SpikeStateEnum.Finished;
         }

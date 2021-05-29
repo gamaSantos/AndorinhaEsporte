@@ -13,7 +13,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
 
             if (!ball.LandingSpot.HasValue) return;
             var landingSpot = ball.LandingSpot.Value;
-            
+
             if (!player.IsDefenseNecessary(landingSpot))
             {
                 player.RemoveAction(PlayerAction.Defend);
@@ -26,10 +26,14 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 player.RemoveAction(PlayerAction.Defend);
                 return;
             }
-
-            if (player.InDefenseRange(ball.transform.position))
+            var inDefenseRange = player.InDefenseRange(ball.transform.position);
+            if (player.Position.Distance(ball.Position) < 2.5f
+                && !inDefenseRange)
             {
                 player.IsDefending = true;
+            }
+            if (inDefenseRange)
+            {
                 var foward = player.TeamFoward.z * 0.15f;
                 ball.Stop();
                 ball.MoveInDirection(new Vector3(0, 1, foward), 6, player.TeamId);

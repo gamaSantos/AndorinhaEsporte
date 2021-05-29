@@ -54,7 +54,8 @@ public class CameraController : MonoBehaviour
 
     public void MoveToMainAngle()
     {
-        MoveToTarget(mainCameraPosition);
+        var direction = GetCameraFacingDirection() > 0 ? 1 : -1;
+        MoveToTarget(mainCameraPosition * direction);
     }
 
     private void MoveToTarget(Vector3 target)
