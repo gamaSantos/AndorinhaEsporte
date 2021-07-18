@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7982777270762946217}
   - component: {fileID: 7982777270762946216}
-  - component: {fileID: 7982777270762946223}
   - component: {fileID: 613577018847318760}
   m_Layer: 0
   m_Name: MatchController
@@ -47,18 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInPlay: 0
   playerPrefab: {fileID: 477070372958106125, guid: 2a9dda07719ea2e4bb9a769755deae62, type: 3}
---- !u!114 &7982777270762946223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7982777270762946219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7fdeb501ecb2504a90a90875dd94dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &613577018847318760
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,7 +29,6 @@ namespace AndorinhaEsporte.Domain
             _teammates = new List<Player>();
             _team = teamInfo;
             FieldPosition = fieldPosition;
-            if (fieldPosition.Type == PlayerPositionType.RightStriker) IsUserControlled = true;
             _opponents = new List<Player>();
             ResetStates();
         }
@@ -47,12 +46,12 @@ namespace AndorinhaEsporte.Domain
         public IReadOnlyCollection<Player> Opponents => _opponents;
 
 
-        public float MoveSpeed = 9000f;
+        public float MoveSpeed = 8000f;
         public float PreciseMoveSpeed = 6000;
         public float SpikeHeight => 3.3f;
 
 
-        public bool IsUserControlled { get; private set; }
+        public bool IsUserControlled { get; set; }
         public bool IsInForcedAction => ForcedPlayerActions.Contains(CurrentAction);
 
         public Vector3 TeamFoward => _team.Foward;
@@ -129,11 +128,6 @@ namespace AndorinhaEsporte.Domain
             _actions.Clear();
         }
 
-        public void RemoveUserControl()
-        {
-            IsUserControlled = false;
-        }
-
         internal void Pass()
         {
             ClearActions();
@@ -200,7 +194,7 @@ namespace AndorinhaEsporte.Domain
             if (_matchStatus?.IsServe ?? false) return Position;
             var fowardDirection = TeamFoward.z;
             var netDistance = 0.1f * fowardDirection;
-            if(!Opponents.Any()) return Position;
+            if (!Opponents.Any()) return Position;
             var horizontalPosition = Opponents.OrderBy(x => Position.Distance(x.Position)).First().Position.x;
             return new Vector3(horizontalPosition, 0, netDistance);
         }

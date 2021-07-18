@@ -12,12 +12,13 @@ namespace AndorinhaEsporte.Domain
         {
             Id = inMatchInfo.TeamId;
             Players = new List<Player>();
-           InMatchInformation = inMatchInfo;
+            InMatchInformation = inMatchInfo;
         }
         public Guid Id { get; }
         public Vector3 Foward => InMatchInformation.Foward;
         public TeamInMatchInformation InMatchInformation { get; private set; }
-        public bool HasControllerAssociated{get;set;}
+        public bool HasControllerAssociated { get; set; }
+        private int _currentPlayerIndex = 0;
         public List<Player> Players { get; private set; }
         public IEnumerable<Player> Formation => Players;
 
@@ -45,6 +46,8 @@ namespace AndorinhaEsporte.Domain
             }
             return playerId;
         }
+
+
 
         internal void Spike()
         {
@@ -142,7 +145,7 @@ namespace AndorinhaEsporte.Domain
             _nextBallTransitionIsServe = true;
             foreach (var player in Formation)
             {
-                player.AddRotationAction();                
+                player.AddRotationAction();
             }
         }
 
@@ -172,6 +175,20 @@ namespace AndorinhaEsporte.Domain
         public bool InRotation()
         {
             return Formation.Any(p => p.RotateState != State.RotateStateEnum.Finished);
+        }
+
+
+        internal void ChangePlayerControlledByUser()
+        {
+            var maxIndex = Players.Count - 1;
+
+            var newIndex = _currentPlayerIndex + 1 > maxIndex ? 0 : _currentPlayerIndex + 1;
+            var currentPlayer = Players.ElementAt(_currentPlayerIndex);
+            var newPlayer = Players.ElementAt(newIndex);
+
+            currentPlayer.IsUserControlled = false;
+            newPlayer.IsUserControlled = true;
+            _currentPlayerIndex = newIndex;
         }
     }
 }

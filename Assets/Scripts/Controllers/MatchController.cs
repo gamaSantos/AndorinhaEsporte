@@ -10,7 +10,6 @@ namespace AndorinhaEsporte.Controller
         private MatchStats _matchStats;
         private Match _match;
         private HudController _hudController;
-        private MatchService _matchService;
         private CameraController _camera;
         private BallController _ball;
 
@@ -29,7 +28,6 @@ namespace AndorinhaEsporte.Controller
         {
             _ball = GameObject.FindObjectOfType<BallController>();
             _camera = Camera.main.GetComponent<CameraController>();
-            _matchService = new MatchService();
             initiateMatch();
             _hudController = GameObject.FindObjectOfType<HudController>();
         }
@@ -95,7 +93,7 @@ namespace AndorinhaEsporte.Controller
             if (_match.HomeTeam.IsResetingPosition() || _match.AwayTeam.IsResetingPosition())
             {
                 return;
-            } 
+            }
 
             isWaitingRotationToServe = false;
             StartServe();
@@ -105,7 +103,7 @@ namespace AndorinhaEsporte.Controller
 
         private void initiateMatch()
         {
-            _match = _matchService.GetMatch(Guid.NewGuid());
+            _match = MatchService.Current;
             _matchStats = _match.Stats;
             CreateTeam(_match.HomeTeam);
             CreateTeam(_match.AwayTeam);

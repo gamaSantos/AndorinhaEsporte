@@ -458,6 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59b1d53eda4a264d9d1b17248dca6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InTransition: 0
   startFacingDirection: 0
   currentFacingDirection: 0
   facingOposingDirection: 0

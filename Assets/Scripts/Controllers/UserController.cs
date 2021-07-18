@@ -6,6 +6,7 @@ using AndorinhaEsporte.CommandHandlers.Actions;
 using AndorinhaEsporte.CommandHandlers.UserActions;
 using AndorinhaEsporte.Domain;
 using AndorinhaEsporte.Inputs;
+using AndorinhaEsporte.Services;
 using UnityEngine;
 
 namespace AndorinhaEsporte.Controller
@@ -18,6 +19,7 @@ namespace AndorinhaEsporte.Controller
         private CameraController _cameraController;
         private PlayerController _playerController;
         private Player _player;
+        private Team _userTeam;
 
         private bool _moving = false;
         private Vector2 _movingDirection = Vector2.zero;
@@ -40,11 +42,16 @@ namespace AndorinhaEsporte.Controller
         {
             _ball = GameObject.FindObjectOfType<BallController>();
             _cameraController = Camera.main.GetComponent<CameraController>();
+
+            _userTeam = MatchService.Current.HomeTeam;
+            _userTeam.ChangePlayerControlledByUser();
+
             Application.targetFrameRate = 60;
             BindSpike();
             BindMovimentEvents();
             BindDefend();
             BindPass();
+            BindChangePlayer();
             // BindMenu();
         }
 
@@ -102,7 +109,13 @@ namespace AndorinhaEsporte.Controller
                 handler.HandleImmediate(command);
             };
         }
-
+        private void BindChangePlayer()
+        {
+            _actions.Player.ChangePlayer.started += ctx =>
+            {
+                _userTeam.ChangePlayerControlledByUser();
+            };
+        }
         private void BindMenu()
         {
             throw new NotImplementedException();
@@ -139,7 +152,7 @@ namespace AndorinhaEsporte.Controller
         {
             if (_playerControllers == null || _playerControllers.Count() == 0) LoadPlayers();
             if (_playerControllers == null || _playerControllers.Count() == 0) return null;
-            return _playerControllers.Where(pc => pc.IsHomeTeamPlayer && pc.IsUserControlled).First();
+            return _playerControllers.Where(pc => pc.IsUserControlled).First();
         }
 
         private void LoadPlayers()

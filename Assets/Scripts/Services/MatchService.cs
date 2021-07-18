@@ -9,11 +9,27 @@ namespace AndorinhaEsporte.Services
     public class MatchService
     {
         private readonly TeamRepository _teamRepository;
-        public MatchService()
+        private static MatchService _matchService;
+        private static Match _currentMatch;
+        private MatchService()
         {
             _teamRepository = new TeamRepository();
         }
-        public Match GetMatch(Guid matchId)
+
+        public static Match Current
+        {
+            get
+            {
+                if (_matchService == null) _matchService = new MatchService();
+                if (_currentMatch == null)
+                {
+                    _currentMatch = _matchService.GetMatch(Guid.NewGuid());
+                }
+                return _currentMatch;
+            }
+        }
+
+        private Match GetMatch(Guid matchId)
         {
 
             var homeTeam = _teamRepository.GetTeam(0);
@@ -47,7 +63,7 @@ namespace AndorinhaEsporte.Services
                 {
                     isHomeTeam = homeTeam,
                 };
-                if(!team.HasControllerAssociated) player.RemoveUserControl();
+                if (!team.HasControllerAssociated) player.IsUserControlled = false;
                 team.AddPlayer(player);
             }
         }
