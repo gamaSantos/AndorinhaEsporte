@@ -23,7 +23,7 @@ namespace AndorinhaEsporte.Controller
 
         [SerializeField]
         GameObject playerPrefab;
-
+        //FIXME FIX LOAD IN NEW MATCH.
         void Start()
         {
             _ball = GameObject.FindObjectOfType<BallController>();
@@ -40,6 +40,17 @@ namespace AndorinhaEsporte.Controller
                 Time.timeScale = 0;
                 _hudController.ShowEndScreen();
                 return;
+            }
+
+            //TODO change to event
+            if (_match.IsPaused)
+            {
+                Time.timeScale = 0;
+                return;
+            }
+            else
+            {
+                Time.timeScale = 1;
             }
 
             if (_match.IsServing())

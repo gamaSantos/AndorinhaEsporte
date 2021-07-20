@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="Main.uss" />
+    <ui:VisualElement name="Screen" style="flex-grow: 1; flex-shrink: 1; justify-content: center;">
+        <ui:VisualElement name="MenuContainer" class="Container">
+            <ui:Button text="Resume&#10;" display-tooltip-when-elided="true" name="ResumeButton" />
+            <ui:Button text="Quit&#10;" display-tooltip-when-elided="true" name="QuitButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

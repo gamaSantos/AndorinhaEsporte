@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AndorinhaEsporte.CommandHandlers;
-using AndorinhaEsporte.CommandHandlers.Actions;
+﻿using AndorinhaEsporte.CommandHandlers.Actions;
 using AndorinhaEsporte.CommandHandlers.UserActions;
+using AndorinhaEsporte.CommandHandlers;
 using AndorinhaEsporte.Domain;
 using AndorinhaEsporte.Inputs;
 using AndorinhaEsporte.Services;
+using AndorinhaEsporte.UI;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace AndorinhaEsporte.Controller
@@ -52,7 +52,7 @@ namespace AndorinhaEsporte.Controller
             BindDefend();
             BindPass();
             BindChangePlayer();
-            // BindMenu();
+            BindMenu();
         }
 
         private void BindMovimentEvents()
@@ -118,7 +118,14 @@ namespace AndorinhaEsporte.Controller
         }
         private void BindMenu()
         {
-            throw new NotImplementedException();
+            _actions.Player.OpenMenu.started += ctx =>
+            {
+                var pauseMenu = FindObjectOfType<PauseMenuController>();
+                if (pauseMenu == null) return;
+
+                pauseMenu.ToogleVisualization();
+
+            };
         }
 
         void Update()

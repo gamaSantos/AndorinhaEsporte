@@ -24,7 +24,7 @@ namespace AndorinhaEsporte.Domain
         public Team AwayTeam { get; set; }
         public MatchStats Stats { get; private set; }
         private List<Team> _teams;
-
+        public bool IsPaused { get; set; }
         public bool IsTeamBusy()
         {
             return IsTeamInRotation() || IsTeamInRotation();
@@ -51,7 +51,7 @@ namespace AndorinhaEsporte.Domain
 
         internal Team GetTeam(Guid teamId)
         {
-            return _teams.First(x=> x.Id == teamId);
+            return _teams.First(x => x.Id == teamId);
         }
 
         public Player GetServingPlayer()

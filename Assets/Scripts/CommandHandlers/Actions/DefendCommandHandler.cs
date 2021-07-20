@@ -63,7 +63,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
                 ball.Stop();
                 ball.MoveInDirection(new Vector3(0, 1, foward), 6, player.TeamId);
                 player.RemoveAction(PlayerAction.Defend);
-                Debug.Log("Finish Implementation, pass team as parameter");
+                //FIXME FIX implementation, pass team as parameter.??
                 return;
             }
         }

@@ -53,6 +53,18 @@ namespace AndorinhaEsporte.Services
             return match;
         }
 
+        public static void ResumeMatch()
+        {
+            if (_currentMatch == null) return;
+            _currentMatch.IsPaused = false;
+        }
+
+        public static void StopMatch()
+        {
+            if (_currentMatch == null) return;
+            _currentMatch.IsPaused = true;
+        }
+
         private void GetTeamPlayers(Team team, bool homeTeam)
         {
             var teamLength = 6;

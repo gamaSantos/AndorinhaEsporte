@@ -37,10 +37,11 @@ namespace AndorinhaEsporte.UI
         private void BindGenericActions()
         {
             var inputSystem = GetComponent<InputSystemUIInputModule>();
-            inputSystem.move.action.performed += ctx =>
-            {
-                Debug.Log("move");
-            };
+            //TODO add basic navigation in menu
+            // inputSystem.move.action.performed += ctx =>
+            // {
+
+            // };
         }
 
         private void BindMainMenu(VisualElement root)

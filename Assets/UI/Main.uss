@@ -28,7 +28,7 @@ Button {
 }
 
 Button:hover {
-    background-color: rgba(20, 50, 55, 0.9);
+    background-color: rgba(34, 162, 183, 0.9);
 }
 
 Button:active {

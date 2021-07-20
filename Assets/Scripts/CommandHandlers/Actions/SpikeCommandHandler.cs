@@ -79,11 +79,7 @@ namespace AndorinhaEsporte.CommandHandlers.Actions
             {
                 spike(ball, player, isRightSide);
             }
-            else
-            {
-                Debug.Log(ball.Position.y);
-                Debug.Log(player.Position.Distance(ball.Position));
-            }
+
             player.SpikeState = SpikeStateEnum.Finished;
         }
 
