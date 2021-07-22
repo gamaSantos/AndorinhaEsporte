@@ -8,6 +8,7 @@ using AndorinhaEsporte.UI;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using System;
 
 namespace AndorinhaEsporte.Controller
 {
@@ -23,6 +24,8 @@ namespace AndorinhaEsporte.Controller
 
         private bool _moving = false;
         private Vector2 _movingDirection = Vector2.zero;
+        private bool _countingEnery = false;
+        private float _currentEnergy = 0f;
 
         private void Awake()
         {
@@ -74,11 +77,20 @@ namespace AndorinhaEsporte.Controller
         }
         private void BindSpike()
         {
-            _actions.Player.Spike.performed += ctx =>
+            var action = _actions.Player.Spike;
+            action.started += ctx =>
+            {
+                _countingEnery = true;
+            };
+            action.performed += ctx =>
             {
                 var command = new PlayerCommand(_player, _ball, _playerController.GetRigidbody(), _playerController.GetTransform());
                 var handler = new SpikeCommandHandler();
                 handler.HandleImmediate(command);
+            };
+            action.canceled += ctx =>
+            {
+                _countingEnery = false;
             };
         }
         private void BindDefend()
@@ -138,6 +150,18 @@ namespace AndorinhaEsporte.Controller
             if (_player == null) return;
             if (_player.IsInForcedAction) return;
             Move();
+            UpdateEnergyMeter();
+        }
+
+        private void UpdateEnergyMeter()
+        {
+            if (!_countingEnery) return;
+            if (_currentEnergy < 1)
+            {
+                _currentEnergy += Time.deltaTime;
+                if (_currentEnergy >= 1) _currentEnergy = 1;
+            }
+            _playerController.UpdateEnergyMeter(_currentEnergy);
         }
 
         private void Move()

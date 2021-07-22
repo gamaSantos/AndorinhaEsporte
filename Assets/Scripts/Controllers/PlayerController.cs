@@ -10,14 +10,14 @@ namespace AndorinhaEsporte.Controller
     public class PlayerController : MonoBehaviour
     {
         [SerializeField]
-        private PlayerUIController UIController;
+        private PlayerUIController _uiController;
 
         [SerializeField]
         private GameObject _meshWrapper;
 
         [SerializeField]
         private Animator animator;
-        
+
         public SpikeStateEnum spikeState;
         public int JerseyNumber = 0;
 
@@ -64,8 +64,8 @@ namespace AndorinhaEsporte.Controller
         public void Update()
         {
             if (_player == null) return;
-              UIController.ChangeText($"{_player.CurrentFunction} - {_player.CurrentAction}");
-              UIController.ChangeUserIndicatorState(_player.IsUserControlled);
+            _uiController.ChangeText($"{_player.CurrentFunction} - {_player.CurrentAction}");
+            _uiController.ChangeUserIndicatorState(_player.IsUserControlled);
         }
         public void FixedUpdate()
         {
@@ -74,7 +74,7 @@ namespace AndorinhaEsporte.Controller
             spikeState = _player.SpikeState;
             UpdateAnimator();
 
-          
+
             if (playerCommandHandler != null)
                 playerCommandHandler.HandleCurrentAction(_passTarget);
 
@@ -99,12 +99,14 @@ namespace AndorinhaEsporte.Controller
                 animator.SetTrigger("IsDefending");
                 _player.IsDefending = false;
             }
-            if(isPassing){
+            if (isPassing)
+            {
                 animator.SetTrigger("IsPassing");
                 _player.IsPassing = false;
             }
 
-            if(isBlocking){
+            if (isBlocking)
+            {
                 animator.SetTrigger("IsBlocking");
                 _player.IsBlocking = false;
             }
@@ -137,6 +139,11 @@ namespace AndorinhaEsporte.Controller
             {
                 _player.IsJumping = false;
             }
+        }
+
+        internal void UpdateEnergyMeter(float currentEnergy)
+        {
+            _uiController.FillPowerBar(currentEnergy);
         }
     }
 
