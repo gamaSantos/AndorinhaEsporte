@@ -143,7 +143,7 @@ namespace AndorinhaEsporte.Controller
 
         internal void UpdateEnergyMeter(float currentEnergy)
         {
-            _uiController.FillPowerBar(currentEnergy);
+            _uiController.FillEnergyBar(currentEnergy);
         }
     }
 

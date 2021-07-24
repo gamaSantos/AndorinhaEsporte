@@ -57,6 +57,7 @@ namespace AndorinhaEsporte.Domain
         public Vector3 TeamFoward => _team.Foward;
         public Color MainColor => _team.MainColor;
         public PlayerAction CurrentAction => _actions.Any() ? _actions.First() : PlayerAction.Idle;
+        public float Energy { get; private set; }
 
         internal void StartSpike()
         {
@@ -133,6 +134,11 @@ namespace AndorinhaEsporte.Domain
             ClearActions();
             ResetStates();
             _actions.Add(PlayerAction.Pass);
+        }
+
+        public void SetEnergy(float currentEnergy)
+        {
+            Energy = UnityEngine.Mathf.Clamp(currentEnergy, 0, 1);
         }
 
         public void ChangePassTargeState(bool isPassTarget)

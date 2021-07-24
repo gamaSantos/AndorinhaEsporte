@@ -27,6 +27,7 @@ namespace AndorinhaEsporte.Controller
         private bool _countingEnery = false;
         private float _currentEnergy = 0f;
 
+
         private void Awake()
         {
             _actions = new AndorinhaUserActions();
@@ -84,9 +85,7 @@ namespace AndorinhaEsporte.Controller
             };
             action.performed += ctx =>
             {
-                var command = new PlayerCommand(_player, _ball, _playerController.GetRigidbody(), _playerController.GetTransform());
-                var handler = new SpikeCommandHandler();
-                handler.HandleImmediate(command);
+                this._player.AddAction(PlayerAction.Spike);
             };
             action.canceled += ctx =>
             {
@@ -144,6 +143,8 @@ namespace AndorinhaEsporte.Controller
         {
             _playerController = GetPlayerController();
             _player = _playerController.GetPlayer();
+            _player.SetEnergy(_currentEnergy);
+
         }
         void FixedUpdate()
         {

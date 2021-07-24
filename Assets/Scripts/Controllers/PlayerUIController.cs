@@ -13,6 +13,7 @@ namespace AndorinhaEsporte.Controller
         public Image EnergyBarFill;
         public MeshRenderer UserControllerIndicator;
         private Transform cameraTransform;
+        private DateTime _energyStartTime;
 
         void Start()
         {
@@ -35,22 +36,21 @@ namespace AndorinhaEsporte.Controller
         {
             var textTransform = PlayerFieldPosition.transform;
             textTransform.LookAt(textTransform.position + cameraTransform.forward);
+            if ((DateTime.Now - _energyStartTime).Seconds > 2)
+            {
+                HideEnergyBar();
+            }
 
         }
-
-        // public void ChangePosition(FieldPosition newPosition)
-        // {
-        //     playerFieldPosition.text = Enum.GetName(typeof(PlayerPositionType), newPosition.Type);
-        // }
-
         public void ChangeText(string text)
         {
             PlayerFieldPosition.text = text;
         }
-        public void FillPowerBar(float percent)
+        public void FillEnergyBar(float percent)
         {
             EnergyBarContainer.gameObject.SetActive(true);
             EnergyBarFill.fillAmount = percent;
+            _energyStartTime = DateTime.Now;
         }
         public void ChangeUserIndicatorState(bool enabled)
         {
