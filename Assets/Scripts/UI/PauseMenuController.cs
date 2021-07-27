@@ -20,7 +20,6 @@ namespace AndorinhaEsporte.UI
             _resumeButton = _container.Q<Button>("ResumeButton");
             _quitButton = _container.Q<Button>("QuitButton");
 
-            //FIXME CLICK EVENT
             _resumeButton.clicked += () =>
            {
                MatchService.ResumeMatch();

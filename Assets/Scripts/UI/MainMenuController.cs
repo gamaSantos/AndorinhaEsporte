@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using AndorinhaEsporte.Data;
 using AndorinhaEsporte.Inputs;
+using AndorinhaEsporte.Services;
 using UnityEngine.InputSystem.UI;
 
 namespace AndorinhaEsporte.UI
@@ -67,6 +68,7 @@ namespace AndorinhaEsporte.UI
         {
             SELECTED_TEAM_ID = args.SelectedTeamId;
             OPPONENT_TEAM_ID = args.OpponentTeamId;
+            MatchService.CreateMatch(SELECTED_TEAM_ID, OPPONENT_TEAM_ID);
             SceneManager.LoadScene("Main", LoadSceneMode.Single);
         }
     }

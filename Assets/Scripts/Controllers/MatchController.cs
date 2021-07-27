@@ -23,7 +23,7 @@ namespace AndorinhaEsporte.Controller
 
         [SerializeField]
         GameObject playerPrefab;
-        //FIXME FIX LOAD IN NEW MATCH.
+
         void Start()
         {
             _ball = GameObject.FindObjectOfType<BallController>();
