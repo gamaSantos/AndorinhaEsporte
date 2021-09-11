@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerFieldPosition: {fileID: 1224956668258447266}
+  WrapperTransformer: {fileID: 1127384861764375779}
   EnergyBarContainer: {fileID: 1391485408320831948}
   EnergyBarFill: {fileID: 6055100423899313998}
   UserControllerIndicator: {fileID: 2294933793268756641}

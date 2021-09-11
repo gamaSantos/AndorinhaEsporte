@@ -9,6 +9,7 @@ namespace AndorinhaEsporte.Controller
     {
 
         public Text PlayerFieldPosition;
+        public Transform WrapperTransformer;
         public UnityEngine.UI.Image EnergyBarContainer;
         public Image EnergyBarFill;
         public MeshRenderer UserControllerIndicator;
@@ -34,8 +35,8 @@ namespace AndorinhaEsporte.Controller
 
         void LateUpdate()
         {
-            var textTransform = PlayerFieldPosition.transform;
-            textTransform.LookAt(textTransform.position + cameraTransform.forward);
+            // var textTransform = PlayerFieldPosition.transform;
+            WrapperTransformer.LookAt(WrapperTransformer.position + cameraTransform.forward);
             if ((DateTime.Now - _energyStartTime).Seconds > 2)
             {
                 HideEnergyBar();
