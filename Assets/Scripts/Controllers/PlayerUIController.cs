@@ -21,21 +21,21 @@ namespace AndorinhaEsporte.Controller
         private Vector3 keyStart;
         private Vector3 KeyEnd;
         private float keyElapsedTime = 0f;
-        private float keyAnimationDuration = 2f;
+        private float keyAnimationDuration = .5f;
         private bool keyMovingback = true;
 
         void Start()
         {
             PlayerFieldPosition.color = Color.white;
-            KeyIndicator.SetActive(false);
-            keyStart = KeyIndicator.transform.position;
-            KeyEnd = KeyIndicator.transform.position + (Vector3.forward * .5f);
+            InitPlayerButton();
             HideEnergyBar();
             if (cameraTransform == null)
             {
                 cameraTransform = Camera.main.transform;
             }
         }
+
+
 
         private void HideEnergyBar()
         {
@@ -60,18 +60,25 @@ namespace AndorinhaEsporte.Controller
         private void BouncePlayerButton()
         {
             if (!KeyIndicator.activeInHierarchy) return;
+            var keyTransform = KeyIndicator.transform;
             var lerpValue = Mathf.Clamp(keyElapsedTime / keyAnimationDuration, 0, 1);
             if (keyMovingback)
-                KeyIndicator.transform.position = Vector3.Lerp(keyStart, KeyEnd, lerpValue);
+                keyTransform.localPosition = Vector3.Lerp(keyStart, KeyEnd, lerpValue);
             else
-                KeyIndicator.transform.position = Vector3.Lerp(KeyEnd, keyStart, lerpValue);
+                keyTransform.localPosition = Vector3.Lerp(KeyEnd, keyStart, lerpValue);
             if (lerpValue >= 1)
             {
                 keyMovingback = !keyMovingback;
                 keyElapsedTime = 0f;
             }
         }
-
+        private void InitPlayerButton()
+        {
+            var movingFactor = 5f;
+            KeyIndicator.SetActive(false);
+            keyStart = KeyIndicator.transform.localPosition;
+            KeyEnd = KeyIndicator.transform.localPosition + (Vector3.forward * movingFactor);
+        }
         public void ChangeText(string text)
         {
             PlayerFieldPosition.text = text;
