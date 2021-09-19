@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AndorinhaEsporte.Domain.Events
 {
-    public class BallChangedDirectionEventArgs : EventArgs
+    public class BallChangedDirectionEvent
     {
         public Vector3? LandingSpot;
         public Guid LastTouchTeamId;

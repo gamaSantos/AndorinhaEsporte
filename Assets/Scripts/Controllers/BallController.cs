@@ -23,7 +23,7 @@ namespace AndorinhaEsporte.Controller
 
         private Guid _lastTeamId;
 
-        public event EventHandler<BallChangedDirectionEventArgs> ChangedDirection;
+        public event EventHandler<BallChangedDirectionEvent> ChangedDirection;
 
         void Start()
         {
@@ -45,7 +45,7 @@ namespace AndorinhaEsporte.Controller
             _lastTeamId = teamId;
             _rigidbody.AddTorque(torque);
             _rigidbody.AddForce(force, ForceMode.Force);
-            ChangedDirection?.Invoke(this, new BallChangedDirectionEventArgs
+            ChangedDirection?.Invoke(this, new BallChangedDirectionEvent
             {
                 LandingSpot = LandingSpot,
                 LastTouchTeamId = teamId
@@ -95,7 +95,7 @@ namespace AndorinhaEsporte.Controller
             var positionArray = Trajectory.Points.ToArray();
             component.startWidth = 0.05f;
             component.endWidth = 0.05f;
-            
+
             component.positionCount = positionArray.Count();
             component.SetPositions(positionArray);
         }

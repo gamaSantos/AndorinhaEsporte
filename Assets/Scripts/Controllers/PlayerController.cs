@@ -1,9 +1,10 @@
-﻿using AndorinhaEsporte.Domain;
-using AndorinhaEsporte.CommandHandlers;
-using System;
-using System.Linq;
-using UnityEngine;
+﻿using AndorinhaEsporte.CommandHandlers;
+using AndorinhaEsporte.Domain.Events;
 using AndorinhaEsporte.Domain.State;
+using AndorinhaEsporte.Domain;
+using System.Linq;
+using System;
+using UnityEngine;
 
 namespace AndorinhaEsporte.Controller
 {
@@ -17,15 +18,12 @@ namespace AndorinhaEsporte.Controller
 
         [SerializeField]
         private Animator animator;
-
         public SpikeStateEnum spikeState;
         public int JerseyNumber = 0;
-
         private Rigidbody _rigidBody;
         private BallController _ball;
         private Player _player;
         private Team _team;
-
         public Guid PlayedId => _player.Id;
         public bool IsHomeTeamPlayer => _player.isHomeTeam;
 
@@ -58,13 +56,14 @@ namespace AndorinhaEsporte.Controller
             renderer.material.color = _player.MainColor;
 
             playerCommandHandler = new PlayerCommandHandler(_player, _ball, _rigidBody, transform, _team);
+            _team.PassingStateChange += OnTeamPassing;
         }
 
 
         public void Update()
         {
             if (_player == null) return;
-            _uiController.ChangeText($"{_player.CurrentFunction} - {_player.CurrentAction}");
+            _uiController.ChangeText($"{_player.CurrentFunction}");
             _uiController.ChangeUserIndicatorState(_player.IsUserControlled);
         }
         public void FixedUpdate()
@@ -115,22 +114,18 @@ namespace AndorinhaEsporte.Controller
             animator.SetBool("IsIdle", isIdle);
         }
 
-        private Player GetPassTarget(Vector3 direction)
-        {
-            Player target = null;
-            if (!_player.Teammates.Any()) return target;
-            target = _player.Teammates
-                    .OrderByDescending(p => Vector3.Angle(direction, _ball.GetDirectionTo(p.Position)))
-                    .First();
-            return target;
-        }
-
         internal Player GetPlayer() => _player;
         internal Rigidbody GetRigidbody() => _rigidBody;
         internal Transform GetTransform() => transform;
         public void OnDrawGizmos()
         {
             // Gizmos.DrawWireSphere(transform.position, _player.BallControlRange);
+        }
+
+        public void OnTeamPassing(object sender, TeamPassingEvent e)
+        {
+            if (e.TeamId != _team.Id) return;
+            _uiController.ChangePassIndicatorVisibility(e.IsPassing);
         }
 
         void OnCollisionEnter(Collision collision)

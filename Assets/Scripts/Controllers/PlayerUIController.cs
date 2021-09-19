@@ -10,7 +10,7 @@ namespace AndorinhaEsporte.Controller
 
         public Text PlayerFieldPosition;
         public Transform WrapperTransformer;
-        public GameObject KeyIndicator;
+        public GameObject PassIndicator;
         public UnityEngine.UI.Image EnergyBarContainer;
         public Image EnergyBarFill;
         public MeshRenderer UserControllerIndicator;
@@ -27,28 +27,19 @@ namespace AndorinhaEsporte.Controller
         void Start()
         {
             PlayerFieldPosition.color = Color.white;
-            InitPlayerButton();
+            InitPassIndicator();
             HideEnergyBar();
             if (cameraTransform == null)
             {
                 cameraTransform = Camera.main.transform;
             }
         }
-
-
-
-        private void HideEnergyBar()
-        {
-            EnergyBarFill.fillAmount = 0;
-            EnergyBarContainer.gameObject.SetActive(false);
-        }
-
         void LateUpdate()
         {
             WrapperTransformer.LookAt(WrapperTransformer.position + cameraTransform.forward);
 
             keyElapsedTime += Time.deltaTime;
-            BouncePlayerButton();
+            BouncePassIndicator();
 
             if ((DateTime.Now - _energyStartTime).Seconds > 2)
             {
@@ -57,10 +48,22 @@ namespace AndorinhaEsporte.Controller
 
         }
 
-        private void BouncePlayerButton()
+        private void HideEnergyBar()
         {
-            if (!KeyIndicator.activeInHierarchy) return;
-            var keyTransform = KeyIndicator.transform;
+            EnergyBarFill.fillAmount = 0;
+            EnergyBarContainer.gameObject.SetActive(false);
+        }
+        private void InitPassIndicator()
+        {
+            var movingFactor = 5f;
+            PassIndicator.SetActive(false);
+            keyStart = PassIndicator.transform.localPosition;
+            KeyEnd = PassIndicator.transform.localPosition + (Vector3.forward * movingFactor);
+        }
+        private void BouncePassIndicator()
+        {
+            if (!PassIndicator.activeInHierarchy) return;
+            var keyTransform = PassIndicator.transform;
             var lerpValue = Mathf.Clamp(keyElapsedTime / keyAnimationDuration, 0, 1);
             if (keyMovingback)
                 keyTransform.localPosition = Vector3.Lerp(keyStart, KeyEnd, lerpValue);
@@ -72,13 +75,14 @@ namespace AndorinhaEsporte.Controller
                 keyElapsedTime = 0f;
             }
         }
-        private void InitPlayerButton()
+        public void ChangePassIndicatorVisibility(bool isPassing)
         {
-            var movingFactor = 5f;
-            KeyIndicator.SetActive(false);
-            keyStart = KeyIndicator.transform.localPosition;
-            KeyEnd = KeyIndicator.transform.localPosition + (Vector3.forward * movingFactor);
+            if (isPassing) ShowPassIndicator();
+            else HidePassIndicator();
         }
+        private void ShowPassIndicator() => PassIndicator.SetActive(true);
+        private void HidePassIndicator() => PassIndicator.SetActive(false);
+
         public void ChangeText(string text)
         {
             PlayerFieldPosition.text = text;

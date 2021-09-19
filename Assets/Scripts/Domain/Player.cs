@@ -45,6 +45,7 @@ namespace AndorinhaEsporte.Domain
 
         public IReadOnlyCollection<Player> Opponents => _opponents;
 
+        public event EventHandler ChangedState;
 
         public float MoveSpeed = 8000f;
         public float PreciseMoveSpeed = 6000;
@@ -121,6 +122,7 @@ namespace AndorinhaEsporte.Domain
             var actions = _actions.FirstOrDefault(x => x == action);
             if (actions == default(PlayerAction)) return;
             _actions.Remove(actions);
+            ChangedState.Invoke(this, null);
             Passing = false;
         }
 
@@ -280,7 +282,5 @@ namespace AndorinhaEsporte.Domain
             return isBallIn2DSpikeRange(groundTarget, 1f) &&
             ballHeight < SpikeHeight + 2.3f && ballVelocity.y < 0;
         }
-
-
     }
 }

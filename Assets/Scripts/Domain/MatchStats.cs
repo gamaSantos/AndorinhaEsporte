@@ -72,7 +72,7 @@ namespace AndorinhaEsporte.Domain
             IsServe = true;
             _lastTouchTeamId = teamId;
         }
-        internal void CountTouches(object sender, BallChangedDirectionEventArgs e)
+        internal void CountTouches(object sender, BallChangedDirectionEvent e)
         {
             var teamId = e.LastTouchTeamId;
             if (teamId != _lastTouchTeamId)

@@ -21,8 +21,9 @@ namespace AndorinhaEsporte.Domain
         private int _currentPlayerIndex = 0;
         public List<Player> Players { get; private set; }
         public IEnumerable<Player> Formation => Players;
-
+        public event EventHandler<TeamPassingEvent> PassingStateChange;
         private bool _nextBallTransitionIsServe = true;
+        private Player _setter;
 
         public void SetFoward(Vector3 direction)
         {
@@ -57,9 +58,9 @@ namespace AndorinhaEsporte.Domain
 
         internal void Pass()
         {
-            var setter = Formation.FirstOrDefault(player => player.CurrentFunction == PlayerPositionType.Center);
-
-            setter.Pass();
+            _setter = Formation.FirstOrDefault(player => player.CurrentFunction == PlayerPositionType.Center);
+            if (PassingStateChange != null) PassingStateChange.Invoke(this, new TeamPassingEvent(this.Id, true));
+            _setter.Pass();
         }
 
         internal bool IsServing()
@@ -108,10 +109,23 @@ namespace AndorinhaEsporte.Domain
                 player.AddTeammate(newPlayer);
                 newPlayer.AddTeammate(player);
             }
+            newPlayer.ChangedState += OnPlayerStateChange;
             Players.Add(newPlayer);
         }
 
-        internal void CheckBall(object sender, BallChangedDirectionEventArgs e)
+        private void OnPlayerStateChange(object sender, EventArgs e)
+        {
+            var player = sender as Player;
+            if (_setter == null) return;
+            if (player.Id == _setter.Id && _setter.CurrentAction != PlayerAction.Pass)
+            {
+                PassingStateChange.Invoke(this, new TeamPassingEvent(Id, false));
+                _setter = null;
+            }
+
+        }
+
+        internal void CheckBall(object sender, BallChangedDirectionEvent e)
         {
             if (Id == e.LastTouchTeamId) return;
             if (!e.LandingSpot.HasValue) return;

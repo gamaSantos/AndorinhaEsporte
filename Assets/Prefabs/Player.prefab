@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerFieldPosition: {fileID: 1224956668258447266}
   WrapperTransformer: {fileID: 1127384861764375779}
-  KeyIndicator: {fileID: 6796735390766247502}
+  PassIndicator: {fileID: 6796735390766247502}
   EnergyBarContainer: {fileID: 1391485408320831948}
   EnergyBarFill: {fileID: 6055100423899313998}
   UserControllerIndicator: {fileID: 2294933793268756641}
@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 134bbbe9a3e62c94485b5807f513a8ba, type: 3}
       propertyPath: m_Name
-      value: KeyIndicator
+      value: PassIndicator
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134bbbe9a3e62c94485b5807f513a8ba, type: 3}
